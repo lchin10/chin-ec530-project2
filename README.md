@@ -2,11 +2,11 @@
 
 ## Smart Document Analyzer (mainly cloud)
 
-### Mission:
+## Mission:
 
 Analyze Catalog Search summarize Topics
 
-### User Stories:
+## User Stories:
 
   - I should login to a secure service to upload my content
   - I should be able to upload documents
@@ -21,11 +21,11 @@ Analyze Catalog Search summarize Topics
   - I want to know all names, locations, institutions and address in my documents.
   - I want to upload different types of files (CSV, DOC, etc.)
 
-### Modules:
+## Modules:
 
-Authorization and Authentication
+**Authorization and Authentication**
 
-Secure File Uploader/Ingester:
+**Secure File Uploader/Ingester:**
 
   - User authentication
   - Upload file
@@ -36,11 +36,11 @@ Secure File Uploader/Ingester:
   - Ingest file (prepare video files for editing)
   - Save file (after files are successfully ingested)
 
-Feed Ingester
+**Feed Ingester**
 
-Output Generator
+**Output Generator**
 
-Text NLP Analysis
+**Text NLP Analysis:**
 
   - Find topics and keywords (for whole text and seperate paragraphs)
   - Negative/positive parser (for sentences and paragraphs)
