@@ -25,10 +25,26 @@ Analyze Catalog Search summarize Topics
 
 Authorization and Authentication
 
-Secure File Uploader/Ingester *
+Secure File Uploader/Ingester:
+
+  - User authentication
+  - Upload file
+  - Parse file
+  - File handler (for different types of files)
+  - Image to text (using a ML model)
+  - Verify file (make sure it is a certain type/size)
+  - Ingest file (prepare video files for editing)
+  - Save file (after files are successfully ingested)
 
 Feed Ingester
 
 Output Generator
 
-Text NLP Analysis *
+Text NLP Analysis
+
+  - Find topics and keywords (for whole text and seperate paragraphs)
+  - Negative/positive parser (for sentences and paragraphs)
+  - External Search (data and keywords from open services)
+  - Text summarization
+  - Web content discovery (for story enhancement)
+  - Name recognizer (names, locations, institutions and address)
