@@ -1,5 +1,3 @@
-# chin-ec530-project2
-
 ## Smart Document Analyzer (mainly cloud)
 
 ## Mission:
