@@ -3,11 +3,13 @@ auth_api.py: Authorization and Authentication API
 
 """
 from flask import Flask, request, jsonify
-from flask import Blueprint
+from flask import Blueprint, current_app
+import os
 import sqlite3
 import tracemalloc
 import cProfile
 import logging
+import shutil
 
 # Logging
 logging.basicConfig(filename='../Logs/auth_api.log', level=logging.INFO)
@@ -138,6 +140,17 @@ def delete_user():
     cursor = conn.cursor()
 
     try:
+        # Delete files from Files db
+        cursor.execute('''
+            DELETE FROM Files
+            WHERE U_ID = (
+                SELECT U_ID FROM Users
+                WHERE Username = ? AND Hashed_password = ?
+            )
+        ''', (username, hashed_password))
+        conn.commit()
+
+        # Delete user from Users db
         cursor.execute('''
             DELETE FROM Users
             WHERE Username = ? AND Hashed_password = ?
@@ -147,6 +160,12 @@ def delete_user():
         if cursor.rowcount == 0:
             return jsonify({'error': 'User does not exist or invalid credentials'}), 404
         
+        # Remove user folder from Uploads
+        upload_folder = current_app.config['UPLOAD_FOLDER']
+        user_folder = os.path.join(upload_folder, username)
+        if os.path.exists(user_folder):
+            shutil.rmtree(user_folder)
+
         logger.info("Delete complete.")
         profile.disable()
         profile.dump_stats(f'{profile_folder}delete.prof')
