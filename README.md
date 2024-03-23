@@ -1,17 +1,21 @@
 ## Smart Document Analyzer (mainly cloud)
 
-## Mission:
-
-Analyze Catalog Search summarize Topics
+**Mission:** Analyze Catalog Search summarize Topics
 
 ## Overview:
 
 This application provides a secure platform for users to upload various types of documents, and get various forms of information about the text.
 
-### 3/22/2024 Update:
+### 3/23/2024 Update:
 
-- Created and completed APIs for modules 'auth_api' and 'file_upload'
+- Created working APIs for:
+    - registration, login, and deleting user in module '*auth_api.py*'
+    - uploading files, listing user files, and removing files in module '*file_upload.py*'
+- Found a way to set up all APIs from multiple modules at once.
+- Added logs and profiling for API calls
 - Created database (database.db) using sqlite3
+    - Created a script to reset and clear the existing database
+- Created a client-side script to test API functionality
 
 ## How it works:
 
