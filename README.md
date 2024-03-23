@@ -4,6 +4,89 @@
 
 Analyze Catalog Search summarize Topics
 
+## Overview:
+
+This application provides a secure platform for users to upload various types of documents, and get various forms of information about the text.
+
+### 3/22/2024 Update:
+
+- Created and completed APIs for modules 'auth_api' and 'file_upload'
+- Created database (database.db) using sqlite3
+
+## How it works:
+
+1. **Create/reset the database:**
+
+    This step is optional, but it clears the existing database and recreates it to start again with a new database.
+
+    ![alt text](Images/database_init.png)
+
+2. **Run the API modules:**
+
+    I created a python script (*flask_run.py*) to run all the API modules. This creates the Flask app, registers each module's API blueprints, and runs the app.
+
+    ![alt text](Images/API_init.png)
+
+3. **Start the application**
+
+    To start the application, run the client-side python application (*test.py*). It will prompt you with instructions, as such:
+
+    ![alt text](Images/test_intro.png)
+
+    ![alt text](Images/test_register.png)
+
+    Once you successfully register, your information is stored in the databsae. Login and the application will prompt you with the next set of instructions.
+
+    ![alt text](Images/test_login.png)
+
+    ![alt text](Images/test_upload.png)
+
+    This will updatae the database and add a copy of the file to an uploads folder under your username.
+
+    ![alt text](Images/test_uploadsfolder.png)
+
+    ![alt text](Images/test_filelist.png)
+
+    In addition, you can remove any file in your account.
+
+    ![alt text](Images/test_fileremoved.png)
+
+    If you want, you can delete your account as you wish. It will remove all your information and files from the uploads folder and database.
+
+    ![alt text](Images/test_deleteaccount.png)
+
+
+
+## API Modules:
+
+**Authorization and Authentication (auth_api.py):** 
+
+- Registration
+- User Info*
+- Login
+- Delete User
+- Update User*
+
+**Secure File Uploader/Ingester (file_upload.py):**
+
+- Upload File
+- Parse File*
+- Select File*
+- Remove File
+- List File
+
+**Feed Ingester (feed_ingester.py):**
+
+**Output Generator (output_generator.py):**
+
+**Text NLP Analysis (text_nlp.py):**
+
+(\*) : not completed
+
+## Database:
+
+![alt text](Images/database_table.png)
+
 ## User Stories:
 
   - I should login to a secure service to upload my content
@@ -19,14 +102,3 @@ Analyze Catalog Search summarize Topics
   - I want to know all names, locations, institutions and address in my documents.
   - I want to upload different types of files (CSV, DOC, etc.)
 
-## Modules:
-
-**Authorization and Authentication**
-
-**Secure File Uploader/Ingester:**
-
-**Feed Ingester**
-
-**Output Generator**
-
-**Text NLP Analysis:**

@@ -560,3 +560,128 @@ INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [22/Mar/2024 15:11:18] "[35m[1mPOST /registration HTTP/1.1[0m" 201 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [22/Mar/2024 15:42:45] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 15:04:28] "POST /login HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 15:04:48] "[35m[1mPOST /upload_file/admin HTTP/1.1[0m" 201 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 15:05:36] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:File removal complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 15:06:28] "POST /remove_file HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 16:38:23] "[35m[1mPOST /registration HTTP/1.1[0m" 201 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 16:39:02] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 16:55:03] "[35m[1mPOST /registration HTTP/1.1[0m" 201 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 16:58:46] "POST /login HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 17:07:37] "[35m[1mPOST /upload_file/admin HTTP/1.1[0m" 201 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 17:11:59] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:File removal complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 17:13:40] "POST /remove_file HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 17:13:44] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Delete user initiated.
+INFO:auth_api:Delete complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 17:14:55] "POST /delete_user HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 17:28:07] "[35m[1mPOST /registration HTTP/1.1[0m" 201 -
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 17:28:12] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 17:28:19] "POST /login HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 17:28:26] "[35m[1mPOST /upload_file/admin HTTP/1.1[0m" 201 -
+INFO:root:Upload file initiated.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 17:28:33] "[33mPOST /upload_file/admin HTTP/1.1[0m" 404 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 17:28:38] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 17:28:47] "[31m[1mPOST /upload_file/admin HTTP/1.1[0m" 401 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 17:29:01] "[35m[1mPOST /upload_file/admin HTTP/1.1[0m" 201 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 17:29:05] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Delete user initiated.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 17:29:14] "[33mPOST /delete_user HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
