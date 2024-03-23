@@ -706,3 +706,136 @@ INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 17:32:02] "POST /list_files HTTP/1.1" 2
 INFO:root:Delete user initiated.
 INFO:auth_api:Delete complete.
 INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 17:32:09] "POST /delete_user HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Login initiated.
+INFO:auth_api:Login could not be completed.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 17:50:48] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 17:50:54] "[35m[1mPOST /registration HTTP/1.1[0m" 201 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 17:51:00] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 18:55:50] "[35m[1mPOST /registration HTTP/1.1[0m" 201 -
+INFO:root:Delete user initiated.
+INFO:auth_api:Delete complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 18:56:06] "POST /delete_user HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 18:58:52] "[35m[1mPOST /registration HTTP/1.1[0m" 201 -
+INFO:root:Delete user initiated.
+INFO:auth_api:Delete complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 18:58:59] "POST /delete_user HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 19:10:01] "[35m[1mPOST /registration HTTP/1.1[0m" 201 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 19:21:01] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 19:21:14] "POST /login HTTP/1.1" 200 -
+INFO:root:Reset password initiated.
+INFO:auth_api:Password reset complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 19:21:16] "POST /change_password HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login could not be completed.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 19:22:19] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:Login initiated.
+INFO:auth_api:Login could not be completed.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 19:22:28] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:Login initiated.
+INFO:auth_api:Login could not be completed.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 19:22:35] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 19:22:46] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Login initiated.
+INFO:auth_api:Login could not be completed.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 19:22:58] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:Reset password initiated.
+INFO:auth_api:Password reset complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 19:23:00] "POST /change_password HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login could not be completed.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 19:24:35] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:Delete user initiated.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 19:24:42] "[33mPOST /delete_user HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 19:25:10] "[35m[1mPOST /registration HTTP/1.1[0m" 201 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 19:25:18] "POST /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 19:25:28] "POST /login HTTP/1.1" 200 -
+INFO:root:Reset password initiated.
+INFO:auth_api:Password reset complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 19:25:30] "POST /change_password HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 19:27:19] "[35m[1mPOST /registration HTTP/1.1[0m" 201 -
+INFO:root:Login initiated.
+INFO:auth_api:Login could not be completed.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 19:27:26] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:Login initiated.
+INFO:auth_api:Login could not be completed.
+INFO:werkzeug:127.0.0.1 - - [23/Mar/2024 19:27:38] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352

@@ -179,12 +179,42 @@ def delete_user():
         conn.close()
 
     
-# Update user information
-@auth_api_app.route('/update_user', methods=['POST'])
-def update_user():
+# Reset password
+@auth_api_app.route('/change_password', methods=['POST'])
+def change_password():
     # Trace, profiling, logging
     profile.enable()
-    logging.info('Update User initiated.')
+    logging.info('Reset password initiated.')
+
+    data = request.json
+    username = data.get('username')
+    new_hashed_password = data.get('hashed_password')
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    try:
+        cursor.execute('''
+            UPDATE Users
+            SET Hashed_password = ?
+            WHERE Username = ?
+        ''', (new_hashed_password, username))
+        conn.commit()
+
+        if cursor.rowcount == 0:
+            return jsonify({'error': 'User does not exist'}), 404
+        
+        logger.info("Password reset complete.")
+        profile.disable()
+        profile.dump_stats(f'{profile_folder}reset_password.prof')
+        return jsonify({'message': 'Password reset successfully'}), 200
+    except Exception as e:
+        logger.info("Password reset could not be completed.")
+        profile.disable()
+        profile.dump_stats(f'{profile_folder}reset_password.prof')
+        return jsonify({'error': str(e)}), 401
+    finally:
+        conn.close()
     
 # APP RUN
 if __name__ == '__main__':

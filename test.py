@@ -5,26 +5,42 @@ from tkinter import filedialog
 
 # Use Auth API
 def get_request1():
-    request1_type = {'1': 'Register:', '2': 'Login:', '3': 'Delete User:', '4': 'Exiting application.'}
-    print('\n\t1  Register\n\t2  Login\n\t3  Delete User\n\t4  Exit Application')
+    request1_type = {'1': 'Register:', '2': 'Login:', '3': 'Delete User:', '4': 'Change Password:', '5': 'Exiting application.'}
+    print('\n\t1  Register\n\t2  Login\n\t3  Delete User\n\t4  Change Password\n\t5  Exit Application')
     while True:
         try:
-            request1 = input(':')
-            if request1 not in ['1', '2', '3', '4']:
-                raise ValueError('Please choose 1, 2, 3, or 4')
+            request1 = input(': ')
+            if request1 not in ['1', '2', '3', '4', '5']:
+                raise ValueError('Please choose 1, 2, 3, 4, or 5')
             
             print(request1_type[request1])
-            if request1 == '4':
+            if request1 == '5': # Exit app
                 return request1, '', ''
             username = input('Enter username: ')
             password = getpass.getpass('Enter password: ')
+            if request1 == '1': # Confirm password
+                confirm_password = getpass.getpass('Enter password again: ')
+                if (password != confirm_password):
+                    print('ERROR: Passwords do not match')
+                    return request1, username, ''
+            new_password = ''
+            if request1 == '4':
+                new_password = getpass.getpass('New password: ')
+                if (password == new_password):
+                    print('ERROR: Pick a different password')
+                    return request1, username, ''
             data = {'username': username, 'hashed_password': password}
+            data_new_pass = {'username': username, 'hashed_password': new_password}
             if request1 == '1':
                 response = register(data)
             elif request1 == '2':
                 response = login(data)
             elif request1 == '3':
                 response = delete(data)
+            elif request1 == '4':
+                response = login(data)
+                if response != 'error':
+                    response = change_pass(data_new_pass)
             return request1, username, response
         except ValueError as e:
             print(e)
@@ -35,7 +51,7 @@ def get_request2(username):
     print('\n\t1  Upload File\n\t2  List Files\n\t3  Remove File\n\t4  Logout')
     while True:
         try:
-            request2 = input(':')
+            request2 = input(': ')
             if request2 not in ['1','2','3','4']:
                 raise ValueError('Please choose 1, 2, 3, or 4')
             
@@ -109,6 +125,21 @@ def delete(data):
         print('Delete User failed. No response data.')
         return 'error'
 
+def change_pass(data):
+    response = requests.post('http://localhost:5000/change_password', json=data)
+    try:
+            message = response.json().get('message')
+            if message:
+                print(message)
+                return 'success'
+            else:
+                error = response.json().get('error')
+                print(f'ERROR: {error}')
+                return 'error'
+    except requests.exceptions.JSONDecodeError:
+        print('Change password failed. No response data.')
+        return 'error'
+
 # FILE FUNCTIONS
 def file_upload(file, username):
         response = requests.post(f'http://localhost:5000/upload_file/{username}', files=file)
@@ -173,6 +204,6 @@ if __name__ == '__main__':
                 request2, response = get_request2(username)
                 if request2 == '4':
                     break
-        elif request1 == '4':
+        elif request1 == '5':
             break
     

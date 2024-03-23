@@ -9,7 +9,7 @@ This application provides a secure platform for users to upload various types of
 ### 3/23/2024 Update:
 
 - Created working APIs for:
-    - registration, login, and deleting user in module '*auth_api.py*'
+    - registration, login, deleting user, and changing password in module '*auth_api.py*'
     - uploading files, listing user files, and removing files in module '*file_upload.py*'
 - Found a way to set up all APIs from multiple modules at once.
 - Added logs and profiling for API calls
