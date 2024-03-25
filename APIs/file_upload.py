@@ -5,11 +5,10 @@ file_upload.py: Secure File Uploader API
 from flask import Flask, request, jsonify
 from flask import Blueprint, current_app
 import os
-import uuid
 import sqlite3
 import tracemalloc
-import logging
 import cProfile
+import logging
 
 # Logging
 logging.basicConfig(filename='../Logs/flie_upload.log', level=logging.INFO)

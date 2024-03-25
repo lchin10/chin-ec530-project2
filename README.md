@@ -60,37 +60,6 @@ This application provides a secure platform for users to upload various types of
     ![alt text](Images/test_deleteaccount.png)
 
 
-
-## API Modules:
-
-**Authorization and Authentication (auth_api.py):** 
-
-- Registration
-- User Info*
-- Login
-- Delete User
-- Update User*
-
-**Secure File Uploader/Ingester (file_upload.py):**
-
-- Upload File
-- Parse File*
-- Select File*
-- Remove File
-- List File
-
-**Feed Ingester (feed_ingester.py):**
-
-**Output Generator (output_generator.py):**
-
-**Text NLP Analysis (text_nlp.py):**
-
-(\*) : not completed
-
-## Database:
-
-![alt text](Images/database_table.png)
-
 ## User Stories:
 
   - I should login to a secure service to upload my content

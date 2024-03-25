@@ -1,17 +1,3 @@
-# Database
+## Database:
 
-    Users:
-        U_ID
-        Username
-        Hashed_password
-        Files:
-            File_ID
-            File_text
-            Names
-            Locations
-            Institutions
-            Address
-            Metadata:
-                Length
-                Width
-                Type
+![alt text](../Images/database_table.png)

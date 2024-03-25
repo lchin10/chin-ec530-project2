@@ -1,0 +1,23 @@
+version: '3'
+services:
+  flask_app:
+    build:
+      context: ./APIs
+      dockerfile: Dockerfile_flask
+    restart: always
+    ports:
+      - "5000:5000"  # Expose Flask port if needed
+    volumes:
+      - ./APIs:/app  # Mount the APIs directory as a volume
+
+  test_script:
+    build:
+      context: .
+      dockerfile: Dockerfile_test
+    depends_on:
+      - flask_app
+    volumes:
+      - ./input.txt:/app/input.txt
+
+#  To run:
+#  docker-compose up
