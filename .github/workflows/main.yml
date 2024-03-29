@@ -1,0 +1,45 @@
+name: Flask and React Deployment
+
+on:
+  push:
+    branches:
+      - main  # Adjust this to your main branch name
+
+jobs:
+  start-flask:
+    runs-on: ubuntu-latest
+    services:
+      flask:
+        image: python:3.9
+        env:
+          FLASK_ENV: development
+        ports:
+          - 5000:5000
+        options: --name flask-server  # Give the service a name
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Install dependencies and start Flask server
+      run: |
+        pip install flask
+        python flask_run  # Adjust this command based on your Flask setup
+
+  build-and-deploy-react:
+    needs: start-flask  # Wait for the Flask server to start
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies and build React app
+      run: |
+        npm install
+        npm run build
+
+    # Add deployment steps here, e.g., deploy to hosting service
