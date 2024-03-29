@@ -20,9 +20,14 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
       
-    - name: Install dependencies and start Flask server
+    - name: Check if Flask server is already running
       run: |
-        pip install flask
-        pip install flask-cors
-        cd APIs
-        python flask_run.py  # Adjust this command based on your Flask setup
+        if ! nc -z localhost 5000; then
+          echo "Flask server is not running. Starting..."
+          pip install flask
+          pip install flask-cors
+          cd APIs
+          python flask_run.py  # Adjust this command based on your Flask setup
+        else
+          echo "Flask server is already running."
+        fi

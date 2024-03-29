@@ -22,7 +22,7 @@ function LoginPage() {
             if (data.message) {
                 console.log(data.message); // Handle success message
                 // Redirect the user to the welcome page
-                navigate('/welcome');
+                navigate('/chin-ec530-project2/welcome');
             } else {
                 console.log(data.error);
                 setError(data.error); // Set error message

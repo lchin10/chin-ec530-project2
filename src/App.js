@@ -14,21 +14,21 @@ function App() {
                 <nav>
                     <ul>
                         <li>
-                            <Link to="/">Home</Link>
+                            <Link to="/chin-ec530-project2/">Home</Link>
                         </li>
                         <li>
-                            <Link to="/register">Register</Link>
+                            <Link to="/chin-ec530-project2/register">Register</Link>
                         </li>
                         <li>
-                            <Link to="/login">Login</Link>
+                            <Link to="/chin-ec530-project2/login">Login</Link>
                         </li>
                     </ul>
                 </nav>
 
                 <Routes>
-                    <Route path="/register" element={<RegisterPage />} />
-                    <Route path="/login" element={<LoginPage setLoggedIn={setLoggedIn} />} />
-                    <Route path="/" element={loggedIn ? <AppPage /> : <LoginPage setLoggedIn={setLoggedIn} />} />
+                    <Route path="/chin-ec530-project2/register" element={<RegisterPage />} />
+                    <Route path="/chin-ec530-project2/login" element={<LoginPage setLoggedIn={setLoggedIn} />} />
+                    <Route path="/chin-ec530-project2/" element={loggedIn ? <AppPage /> : <LoginPage setLoggedIn={setLoggedIn} />} />
                 </Routes>
             </div>
         </Router>
