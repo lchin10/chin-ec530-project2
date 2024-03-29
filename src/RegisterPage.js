@@ -13,7 +13,7 @@ function RegisterPage() {
     const handleRegister = async (e) => {
         e.preventDefault();
 
-        if (hashed_password != confirmPassword) {
+        if (hashed_password !== confirmPassword) {
             setError('An error occurred: Passwords do not match')
         }
         else {
