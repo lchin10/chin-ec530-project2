@@ -23,5 +23,5 @@ jobs:
         npm install
         npm run build
         git config --global user.email "lchin10@bu.edu"
-        git config --global user.name "Lukas Chin"
-        npm run deploy -- -m 'Deploying React App'
+        git config --global user.name "lchin10"
+        npm run deploy
