@@ -16,12 +16,16 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '14'
+    
+    - name: Deploy GitHub Pages site
+      uses: actions/deploy-pages@v4.0.5
 
     - name: Install dependencies and build React app
       run: |
         npm install axios
         npm install
         npm run build
-        git config --global user.email "lchin10@bu.edu"
-        git config --global user.name "lchin10"
-        npm run deploy
+        # git config --global user.email "lchin10@bu.edu"
+        # git config --global user.name "lchin10"
+        # npm run deploy
+    
