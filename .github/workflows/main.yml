@@ -23,6 +23,7 @@ jobs:
     - name: Install dependencies and start Flask server
       run: |
         pip install flask
+        cd APIs
         python flask_run  # Adjust this command based on your Flask setup
 
   build-and-deploy-react:
