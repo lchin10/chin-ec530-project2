@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import RegisterPage from './RegisterPage';
 import LoginPage from './LoginPage';
 import AppPage from './AppPage';
+import WelcomePage from './WelcomePage';
 import './App.css';
 
 function App() {
@@ -28,7 +29,8 @@ function App() {
                 <Routes>
                     <Route path="/chin-ec530-project2/register" element={<RegisterPage />} />
                     <Route path="/chin-ec530-project2/login" element={<LoginPage setLoggedIn={setLoggedIn} />} />
-                    <Route path="/chin-ec530-project2/welcome" element={loggedIn ? <AppPage /> : <LoginPage setLoggedIn={setLoggedIn} />} />
+                    <Route path="/chin-ec530-project2/welcome" element={loggedIn ? <WelcomePage /> : <LoginPage setLoggedIn={setLoggedIn} />} />
+                    <Route path="/chin-ec530-project2/" element={<AppPage />} />
                 </Routes>
             </div>
         </Router>
