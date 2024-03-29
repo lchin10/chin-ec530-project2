@@ -9,6 +9,8 @@ function WelcomePage() {
             <h2>Welcome!!</h2>
         </div>
     );
+
+    // trying to make workflow work
 }
 
 export default WelcomePage;
