@@ -17,15 +17,12 @@ jobs:
 
     - name: Checkout repository
       uses: actions/checkout@v2
-    
-    - name: Setup Pages
-      if: github.ref == 'refs/heads/main'
-      uses: actions/configure-pages@v3
 
     - name: Install dependencies and build React app
       run: |
         npm install axios
         npm install
+        npm run build
     
     - name: Deploy GitHub Pages site
       uses: JamesIves/github-pages-deploy-action@4.1.1
