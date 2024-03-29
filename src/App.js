@@ -28,7 +28,7 @@ function App() {
                 <Routes>
                     <Route path="/chin-ec530-project2/register" element={<RegisterPage />} />
                     <Route path="/chin-ec530-project2/login" element={<LoginPage setLoggedIn={setLoggedIn} />} />
-                    <Route path="/chin-ec530-project2/" element={loggedIn ? <AppPage /> : <LoginPage setLoggedIn={setLoggedIn} />} />
+                    <Route path="/chin-ec530-project2/welcome" element={loggedIn ? <AppPage /> : <LoginPage setLoggedIn={setLoggedIn} />} />
                 </Routes>
             </div>
         </Router>

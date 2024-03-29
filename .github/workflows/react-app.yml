@@ -22,5 +22,4 @@ jobs:
         npm install axios
         npm install
         npm run build
-
-    # Add deployment steps here, e.g., deploy to hosting service
+        npm run deploy -- -m 'Deploying React App'
