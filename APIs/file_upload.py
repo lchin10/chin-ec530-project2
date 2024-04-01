@@ -6,7 +6,7 @@ from flask import Flask, request, jsonify
 from flask import Blueprint, current_app
 import os
 import sqlite3
-import tracemalloc
+# import tracemalloc
 import cProfile
 import logging
 
