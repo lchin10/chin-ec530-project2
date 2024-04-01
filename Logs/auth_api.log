@@ -1671,3 +1671,16 @@ INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:10:03] "OPTIONS /list_files HTTP/1.1
 INFO:root:List files initiated.
 INFO:file_upload:List files complete.
 INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:10:04] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:19:37] "OPTIONS /registration HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:22:54] "OPTIONS /registration HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:22:55] "POST /registration HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:22:55] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:22:55] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:22:55] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:22:56] "POST /list_files HTTP/1.1" 200 -

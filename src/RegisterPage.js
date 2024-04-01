@@ -18,7 +18,7 @@ function RegisterPage({ setLoggedIn, setGlobalUsername }) {
         }
         else {
             try {
-                const response = await axios.post('http://localhost:5000/registration', {
+                const response = await axios.post('https://lchin10.github.io/chin-ec530-project2/registration', {
                     username,
                     password
                 });
