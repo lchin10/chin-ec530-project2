@@ -24,8 +24,7 @@ jobs:
       run: |
         if ! nc -z localhost 5000; then
           echo "Flask server is not running. Starting..."
-          pip install flask
-          pip install flask-cors
+          pip install -r requirements.txt
           cd APIs
           python flask_run.py  # Adjust this command based on your Flask setup
         else

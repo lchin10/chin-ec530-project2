@@ -13,7 +13,7 @@ function LoginPage({ setLoggedIn, setGlobalUsername }) {
         e.preventDefault();
 
         try {
-            const response = await axios.post('https://lchin10.github.io/chin-ec530-project2/login', {
+            const response = await axios.post('http://localhost:5000/login', {
                 username,
                 password
             });

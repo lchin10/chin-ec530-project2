@@ -12,7 +12,7 @@ function WelcomePage({ username }) {
         const fetchFiles = async () => {
             try {
                 // Make a request to fetch files
-                const response = await axios.post('https://lchin10.github.io/chin-ec530-project2/list_files', { username });
+                const response = await axios.post('http://localhost:5000/list_files', { username });
                 setFiles(response.data.filenames);
                 setLoading(false);
             } catch (error) {
@@ -27,7 +27,7 @@ function WelcomePage({ username }) {
     const fetchFiles = async () => {
         try {
             // Make a request to fetch files
-            const response = await axios.post('https://lchin10.github.io/chin-ec530-project2/list_files', { username });
+            const response = await axios.post('http://localhost:5000/list_files', { username });
             setFiles(response.data.filenames);
             setLoading(false);
         } catch (error) {
@@ -50,7 +50,7 @@ function WelcomePage({ username }) {
 
         try {
             // Make a request to upload the file
-            await axios.post(`https://lchin10.github.io/chin-ec530-project2/upload_file/${username}`, formData, {
+            await axios.post(`http://localhost:5000/upload_file/${username}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
@@ -66,7 +66,7 @@ function WelcomePage({ username }) {
     const handleRemoveFile = async () => {
         try {
             // Make a request to remove the selected file
-            await axios.post('https://lchin10.github.io/chin-ec530-project2/remove_file', { username, file_title: file.name });
+            await axios.post('http://localhost:5000/remove_file', { username, file_title: file.name });
             
             // Refresh the files list after successful removal
             fetchFiles();
