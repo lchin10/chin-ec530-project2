@@ -13,7 +13,7 @@ function LoginPage({ setLoggedIn, setGlobalUsername }) {
         e.preventDefault();
 
         try {
-            const response = await axios.post('https://chin-ec530-project2-2.onrender.com/login', {
+            const response = await axios.post('https://0.0.0.0:5000/login', {
                 username,
                 password
             });
