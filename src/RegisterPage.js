@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-function RegisterPage() {
+function RegisterPage({ setLoggedIn, setGlobalUsername }) {
     const [username, setUsername] = useState('');
-    const [hashed_password, setPassword] = useState('');
+    const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
@@ -13,19 +13,21 @@ function RegisterPage() {
     const handleRegister = async (e) => {
         e.preventDefault();
 
-        if (hashed_password !== confirmPassword) {
+        if (password !== confirmPassword) {
             setError('An error occurred: Passwords do not match')
         }
         else {
             try {
                 const response = await axios.post('http://localhost:5000/registration', {
                     username,
-                    hashed_password
+                    password
                 });
         
                 const data = response.data;
-                if (data.message) {
-                    console.log(data.message); // Handle success message
+                if (data.token) {
+                    console.log(data.token);
+                    setLoggedIn(true);
+                    setGlobalUsername(username);
                     // Redirect the user to the welcome page
                     navigate('/chin-ec530-project2/welcome');
                 } else {
@@ -59,7 +61,7 @@ function RegisterPage() {
             <input
                 type="password"
                 placeholder="Password"
-                value={hashed_password}
+                value={password}
                 onChange={(e) => setPassword(e.target.value)}
             />
             <input

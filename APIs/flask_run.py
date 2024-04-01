@@ -4,8 +4,9 @@ from auth_api import auth_api_app
 from file_upload import file_upload_app
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins='http://localhost:3000')
 app.config['UPLOAD_FOLDER'] = '../Uploads'
+app.config['SECRET_KEY'] = 'Tf&2L$nDp9@qBhV*WY3#Zc7u8Xe4@FmA'
 
 # Register blueprints
 app.register_blueprint(auth_api_app)

@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-function LoginPage() {
+function LoginPage({ setLoggedIn, setGlobalUsername }) {
     const [username, setUsername] = useState('');
-    const [hashed_password, setPassword] = useState('');
+    const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
@@ -15,12 +15,15 @@ function LoginPage() {
         try {
             const response = await axios.post('http://localhost:5000/login', {
                 username,
-                hashed_password
+                password
             });
 
             const data = response.data;
-            if (data.message) {
-                console.log(data.message); // Handle success message
+            if (data.token) {
+                console.log(data.token); // Handle success message
+                // localStorage.setItem('token', data.token);
+                setLoggedIn(true);
+                setGlobalUsername(username);
                 // Redirect the user to the welcome page
                 navigate('/chin-ec530-project2/welcome');
             } else {
@@ -53,7 +56,7 @@ function LoginPage() {
                 <input
                     type="password"
                     placeholder="Password"
-                    value={hashed_password}
+                    value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 <button type="submit">Login</button>

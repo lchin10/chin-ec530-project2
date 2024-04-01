@@ -10,6 +10,10 @@ import tracemalloc
 import cProfile
 import logging
 import shutil
+import jwt
+import datetime
+import pytz
+import bcrypt
 
 # Logging
 logging.basicConfig(filename='../Logs/auth_api.log', level=logging.INFO)
@@ -36,7 +40,8 @@ def registration():
 
     data = request.json
     username = data.get('username')
-    hashed_password = data.get('hashed_password')
+    password = data.get('password')
+    hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
 
     conn = get_db_connection()
     cursor = conn.cursor()
@@ -54,10 +59,11 @@ def registration():
         ''', (username, hashed_password, 0))
         conn.commit()
 
+        token = jwt.encode({'username': username, 'exp': datetime.datetime.now(pytz.utc) + datetime.timedelta(hours=1)}, current_app.config['SECRET_KEY'])
         logger.info("Registration complete.")
         profile.disable()
         profile.dump_stats(f'{profile_folder}registration.prof')
-        return jsonify({'message': 'User registered successfully'}), 201
+        return jsonify({'token': token}), 200
     except sqlite3.IntegrityError:
         logger.info("Registration could not be completed.")
         profile.disable()
@@ -101,24 +107,24 @@ def login():
 
     data = request.json
     username = data.get('username')
-    hashed_password = data.get('hashed_password')
+    password = data.get('password')
 
     conn = get_db_connection()
     cursor = conn.cursor()
 
     cursor.execute('''
-        SELECT * FROM Users
-        WHERE Username = ? AND Hashed_password = ?
-    ''', (username, hashed_password))
+        SELECT Hashed_password FROM Users
+        WHERE Username = ?
+    ''', (username,))
+    
+    hashed_password = cursor.fetchone()
 
-    user = cursor.fetchone()
-    conn.close()
-
-    if user:
+    if hashed_password and bcrypt.checkpw(password.encode('utf-8'), hashed_password[0]):
+        token = jwt.encode({'username': username, 'exp': datetime.datetime.now(pytz.utc) + datetime.timedelta(hours=1)}, current_app.config['SECRET_KEY'])
         logger.info("Login complete.")
         profile.disable()
         profile.dump_stats(f'{profile_folder}login.prof')
-        return jsonify({'message': 'Login successful'}), 200
+        return jsonify({'token': token}), 200
     else:
         logger.info("Login could not be completed.")
         profile.disable()
@@ -134,49 +140,62 @@ def delete_user():
 
     data = request.json
     username = data.get('username')
-    hashed_password = data.get('hashed_password')
+    password = data.get('password')
 
     conn = get_db_connection()
     cursor = conn.cursor()
 
-    try:
-        # Delete files from Files db
-        cursor.execute('''
-            DELETE FROM Files
-            WHERE U_ID = (
-                SELECT U_ID FROM Users
-                WHERE Username = ? AND Hashed_password = ?
-            )
-        ''', (username, hashed_password))
-        conn.commit()
+    cursor.execute('''
+        SELECT Hashed_password FROM Users
+        WHERE Username = ?
+    ''', (username,))
+    
+    hashed_password = cursor.fetchone()
 
-        # Delete user from Users db
-        cursor.execute('''
-            DELETE FROM Users
-            WHERE Username = ? AND Hashed_password = ?
-        ''', (username, hashed_password))
-        conn.commit()
+    if hashed_password and bcrypt.checkpw(password.encode('utf-8'), hashed_password[0]):
+        try:
+            # Delete files from Files db
+            cursor.execute('''
+                DELETE FROM Files
+                WHERE U_ID = (
+                    SELECT U_ID FROM Users
+                    WHERE Username = ?
+                )
+            ''', (username,))
+            
+            # Delete user from Users db
+            cursor.execute('''
+                DELETE FROM Users
+                WHERE Username = ?
+            ''', (username,))
+            
+            conn.commit()
 
-        if cursor.rowcount == 0:
-            return jsonify({'error': 'User does not exist or invalid credentials'}), 404
-        
-        # Remove user folder from Uploads
-        upload_folder = current_app.config['UPLOAD_FOLDER']
-        user_folder = os.path.join(upload_folder, username)
-        if os.path.exists(user_folder):
-            shutil.rmtree(user_folder)
+            if cursor.rowcount == 0:
+                return jsonify({'error': 'User does not exist or invalid credentials'}), 404
 
-        logger.info("Delete complete.")
+            # Remove user folder from Uploads
+            upload_folder = current_app.config['UPLOAD_FOLDER']
+            user_folder = os.path.join(upload_folder, username)
+            if os.path.exists(user_folder):
+                shutil.rmtree(user_folder)
+
+            logger.info("Delete complete.")
+            profile.disable()
+            profile.dump_stats(f'{profile_folder}delete.prof')
+            return jsonify({'message': 'User deleted successfully'}), 200
+        except Exception as e:
+            logger.info("Delete could not be completed.")
+            profile.disable()
+            profile.dump_stats(f'{profile_folder}delete.prof')
+            return jsonify({'error': str(e)}), 500
+        finally:
+            conn.close()
+    else:
+        logger.info("Delete could not be completed due to invalid credentials.")
         profile.disable()
         profile.dump_stats(f'{profile_folder}delete.prof')
-        return jsonify({'message': 'User deleted successfully'}), 200
-    except Exception as e:
-        logger.info("Delete could not be completed.")
-        profile.disable()
-        profile.dump_stats(f'{profile_folder}delete.prof')
-        return jsonify({'error': str(e)}), 401
-    finally:
-        conn.close()
+        return jsonify({'error': 'Invalid credentials'}), 401
 
     
 # Reset password
@@ -188,33 +207,48 @@ def change_password():
 
     data = request.json
     username = data.get('username')
-    new_hashed_password = data.get('hashed_password')
+    old_password = data.get('old_password')
+    new_password = data.get('new_password')
 
     conn = get_db_connection()
     cursor = conn.cursor()
 
-    try:
-        cursor.execute('''
-            UPDATE Users
-            SET Hashed_password = ?
-            WHERE Username = ?
-        ''', (new_hashed_password, username))
-        conn.commit()
+    cursor.execute('''
+        SELECT Hashed_password FROM Users
+        WHERE Username = ?
+    ''', (username,))
+    
+    hashed_password = cursor.fetchone()
 
-        if cursor.rowcount == 0:
-            return jsonify({'error': 'User does not exist'}), 404
-        
-        logger.info("Password reset complete.")
+    if hashed_password and bcrypt.checkpw(new_password.encode('utf-8'), hashed_password[0]):
+        try:
+            new_hashed_password = bcrypt.hashpw(new_password.encode('utf-8'), bcrypt.gensalt())
+            cursor.execute('''
+                UPDATE Users
+                SET Hashed_password = ?
+                WHERE Username = ?
+            ''', (new_hashed_password, username))
+            conn.commit()
+
+            if cursor.rowcount == 0:
+                return jsonify({'error': 'User does not exist'}), 404
+            
+            logger.info("Password reset complete.")
+            profile.disable()
+            profile.dump_stats(f'{profile_folder}reset_password.prof')
+            return jsonify({'message': 'Password reset successfully'}), 200
+        except Exception as e:
+            logger.info("Password reset could not be completed.")
+            profile.disable()
+            profile.dump_stats(f'{profile_folder}reset_password.prof')
+            return jsonify({'error': str(e)}), 500
+        finally:
+            conn.close()
+    else:
+        logger.info("Password reset could not be completed due to invalid credentials.")
         profile.disable()
         profile.dump_stats(f'{profile_folder}reset_password.prof')
-        return jsonify({'message': 'Password reset successfully'}), 200
-    except Exception as e:
-        logger.info("Password reset could not be completed.")
-        profile.disable()
-        profile.dump_stats(f'{profile_folder}reset_password.prof')
-        return jsonify({'error': str(e)}), 401
-    finally:
-        conn.close()
+        return jsonify({'error': 'Invalid credentials'}), 401
     
 # APP RUN
 if __name__ == '__main__':

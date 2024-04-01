@@ -1056,3 +1056,520 @@ INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 10:04:38] "OPTIONS /registration HTTP/1
 INFO:root:Registration initiated.
 INFO:auth_api:Registration complete.
 INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 10:04:39] "[35m[1mPOST /registration HTTP/1.1[0m" 201 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 10:44:14] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 10:44:14] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 10:45:04] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 10:45:04] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 10:45:29] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 10:45:30] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 10:52:30] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 10:52:30] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 17:26:23] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login could not be completed.
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 17:26:23] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 17:26:31] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 17:26:31] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 22:12:56] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 22:12:57] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 22:12:58] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 22:12:59] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 22:12:59] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 22:12:59] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 22:13:03] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 22:13:03] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 22:13:09] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 22:13:09] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 22:13:20] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 22:13:20] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 22:15:08] "OPTIONS /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 22:21:52] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [29/Mar/2024 22:21:52] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2024 13:39:46] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2024 13:39:46] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2024 13:42:58] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2024 13:42:59] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\flask_run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2024 13:44:30] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2024 13:44:30] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2024 21:44:22] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2024 21:44:22] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2024 22:12:31] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2024 22:12:31] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2024 22:12:47] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2024 22:12:48] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2024 22:15:49] "OPTIONS /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2024 22:29:05] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2024 22:29:06] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2024 22:30:00] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2024 22:30:01] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2024 22:35:08] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [30/Mar/2024 22:35:08] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 15:29:15] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login could not be completed.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 15:29:16] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 15:30:02] "OPTIONS /registration HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 15:30:03] "POST /registration HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 15:30:03] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 15:30:03] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 15:30:03] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 15:30:03] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 16:02:25] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login could not be completed.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 16:02:26] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 16:21:18] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 16:21:18] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 16:21:25] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 16:21:26] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 16:26:44] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 16:26:45] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 16:26:45] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 16:26:45] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 16:26:45] "[33mPOST /list_files HTTP/1.1[0m" 404 -
+INFO:root:List files initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 16:26:45] "[33mPOST /list_files HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 16:57:33] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 16:57:33] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 16:57:33] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 16:57:34] "[33mPOST /list_files HTTP/1.1[0m" 404 -
+INFO:root:List files initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 16:57:34] "[33mPOST /list_files HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:02:39] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:02:40] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:02:40] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:02:40] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:02:40] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:04:23] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:04:24] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:04:24] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:04:24] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:04:24] "[33mPOST /list_files HTTP/1.1[0m" 404 -
+INFO:root:List files initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:04:25] "[33mPOST /list_files HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:04:38] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:04:38] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:04:38] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:04:39] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:04:39] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:04:39] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:04:58] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:04:58] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:04:58] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:04:59] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:04:59] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:04:59] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:05:37] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:05:37] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:05:37] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:05:38] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:05:38] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:05:38] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:06:23] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:06:23] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:07:07] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:07:07] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:07:07] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:07:07] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:08:38] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:08:39] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:08:39] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:08:39] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:08:39] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:08:39] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:09:46] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:09:46] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:10:05] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:10:05] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:10:14] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:10:15] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:10:15] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:10:15] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:10:15] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:10:33] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:10:34] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:11:04] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:11:04] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:11:10] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:11:10] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:12:27] "[35m[1mPOST /upload_file/admin HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:12:27] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:12:27] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:12:36] "[35m[1mPOST /upload_file/admin HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:17:19] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:17:19] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:17:19] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:17:19] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:17:20] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:17:20] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:17:26] "[33mPOST /upload_file/admin HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:18:28] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:18:28] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:18:28] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:18:28] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:18:57] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:18:57] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:20:04] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:20:04] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:20:10] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:20:10] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:20:38] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:20:38] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:20:46] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:20:47] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:20:47] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:20:47] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:20:47] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:20:47] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:20:50] "[33mPOST /upload_file/admin HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:21:27] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:21:28] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:21:34] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:21:34] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:22:00] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:22:00] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:31:56] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:31:56] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:32:55] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:32:55] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:33:11] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:33:11] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:33:19] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:33:19] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:33:19] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:33:20] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:33:20] "[33mPOST /list_files HTTP/1.1[0m" 404 -
+INFO:root:List files initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:33:20] "[33mPOST /list_files HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:33:25] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:33:26] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:33:26] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:33:26] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:33:26] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:33:27] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:33:30] "[33mPOST /upload_file/admin HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:34:06] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:34:06] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:34:09] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:34:57] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:34:57] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:48:20] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:48:20] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:48:20] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:48:21] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:48:21] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:48:21] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:48:25] "[33mPOST /upload_file/admin HTTP/1.1[0m" 404 -
+INFO:root:Upload file initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:48:51] "[33mPOST /upload_file/admin HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Upload file initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:48:56] "[33mPOST /upload_file/admin HTTP/1.1[0m" 404 -
+INFO:root:Upload file initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:49:19] "[33mPOST /upload_file/admin HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:54:18] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:54:19] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:54:19] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:54:19] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:54:19] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:54:19] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:54:24] "[33mPOST /upload_file/admin HTTP/1.1[0m" 404 -
