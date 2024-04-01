@@ -1684,3 +1684,9 @@ INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:22:55] "POST /list_files HTTP/1.1" 2
 INFO:root:List files initiated.
 INFO:file_upload:List files complete.
 INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:22:56] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:28:23] "OPTIONS /registration HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:29:33] "OPTIONS /registration HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:29:39] "OPTIONS /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:33:44] "OPTIONS /registration HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\flask_run.py', reloading
+INFO:werkzeug: * Restarting with stat
