@@ -9,9 +9,20 @@ function WelcomePage({ username }) {
     const [showConfirmation, setShowConfirmation] = useState(false);
 
     useEffect(() => {
-        // Fetch files when the component mounts
-        fetchFiles();
-    }, []);
+        const fetchFiles = async () => {
+            try {
+                // Make a request to fetch files
+                const response = await axios.post('http://localhost:5000/list_files', { username });
+                setFiles(response.data.filenames);
+                setLoading(false);
+            } catch (error) {
+                console.error('Error fetching files:', error);
+            }
+        };
+    
+        fetchFiles(); // Call fetchFiles directly inside the effect
+    
+    }, [username]);
 
     const fetchFiles = async () => {
         try {

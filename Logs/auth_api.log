@@ -1573,3 +1573,101 @@ INFO:file_upload:List files complete.
 INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:54:19] "POST /list_files HTTP/1.1" 200 -
 INFO:root:Upload file initiated.
 INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:54:24] "[33mPOST /upload_file/admin HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Upload file initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:54:33] "[33mPOST /upload_file/admin HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:57:26] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:57:26] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:57:41] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:57:42] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:57:42] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:57:42] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:57:42] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:57:42] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:58:46] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 17:58:46] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:03:42] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:03:43] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:03:47] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:03:48] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:03:48] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:03:48] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:03:48] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:03:49] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:04:33] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:04:33] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:04:42] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:04:42] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:04:49] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:04:49] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:05:14] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:05:14] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:09:22] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:09:22] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:09:22] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:09:23] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:09:23] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:09:23] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:09:34] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:09:34] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:09:41] "[35m[1mPOST /upload_file/admin HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:09:42] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:09:42] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:09:57] "[35m[1mPOST /upload_file/admin HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:09:58] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:09:58] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:10:03] "OPTIONS /remove_file HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:File removal complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:10:03] "POST /remove_file HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:10:03] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2024 22:10:04] "POST /list_files HTTP/1.1" 200 -
