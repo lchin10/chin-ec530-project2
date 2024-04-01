@@ -26,7 +26,7 @@ jobs:
           echo "Flask server is not running. Starting..."
           pip install -r requirements.txt
           cd APIs
-          python flask_run.py  # Adjust this command based on your Flask setup
+          gunicorn flask_run:app
         else
           echo "Flask server is already running."
         fi
