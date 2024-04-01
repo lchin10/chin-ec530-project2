@@ -18,7 +18,7 @@ function RegisterPage({ setLoggedIn, setGlobalUsername }) {
         }
         else {
             try {
-                const response = await axios.post('http://localhost:5000/registration', {
+                const response = await axios.post('http://0.0.0.0:10000/registration', {
                     username,
                     password
                 });
