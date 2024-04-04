@@ -85,7 +85,7 @@ function WelcomePage({ username }) {
     };
 
     return (
-        <div>
+        <div style={{ margin: "3%", }}>
             <h1>Welcome, {username}!</h1>
             <h2>Files:</h2>
             {loading ? (

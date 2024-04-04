@@ -17,6 +17,7 @@ function App() {
         // Remove logged-in state and username from localStorage
         localStorage.removeItem('loggedIn');
         localStorage.removeItem('username');
+        window.location.href = '/#/chin-ec530-project2/';
     };
 
     useEffect(() => {
@@ -31,12 +32,12 @@ function App() {
                 <nav>
                     <ul>
                         <li>
-                            <Link to="/chin-ec530-project2/">Home</Link>
+                            <Link to="/#/chin-ec530-project2/">Home</Link>
                         </li>
                         {loggedIn ? (
                             <>
                                 <li>
-                                    <Link to="/chin-ec530-project2/welcome">Welcome, {username}!</Link>
+                                    <Link to="/#/chin-ec530-project2/welcome">Welcome, {username}!</Link>
                                 </li>
                                 <li>
                                     <button onClick={handleLogout}>Logout</button>
@@ -45,10 +46,10 @@ function App() {
                         ) : (
                             <>
                                 <li>
-                                    <Link to="/chin-ec530-project2/register">Register</Link>
+                                    <Link to="/#/chin-ec530-project2/register">Register</Link>
                                 </li>
                                 <li>
-                                    <Link to="/chin-ec530-project2/login">Login</Link>
+                                    <Link to="/#/chin-ec530-project2/login">Login</Link>
                                 </li>
                             </>
                         )}
@@ -56,10 +57,10 @@ function App() {
                 </nav>
 
                 <Routes>
-                    <Route path="/chin-ec530-project2/register" element={<RegisterPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} />} />
-                    <Route path="/chin-ec530-project2/login" element={<LoginPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} />} />
-                    <Route path="/chin-ec530-project2/welcome" element={loggedIn ? <WelcomePage username={username} /> : <LoginPage setLoggedIn={setLoggedIn} />} />
-                    <Route path="/chin-ec530-project2/" element={<AppPage />} />
+                    <Route path="/#/chin-ec530-project2/register" element={<RegisterPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} />} />
+                    <Route path="/#/chin-ec530-project2/login" element={<LoginPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} />} />
+                    <Route path="/#/chin-ec530-project2/welcome" element={loggedIn ? <WelcomePage username={username} /> : <LoginPage setLoggedIn={setLoggedIn} />} />
+                    <Route path="/#/chin-ec530-project2/" element={<AppPage />} />
                 </Routes>
             </div>
         </Router>
