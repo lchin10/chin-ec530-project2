@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import RegisterPage from './RegisterPage';
 import LoginPage from './LoginPage';
@@ -8,8 +8,23 @@ import WelcomePage from './WelcomePage';
 import './App.css';
 
 function App() {
-    const [loggedIn, setLoggedIn] = useState(false);
-    const [username, setGlobalUsername] = useState('');
+    const [loggedIn, setLoggedIn] = useState(localStorage.getItem('loggedIn') === 'true');
+    const [username, setGlobalUsername] = useState(localStorage.getItem('username') || '');
+
+    const handleLogout = () => {
+        setLoggedIn(false);
+        setGlobalUsername('');
+        // Remove logged-in state and username from localStorage
+        localStorage.removeItem('loggedIn');
+        localStorage.removeItem('username');
+    };
+
+    useEffect(() => {
+        // Store login state and username in localStorage
+        localStorage.setItem('loggedIn', loggedIn);
+        localStorage.setItem('username', username);
+    }, [loggedIn, username]);
+
     return (
         <Router>
             <div>
@@ -24,7 +39,7 @@ function App() {
                                     <Link to="/chin-ec530-project2/welcome">Welcome, {username}!</Link>
                                 </li>
                                 <li>
-                                    <button onClick={() => setLoggedIn(false)}>Logout</button>
+                                    <button onClick={handleLogout}>Logout</button>
                                 </li>
                             </>
                         ) : (

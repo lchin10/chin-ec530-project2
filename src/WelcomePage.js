@@ -64,16 +64,21 @@ function WelcomePage({ username }) {
     };
 
     const handleRemoveFile = async () => {
+        if (files.length === 0) {
+            alert('There are no files.');
+            return;
+        }
+
+        setShowConfirmation(true);
+    };
+
+    const confirmRemoveFile = async () => {
         try {
-            // Make a request to remove the selected file
-            await axios.post('https://chin-ec530-project2-2.onrender.com/remove_file', { username, file_title: file.name });
-            
-            // Refresh the files list after successful removal
+            await axios.post('https://chin-ec530-project2-2.onrender.com/remove_file', { username, file_title: file });
             fetchFiles();
         } catch (error) {
             console.error('Error removing file:', error);
         } finally {
-            // Reset selected file and confirmation state
             setFile(null);
             setShowConfirmation(false);
         }
@@ -102,13 +107,23 @@ function WelcomePage({ username }) {
                     </ul>
                     <input type="file" name="file" onChange={chooseFile} />
                     <button onClick={handleFileUpload} >Upload File</button><br></br><br></br>
-                    <button onClick={() => handleRemoveFile()}>Remove File</button>
-                    {showConfirmation && file && (
-                        <div>
-                            <p>Are you sure you want to remove {file.name}?</p>
-                            <button onClick={handleRemoveFile}>Confirm</button>
-                        </div>
-                    )}
+                    {files.length > 0 ? (
+                        <>
+                            <button onClick={handleRemoveFile}>Remove File</button>
+                            {showConfirmation && (
+                                <div>
+                                    <form onSubmit={confirmRemoveFile}>
+                                        <select value={file ? file.name : ''} onChange={(e) => setFile(e.target.value)}>
+                                            {files.map((file, index) => (
+                                                <option key={index} value={file}>{file}</option>
+                                            ))}
+                                        </select>
+                                        <button type="submit">Confirm</button>
+                                    </form>
+                                </div>
+                            )}
+                        </>
+                    ) : null}
                 </>
             )}
         </div>

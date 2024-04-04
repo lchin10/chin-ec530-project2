@@ -6,6 +6,15 @@
 
 This application provides a secure platform for users to upload various types of documents, and get various forms of information about the text.
 
+### 4/1/2024 Update:
+
+- Transitioned application from terminal to React Web Application
+- Successfully called to web app APIs:
+    - registration, login
+    - uploading files, listing upser files, removing files (partially working)
+- Web app is set up on github pages (https://lchin10.github.io/chin-ec530-project2/)
+- Database is set up with Render (https://chin-ec530-project2-2.onrender.com/ to call APIs in app)
+
 ### 3/23/2024 Update:
 
 - Created working APIs for:
