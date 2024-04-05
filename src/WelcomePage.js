@@ -10,6 +10,10 @@ function WelcomePage({ username }) {
     const [showConfirmation, setShowConfirmation] = useState(false);
 
     useEffect(() => {
+        document.title = "Welcome - Smart Document Analyzer"
+    }, [])
+
+    useEffect(() => {
         const fetchFiles = async () => {
             try {
                 // Make a request to fetch files
@@ -56,9 +60,7 @@ function WelcomePage({ username }) {
                     'Content-Type': 'multipart/form-data'
                 }
             });
-
-            // Refresh the files list after successful upload
-            fetchFiles();
+            window.location.reload();
         } catch (error) {
             console.error('Error uploading file:', error);
         }
@@ -76,7 +78,7 @@ function WelcomePage({ username }) {
     const confirmRemoveFile = async () => {
         try {
             await axios.post('https://chin-ec530-project2-2.onrender.com/remove_file', { username, file_title: file });
-            fetchFiles();
+            window.location.reload();
         } catch (error) {
             console.error('Error removing file:', error);
         } finally {

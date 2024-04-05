@@ -1,5 +1,5 @@
 // LoginPage.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,6 +9,10 @@ function LoginPage({ setLoggedIn, setGlobalUsername }) {
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
+
+    useEffect(() => {
+        document.title = "Login - Smart Document Analyzer"
+    }, [])
 
     const handleLogin = async (e) => {
         e.preventDefault();

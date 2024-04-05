@@ -61,7 +61,7 @@ function App() {
                     <Route path="/chin-ec530-project2/register" element={<RegisterPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} />} />
                     <Route path="/chin-ec530-project2/login" element={<LoginPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} />} />
                     <Route path="/chin-ec530-project2/welcome" element={loggedIn ? <WelcomePage username={username} /> : <LoginPage setLoggedIn={setLoggedIn} />} />
-                    <Route path="/chin-ec530-project2/welcome/:filename" element={<FileDetailsPage />} />
+                    <Route path="/chin-ec530-project2/welcome/:filename" element={<FileDetailsPage username={username} />} />
                     <Route path="/chin-ec530-project2/" element={<AppPage />} />
                 </Routes>
             </div>

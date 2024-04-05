@@ -1,5 +1,5 @@
 // RegisterPage.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,6 +9,10 @@ function RegisterPage({ setLoggedIn, setGlobalUsername }) {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
+
+    useEffect(() => {
+        document.title = "Register - Smart Document Analyzer"
+    }, [])
   
     const handleRegister = async (e) => {
         e.preventDefault();
