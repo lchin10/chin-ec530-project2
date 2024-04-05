@@ -26,7 +26,7 @@ This application provides a secure platform for users to upload various types of
     - Created a script to reset and clear the existing database
 - Created a client-side script to test API functionality
 
-## How it works:
+## How it works (previous application in terminal, not in use anymore):
 
 1. **Create/reset the database:**
 

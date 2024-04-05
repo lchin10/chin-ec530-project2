@@ -1,6 +1,7 @@
 // WelcomePage.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function WelcomePage({ username }) {
     const [files, setFiles] = useState([]);
@@ -94,13 +95,11 @@ function WelcomePage({ username }) {
                 <>
                     <ul>
                         {files && files.length > 0 ? (
-                            (() => {
-                                const fileItems = [];
-                                for (let i = 0; i < files.length; i++) {
-                                    fileItems.push(<li key={i}>{files[i]}</li>);
-                                }
-                                return fileItems;
-                            })()
+                            files.map((file, index) => (
+                                <li key={index}>
+                                    <Link to={`/chin-ec530-project2/welcome/${file}`}>{file}</Link>
+                                </li>
+                            ))
                         ) : (
                             <p>No files in your account.</p>
                         )}

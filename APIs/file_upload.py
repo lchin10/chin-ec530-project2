@@ -257,14 +257,50 @@ def list_files():
         profile.disable()
         profile.dump_stats(f'{profile_folder}list_files.prof')
         return jsonify({'error': 'Internal server error'}), 401
-    
-    file_list = [dict(file) for file in files]
-    
-    logger.info('Files retrieved successfully.')
-    profile.disable()
-    profile.dump_stats(f'{profile_folder}get_files.prof')
-    
-    return jsonify(file_list), 200
+
+# Get File Info
+@file_upload_app.route('/get_file_info', methods=['POST'])
+def get_file_info():
+    # Trace, profiling, logging
+    profile.enable()
+    logging.info('Get file info initiated.')
+
+    data = request.json
+    username = data.get('username')
+    filename = data.get('filename')
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    try:
+        # Get U_ID from username
+        cursor.execute('SELECT U_ID FROM Users WHERE Username = ?', (username,))
+        user = cursor.fetchone()
+        if not user:
+            return jsonify({'error': 'User not found'}), 404
+        u_id = user['U_ID']
+
+        # Get file_ID from Files table
+        cursor.execute('SELECT file_ID FROM Files WHERE U_ID = ? AND file_title = ?', (u_id, filename))
+        file_record = cursor.fetchone()
+        if not file_record:
+            return jsonify({'error': 'File not found'}), 404
+        file_id = file_record['file_ID']
+
+        # Get file info from FileInfo table
+        cursor.execute('SELECT info_type, info FROM FileInfo WHERE file_ID = ?', (file_id,))
+        file_info = cursor.fetchall()
+        info_dict = {info['info_type']: info['info'] for info in file_info}
+
+        logger.info("Get file info complete.")
+        profile.disable()
+        profile.dump_stats(f'{profile_folder}get_file_info.prof')
+        return jsonify({'message': 'File info retrieved successfully', 'file_info': info_dict}), 200
+    except Exception as e:
+        logger.info("Get file info could not be completed.")
+        profile.disable()
+        profile.dump_stats(f'{profile_folder}get_file_info.prof')
+        return jsonify({'error': 'Internal server error'}), 500
 
 # APP RUN
 if __name__ == '__main__':

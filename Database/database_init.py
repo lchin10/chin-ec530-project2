@@ -6,6 +6,7 @@ def create_database():
 
     cursor.execute("DROP TABLE IF EXISTS Users")
     cursor.execute("DROP TABLE IF EXISTS Files")
+    cursor.execute("DROP TABLE IF EXISTS FileInfo")
     cursor.execute("DROP TABLE IF EXISTS Metadata")
 
     # Users
@@ -21,7 +22,7 @@ def create_database():
     # Files
     cursor.execute('''
         CREATE TABLE Files (
-            files_ID INTEGER PRIMARY KEY,
+            file_ID INTEGER PRIMARY KEY,
             file_title TEXT,
             file_data BLOB,
             U_ID INTEGER,
@@ -31,12 +32,11 @@ def create_database():
 
     # Metadata
     cursor.execute('''
-        CREATE TABLE Metadata (
+        CREATE TABLE FileInfo (
             file_ID INTEGER,
-            length INTEGER,
-            width INTEGER,
-            type TEXT,
-            FOREIGN KEY(file_ID) REFERENCES Files(files_ID)
+            info_type TEXT,
+            info TEXT,
+            FOREIGN KEY(file_ID) REFERENCES Files(file_ID)
         )
     ''')
 

@@ -249,6 +249,8 @@ def change_password():
         profile.disable()
         profile.dump_stats(f'{profile_folder}reset_password.prof')
         return jsonify({'error': 'Invalid credentials'}), 401
+
+# Get all users (admin API)
     
 # APP RUN
 if __name__ == '__main__':
