@@ -3,8 +3,7 @@ file_upload.py: Secure File Uploader API
 
 """
 from flask import Flask, request, jsonify
-from flask import Blueprint, current_app
-import os
+from flask import Blueprint
 import sqlite3
 # import tracemalloc
 import cProfile
@@ -26,7 +25,7 @@ def get_db_connection():
     return conn
 
 # Define the route to list online users
-@p2p_app.route('/list_online_users')
+@p2p_app.route('/list_online_users', methods=['POST'])
 def list_online_users():
 
     # Trace, profiling, logging
@@ -52,3 +51,6 @@ def list_online_users():
         return jsonify({'error': 'Cannot list online users'}), 401
     finally:
         conn.close()
+
+if __name__ == '__main__':
+    p2p_app.run(debug=True)

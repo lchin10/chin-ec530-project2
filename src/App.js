@@ -12,6 +12,7 @@ import './App.css';
 function App() {
     const [loggedIn, setLoggedIn] = useState(localStorage.getItem('loggedIn') === 'true');
     const [username, setGlobalUsername] = useState(localStorage.getItem('username') || '');
+    const [onlineUsers, setOnlineUsers] = useState([]);
 
     const handleLogout = async () => {
         try {
@@ -42,6 +43,19 @@ function App() {
         localStorage.setItem('username', username);
     }, [loggedIn, username]);
 
+    useEffect(() => {
+        const fetchOnlineUsers = async () => {
+            try {
+                const response = await axios.post('https://chin-ec530-project2-2.onrender.com/list_online_users');
+                setOnlineUsers(response.data.online_users);
+            } catch (error) {
+                console.error('Error fetching online users:', error);
+            }
+        };
+
+        fetchOnlineUsers();
+    }, []);
+
     return (
         <Router>
             <div>
@@ -71,6 +85,15 @@ function App() {
                         )}
                     </ul>
                 </nav>
+
+                <div className="online-users">
+                    <h3>Online Users</h3>
+                    <ul>
+                        {onlineUsers.map((user, index) => (
+                            <li key={index}>{user}</li>
+                        ))}
+                    </ul>
+                </div>
 
                 <Routes>
                     <Route path="/chin-ec530-project2/register" element={<RegisterPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} />} />
