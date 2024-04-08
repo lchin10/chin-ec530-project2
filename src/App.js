@@ -99,20 +99,32 @@ function App() {
                         <Route path="/chin-ec530-project2/login" element={loggedIn ? <WelcomePage username={username} /> : <LoginPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} />} />
                         <Route path="/chin-ec530-project2/welcome" element={loggedIn ? <WelcomePage username={username} /> : <AppPage />} />
                         <Route path="/chin-ec530-project2/welcome/:filename" element={<FileDetailsPage username={username} />} />
-                        <Route path="/chin-ec530-project2/chat/:recipientUsername" element={<ChatWindow senderUsername={username} />} />
+                        <Route path="/chin-ec530-project2/chat/:recipientUsername" element={loggedIn ? <ChatWindow senderUsername={username} /> : <LoginPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} />} />
                         <Route path="/chin-ec530-project2/" element={<AppPage />} />
                     </Routes>
                 </div>
 
                 <div className="online-users" style={{ border: '2px solid #ccc', borderRadius: '5px', padding: '10px', marginLeft: '20px', margin: "5%",}} >
                     <h3>Online Users</h3>
-                    <ul>
-                        {onlineUsers.map((user, index) => (
-                            <li key={index} onClick={() => handleChatOpen(user)}>
-                                {user}
-                            </li>
-                        ))}
-                    </ul>
+                    {loggedIn ? (
+                        <>
+                            <ul>
+                                {onlineUsers.map((user, index) => (
+                                    <li key={index} onClick={() => handleChatOpen(user)}>
+                                        {user}
+                                    </li>
+                                ))}
+                            </ul>
+                        </>
+                    ) : (
+                        <>
+                            <ul>
+                                {onlineUsers.map((user, index) => (
+                                    <li key={index}>{user}</li>
+                                ))}
+                            </ul>
+                        </>
+                    )}
                 </div>
             </div>
         </Router>
