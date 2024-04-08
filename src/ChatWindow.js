@@ -8,20 +8,6 @@ function ChatWindow({ senderUsername }) {
     const [messages, setMessages] = useState([]);
     const [newMessage, setNewMessage] = useState('');
 
-    useEffect(() => {
-        const fetchMessages = async () => {
-            try {
-                const response = await axios.get(`https://chin-ec530-project2-2.onrender.com/get_messages?sender_username=${senderUsername}&recipient_username=${recipientUsername}`);
-                setMessages(response.data.messages);
-                console.log(response.data.messages);
-            } catch (error) {
-                console.error('Error fetching messages:', error);
-            }
-        };
-
-        fetchMessages();
-    }, [senderUsername, recipientUsername]);
-
     const fetchMessages = async () => {
         try {
             const response = await axios.get(`https://chin-ec530-project2-2.onrender.com/get_messages?sender_username=${senderUsername}&recipient_username=${recipientUsername}`);
@@ -31,6 +17,13 @@ function ChatWindow({ senderUsername }) {
             console.error('Error fetching messages:', error);
         }
     };
+
+    useEffect(() => {
+        fetchMessages();
+        // Poll for new messages every 5 seconds
+        const intervalId = setInterval(fetchMessages, 5000);
+        return () => clearInterval(intervalId);
+    }, [senderUsername, recipientUsername]);
 
     const handleMessageSend = async () => {
         try {
@@ -53,14 +46,16 @@ function ChatWindow({ senderUsername }) {
             <div className="messages">
                 {messages.map((message, index) => (
                     <div key={index} className="message">
-                        <p>{message.Timestamp}: <b>{message.SenderUsername === senderUsername ? 'You' : `User ${recipientUsername}`}</b>: {message.MessageText}</p>
+                        <p>{message.Timestamp}: <b>{message.SenderUsername === senderUsername ? 'You' : `${recipientUsername}`}</b>: {message.MessageText}</p>
                     </div>
                 ))}
             </div>
-            <div className="message-input">
-                <input type="text" value={newMessage} onChange={(e) => setNewMessage(e.target.value)} />
-                <button onClick={handleMessageSend}>Send</button>
-            </div>
+            <form onSubmit={handleMessageSend}>
+                <div className="message-input">
+                    <input type="text" value={newMessage} onChange={(e) => setNewMessage(e.target.value)} />
+                    <button type="submit">Send</button>
+                </div>
+            </form>
         </div>
     );
 }
