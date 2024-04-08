@@ -15,7 +15,8 @@ def create_database():
             U_ID INTEGER PRIMARY KEY,
             Username TEXT,
             Hashed_password TEXT,
-            NOFiles INTEGER
+            NOFiles INTEGER,
+            Token TEXT
         )
     ''')
 

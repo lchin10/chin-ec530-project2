@@ -53,13 +53,13 @@ def registration():
         if existing_user:
             return jsonify({'error': 'Username already exists'}), 401
         
+        token = jwt.encode({'username': username, 'exp': datetime.datetime.now(pytz.utc) + datetime.timedelta(hours=1)}, current_app.config['SECRET_KEY'])
         cursor.execute('''
-            INSERT INTO Users (Username, Hashed_password, NOFiles)
+            INSERT INTO Users (Username, Hashed_password, NOFiles, Token)
             VALUES (?, ?, ?)
-        ''', (username, hashed_password, 0))
+        ''', (username, hashed_password, 0, token))
         conn.commit()
 
-        token = jwt.encode({'username': username, 'exp': datetime.datetime.now(pytz.utc) + datetime.timedelta(hours=1)}, current_app.config['SECRET_KEY'])
         logger.info("Registration complete.")
         profile.disable()
         profile.dump_stats(f'{profile_folder}registration.prof')

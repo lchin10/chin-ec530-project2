@@ -50,6 +50,7 @@ function FileDetailsPage({ username }) {
 
     return (
         <div style={{ margin: "3%", }}>
+            <h2><u>{filename}</u></h2>
             <h1>Current Information:</h1>
             {Object.keys(fileInfo).length > 0 ? (
                 Object.entries(fileInfo).map(([key, value]) => (
