@@ -104,7 +104,7 @@ function App() {
                     </Routes>
                 </div>
 
-                <div className="online-users" style={{ margin: "5%",}} >
+                <div className="online-users" style={{ border: '2px solid #ccc', borderRadius: '5px', padding: '10px', marginLeft: '20px', margin: "5%",}} >
                     <h3>Online Users</h3>
                     <ul>
                         {onlineUsers.map((user, index) => (
