@@ -1,8 +1,10 @@
 // ChatWindow.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
-function ChatWindow({ senderUsername, recipientUsername }) {
+function ChatWindow({ senderUsername }) {
+    const { recipientUsername } = useParams();
     const [messages, setMessages] = useState([]);
     const [newMessage, setNewMessage] = useState('');
 

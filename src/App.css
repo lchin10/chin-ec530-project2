@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.online-users ul li {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.online-users ul li:hover {
+    color: blue;
+}

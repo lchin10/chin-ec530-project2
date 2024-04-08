@@ -10,6 +10,7 @@ This application provides a secure platform for users to upload various types of
 
 - Added P2P Functionality:
     - List current online users
+    - Chat feature with other online users
 
 ### 4/1/2024 Update:
 
