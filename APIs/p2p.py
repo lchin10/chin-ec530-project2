@@ -83,8 +83,8 @@ def send_message():
 
         # Insert message into database
         cursor.execute('''
-            INSERT INTO P2P (SenderID, RecipientID, MessageText)
-            VALUES (?, ?, ?)
+            INSERT INTO P2P (SenderID, RecipientID, MessageText, Timestamp)
+            VALUES (?, ?, ?, CURRENT_TIMESTAMP)
         ''', (sender_id, recipient_id, message_text))
         conn.commit()
 
@@ -128,11 +128,15 @@ def get_messages():
         recipient_id = recipient['U_ID']
 
         # Retrieve messages from database
+        # Rather than keeping the sender/receiver IDs, this replaces them with their usernames to return
         cursor.execute('''
-            SELECT * FROM P2P
-            WHERE (SenderID = ? AND RecipientID = ?)
-            OR (SenderID = ? AND RecipientID = ?)
-            ORDER BY Timestamp
+            SELECT P2P.MessageID, Sender.Username as SenderUsername, Recipient.Username as RecipientUsername, P2P.MessageText, P2P.Timestamp 
+            FROM P2P
+            INNER JOIN Users as Sender ON P2P.SenderID = Sender.U_ID
+            INNER JOIN Users as Recipient ON P2P.RecipientID = Recipient.U_ID
+            WHERE (P2P.SenderID = ? AND P2P.RecipientID = ?)
+            OR (P2P.SenderID = ? AND P2P.RecipientID = ?)
+            ORDER BY P2P.Timestamp
         ''', (sender_id, recipient_id, recipient_id, sender_id))
         messages = cursor.fetchall()
         logger.info("Getting messages complete.")

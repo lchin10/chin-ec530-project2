@@ -32,8 +32,6 @@ function ChatWindow({ senderUsername }) {
 
     const handleMessageSend = async () => {
         try {
-            console.log(senderUsername);
-            console.log(recipientUsername);
             await axios.post('https://chin-ec530-project2-2.onrender.com/send_message', {
                 sender_username: senderUsername,
                 recipient_username: recipientUsername,
@@ -53,7 +51,7 @@ function ChatWindow({ senderUsername }) {
             <div className="messages">
                 {messages.map((message, index) => (
                     <div key={index} className="message">
-                        <p>{message.sender_username === senderUsername ? 'You' : `User ${recipientUsername}`}: {message.message_text}</p>
+                        <p>{message.sender_username === senderUsername ? 'You' : `User ${recipientUsername}`}: {message.MessageText}</p>
                     </div>
                 ))}
             </div>
