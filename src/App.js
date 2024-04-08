@@ -29,7 +29,7 @@ function App() {
                 localStorage.removeItem('loggedIn');
                 localStorage.removeItem('username');
                 window.location.href = '/chin-ec530-project2/';
-            } else {
+            } else if (data.error) {
                 console.log(data.error);
             }
         } catch (error) {
