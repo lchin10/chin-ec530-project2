@@ -57,7 +57,7 @@ def list_online_users():
 def send_message():
     # Trace, profiling, logging
     profile.enable()
-    logging.info('Listing online users initiated.')
+    logging.info('Send message initiated.')
 
     data = request.json
     sender_username = data.get('sender_username')
@@ -88,9 +88,15 @@ def send_message():
         ''', (sender_id, recipient_id, message_text))
         conn.commit()
 
+        logger.info("Sending message complete.")
+        profile.disable()
+        profile.dump_stats(f'{profile_folder}send_message.prof')
         return jsonify({'message': 'Message sent successfully'}), 200
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
+    except sqlite3.IntegrityError:
+        logger.info("Cannot send message.")
+        profile.disable()
+        profile.dump_stats(f'{profile_folder}send_message.prof')
+        return jsonify({'error': 'Cannot send message'}), 401
     finally:
         conn.close()
 
@@ -99,7 +105,7 @@ def send_message():
 def get_messages():
     # Trace, profiling, logging
     profile.enable()
-    logging.info('Listing online users initiated.')
+    logging.info('Get messages initiated.')
 
     sender_username = request.args.get('sender_username')
     recipient_username = request.args.get('recipient_username')
@@ -120,7 +126,7 @@ def get_messages():
         if not recipient:
             return jsonify({'error': 'Recipient not found'}), 404
         recipient_id = recipient['U_ID']
-        
+
         # Retrieve messages from database
         cursor.execute('''
             SELECT * FROM P2P
@@ -129,10 +135,15 @@ def get_messages():
             ORDER BY Timestamp
         ''', (sender_id, recipient_id, recipient_id, sender_id))
         messages = cursor.fetchall()
-
+        logger.info("Getting messages complete.")
+        profile.disable()
+        profile.dump_stats(f'{profile_folder}get_messages.prof')
         return jsonify({'messages': [dict(message) for message in messages]}), 200
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
+    except sqlite3.IntegrityError:
+        logger.info("Cannot get messages.")
+        profile.disable()
+        profile.dump_stats(f'{profile_folder}get_messages.prof')
+        return jsonify({'error': 'Cannot get messages'}), 401
     finally:
         conn.close()
 

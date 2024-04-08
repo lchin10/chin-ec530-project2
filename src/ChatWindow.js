@@ -32,9 +32,11 @@ function ChatWindow({ senderUsername }) {
 
     const handleMessageSend = async () => {
         try {
+            console.log(senderUsername);
+            console.log(recipientUsername);
             await axios.post('https://chin-ec530-project2-2.onrender.com/send_message', {
                 sender_username: senderUsername,
-                recipient_uesrname: recipientUsername,
+                recipient_username: recipientUsername,
                 message_text: newMessage
             });
             // Fetch messages again after sending a new message
