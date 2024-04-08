@@ -17,7 +17,7 @@ This application provides a secure platform for users to upload various types of
 - Transitioned application from terminal to React Web Application
 - Successfully called to web app APIs:
     - registration, login
-    - uploading files, listing upser files, removing files (partially working)
+    - uploading files, listing upser files, removing files
 - Web app is set up on github pages (https://lchin10.github.io/chin-ec530-project2/)
 - Database is set up with Render (https://chin-ec530-project2-2.onrender.com/ to call APIs in app)
 

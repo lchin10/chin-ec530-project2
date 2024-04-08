@@ -8,6 +8,7 @@ function WelcomePage({ username }) {
     const [loading, setLoading] = useState(true);
     const [file, setFile] = useState(null);
     const [showConfirmation, setShowConfirmation] = useState(false);
+    const [selectedFile, setSelectedFile] = useState(files.length > 0 ? files[0] : '');
 
     useEffect(() => {
         document.title = "Welcome - Smart Document Analyzer"
@@ -61,12 +62,14 @@ function WelcomePage({ username }) {
             return;
         }
 
+        setSelectedFile(files[0]);
         setShowConfirmation(true);
     };
 
-    const confirmRemoveFile = async () => {
+    const confirmRemoveFile = async (e) => {
+        e.preventDefault();
         try {
-            await axios.post('https://chin-ec530-project2-2.onrender.com/remove_file', { username, file_title: file });
+            await axios.post('https://chin-ec530-project2-2.onrender.com/remove_file', { username, file_title: selectedFile });
             window.location.reload();
         } catch (error) {
             console.error('Error removing file:', error);
@@ -103,7 +106,7 @@ function WelcomePage({ username }) {
                             {showConfirmation && (
                                 <div>
                                     <form onSubmit={confirmRemoveFile}>
-                                        <select value={file ? file.name : ''} onChange={(e) => setFile(e.target.value)}>
+                                        <select value={selectedFile} onChange={(e) => setSelectedFile(e.target.value)}>
                                             {files.map((file, index) => (
                                                 <option key={index} value={file}>{file}</option>
                                             ))}
