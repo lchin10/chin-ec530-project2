@@ -41,6 +41,19 @@ def create_database():
         )
     ''')
 
+    # P2P
+    cursor.execute('''
+        CREATE TABLE P2P (
+            MessageID INTEGER PRIMARY KEY,
+            SenderID INTEGER,
+            RecipientID INTEGER,
+            MessageText TEXT,
+            Timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY(SenderID) REFERENCES Users(U_ID),
+            FOREIGN KEY(RecipientID) REFERENCES Users(U_ID)
+        );
+    ''')
+
     # Commit changes and close connection
     conn.commit()
     conn.close()

@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import axios from 'axios';
 import RegisterPage from './RegisterPage';
 import LoginPage from './LoginPage';
 import AppPage from './AppPage';
@@ -12,14 +13,10 @@ function App() {
     const [loggedIn, setLoggedIn] = useState(localStorage.getItem('loggedIn') === 'true');
     const [username, setGlobalUsername] = useState(localStorage.getItem('username') || '');
 
-    const handleLogout = async (e) => {
-        e.preventDefault();
-        setLoading(true);
-
+    const handleLogout = async () => {
         try {
             const response = await axios.post('https://chin-ec530-project2-2.onrender.com/logout', {
-                username,
-                password
+                username
             });
 
             const data = response.data;
@@ -33,17 +30,9 @@ function App() {
                 window.location.href = '/chin-ec530-project2/';
             } else {
                 console.log(data.error);
-                setError(data.error); // Set error message
             }
         } catch (error) {
-            if (error.response && error.response.data && error.response.data.error) {
-                const error_message = 'An error occurred:'.concat(' ', error.response.data.error)
-                console.log(error.response.data.error);
-                setError(error_message); // Set error message from API response
-            } else {
-                console.error('An error occurred:', error);
-                setError('An error occurred. Please try again later.');
-            }
+            console.error('Error logging out:', error);
         }
     };
 
