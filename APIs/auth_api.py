@@ -280,9 +280,6 @@ def logout():
         if not user:
             return jsonify({'error': 'Invalid username'}), 404
         
-        if user['Token'] == '':
-            return jsonify({'error': 'User is not logged in'}), 401
-        
         cursor.execute('UPDATE Users SET Token = ? WHERE Username = ?', ('', username))
         conn.commit()
 
