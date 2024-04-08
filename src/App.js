@@ -106,25 +106,13 @@ function App() {
 
                 <div className="online-users" style={{ border: '2px solid #ccc', borderRadius: '5px', padding: '10px', marginLeft: '20px', margin: "5%",}} >
                     <h3>Online Users</h3>
-                    {loggedIn ? (
-                        <>
-                            <ul>
-                                {onlineUsers.map((user, index) => (
-                                    <li key={index} onClick={() => handleChatOpen(user)}>
-                                        {user}
-                                    </li>
-                                ))}
-                            </ul>
-                        </>
-                    ) : (
-                        <>
-                            <ul>
-                                {onlineUsers.map((user, index) => (
-                                    <li key={index}>{user}</li>
-                                ))}
-                            </ul>
-                        </>
-                    )}
+                    <ul>
+                        {onlineUsers.map((user, index) => (
+                            <li key={index} onClick={() => handleChatOpen(user)}>
+                                {user}
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </Router>
