@@ -6,6 +6,11 @@
 
 This application provides a secure platform for users to upload various types of documents, and get various forms of information about the text.
 
+### 4/7/2024 Update:
+
+- Added P2P Functionality:
+    - List current online users
+
 ### 4/1/2024 Update:
 
 - Transitioned application from terminal to React Web Application

@@ -27,7 +27,6 @@ def get_db_connection():
 # Define the route to list online users
 @p2p_app.route('/list_online_users', methods=['POST'])
 def list_online_users():
-
     # Trace, profiling, logging
     profile.enable()
     logging.info('Listing online users initiated.')
@@ -49,6 +48,91 @@ def list_online_users():
         profile.disable()
         profile.dump_stats(f'{profile_folder}list_online_users.prof')
         return jsonify({'error': 'Cannot list online users'}), 401
+    finally:
+        conn.close()
+
+
+# Route to send a message
+@p2p_app.route('/send_message', methods=['POST'])
+def send_message():
+    # Trace, profiling, logging
+    profile.enable()
+    logging.info('Listing online users initiated.')
+
+    data = request.json
+    sender_username = data.get('sender_username')
+    recipient_username = data.get('recipient_username')
+    message_text = data.get('message_text')
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    try:
+        # Get U_IDs
+        cursor.execute('SELECT U_ID FROM Users WHERE Username = ?', (sender_username,))
+        sender = cursor.fetchone()
+        if not sender:
+            return jsonify({'error': 'Sender not found'}), 404
+        sender_id = sender['U_ID']
+        
+        cursor.execute('SELECT U_ID FROM Users WHERE Username = ?', (recipient_username,))
+        recipient = cursor.fetchone()
+        if not recipient:
+            return jsonify({'error': 'Recipient not found'}), 404
+        recipient_id = recipient['U_ID']
+
+        # Insert message into database
+        cursor.execute('''
+            INSERT INTO P2P (SenderID, RecipientID, MessageText)
+            VALUES (?, ?, ?)
+        ''', (sender_id, recipient_id, message_text))
+        conn.commit()
+
+        return jsonify({'message': 'Message sent successfully'}), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+    finally:
+        conn.close()
+
+# Route to retrieve messages between two users
+@p2p_app.route('/get_messages', methods=['GET'])
+def get_messages():
+    # Trace, profiling, logging
+    profile.enable()
+    logging.info('Listing online users initiated.')
+
+    sender_username = request.args.get('sender_username')
+    recipient_username = request.args.get('recipient_username')
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    try:
+        # Get U_IDs
+        cursor.execute('SELECT U_ID FROM Users WHERE Username = ?', (sender_username,))
+        sender = cursor.fetchone()
+        if not sender:
+            return jsonify({'error': 'Sender not found'}), 404
+        sender_id = sender['U_ID']
+        
+        cursor.execute('SELECT U_ID FROM Users WHERE Username = ?', (recipient_username,))
+        recipient = cursor.fetchone()
+        if not recipient:
+            return jsonify({'error': 'Recipient not found'}), 404
+        recipient_id = recipient['U_ID']
+        
+        # Retrieve messages from database
+        cursor.execute('''
+            SELECT * FROM P2P
+            WHERE (SenderID = ? AND RecipientID = ?)
+            OR (SenderID = ? AND RecipientID = ?)
+            ORDER BY Timestamp
+        ''', (sender_id, recipient_id, recipient_id, sender_id))
+        messages = cursor.fetchall()
+
+        return jsonify({'messages': [dict(message) for message in messages]}), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
     finally:
         conn.close()
 

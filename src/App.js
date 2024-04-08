@@ -7,6 +7,7 @@ import LoginPage from './LoginPage';
 import AppPage from './AppPage';
 import WelcomePage from './WelcomePage';
 import FileDetailsPage from './FileDetailsPage';
+import ChatWindow from './ChatWindow';
 import './App.css';
 
 function App() {
@@ -58,6 +59,10 @@ function App() {
         return () => clearInterval(intervalId);
     }, []);
 
+    const handleChatOpen = (recipientUsername) => {
+        window.location.href = `/chin-ec530-project2/chat/${recipientUsername}`;
+    };
+
     return (
         <Router>
             <div>
@@ -92,7 +97,9 @@ function App() {
                     <h3>Online Users</h3>
                     <ul>
                         {onlineUsers.map((user, index) => (
-                            <li key={index}>{user}</li>
+                            <li key={index} onClick={() => handleChatOpen(user.username)}>
+                                {user.username}
+                            </li>
                         ))}
                     </ul>
                 </div>
@@ -102,6 +109,7 @@ function App() {
                     <Route path="/chin-ec530-project2/login" element={<LoginPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} />} />
                     <Route path="/chin-ec530-project2/welcome" element={loggedIn ? <WelcomePage username={username} /> : <LoginPage setLoggedIn={setLoggedIn} />} />
                     <Route path="/chin-ec530-project2/welcome/:filename" element={<FileDetailsPage username={username} />} />
+                    <Route path="/chin-ec530-project2/chat/:recipientUsername" element={<ChatWindow senderUsername={username} />} />
                     <Route path="/chin-ec530-project2/" element={<AppPage />} />
                 </Routes>
             </div>
