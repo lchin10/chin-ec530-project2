@@ -121,6 +121,11 @@ def login():
 
     if hashed_password and bcrypt.checkpw(password.encode('utf-8'), hashed_password[0]):
         token = jwt.encode({'username': username, 'exp': datetime.datetime.now(pytz.utc) + datetime.timedelta(hours=1)}, current_app.config['SECRET_KEY'])
+        cursor.execute('''
+                UPDATE Users
+                SET Token = ?
+                WHERE Username = ?
+            ''', (token, username))
         logger.info("Login complete.")
         profile.disable()
         profile.dump_stats(f'{profile_folder}login.prof')
@@ -249,6 +254,48 @@ def change_password():
         profile.disable()
         profile.dump_stats(f'{profile_folder}reset_password.prof')
         return jsonify({'error': 'Invalid credentials'}), 401
+    
+# Logout
+@auth_api_app.route('/logout', methods=['POST'])
+def logout():
+    # Trace, profiling, logging
+    profile.enable()
+    logging.info('Logout initiated.')
+
+    data = request.json
+    username = data.get('username')
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    try:
+        cursor.execute('SELECT * FROM Users WHERE Username = ?', (username,))
+        user = cursor.fetchone()
+        if not user:
+            return jsonify({'error': 'Invalid username'}), 404
+        
+        if user['Token'] == '':
+            return jsonify({'error': 'User is not logged in'}), 401
+        
+        cursor.execute('UPDATE Users SET Token = ? WHERE Username = ?', ('', username))
+        conn.commit()
+
+        logger.info("Logout complete.")
+        profile.disable()
+        profile.dump_stats(f'{profile_folder}logout.prof')
+        return jsonify({'message': 'Logout successful'}), 200
+    except sqlite3.IntegrityError:
+        logger.info("Logout could not be completed.")
+        profile.disable()
+        profile.dump_stats(f'{profile_folder}logout.prof')
+        return jsonify({'error': 'Logout could not be completed'}), 401
+    finally:
+        conn.close()
+
+
+    # if user invalid: error
+    # if token == '': error 'not logged in'
+    # else: token = ''
 
 # Get all users (admin API)
     

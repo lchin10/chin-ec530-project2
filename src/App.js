@@ -12,13 +12,39 @@ function App() {
     const [loggedIn, setLoggedIn] = useState(localStorage.getItem('loggedIn') === 'true');
     const [username, setGlobalUsername] = useState(localStorage.getItem('username') || '');
 
-    const handleLogout = () => {
-        setLoggedIn(false);
-        setGlobalUsername('');
-        // Remove logged-in state and username from localStorage
-        localStorage.removeItem('loggedIn');
-        localStorage.removeItem('username');
-        window.location.href = '/chin-ec530-project2/';
+    const handleLogout = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+
+        try {
+            const response = await axios.post('https://chin-ec530-project2-2.onrender.com/logout', {
+                username,
+                password
+            });
+
+            const data = response.data;
+            if (data.message) {
+                console.log(data.message);
+                setLoggedIn(false);
+                setGlobalUsername('');
+                // Remove logged-in state and username from localStorage
+                localStorage.removeItem('loggedIn');
+                localStorage.removeItem('username');
+                window.location.href = '/chin-ec530-project2/';
+            } else {
+                console.log(data.error);
+                setError(data.error); // Set error message
+            }
+        } catch (error) {
+            if (error.response && error.response.data && error.response.data.error) {
+                const error_message = 'An error occurred:'.concat(' ', error.response.data.error)
+                console.log(error.response.data.error);
+                setError(error_message); // Set error message from API response
+            } else {
+                console.error('An error occurred:', error);
+                setError('An error occurred. Please try again later.');
+            }
+        }
     };
 
     useEffect(() => {
