@@ -29,17 +29,6 @@ function WelcomePage({ username }) {
     
     }, [username]);
 
-    const fetchFiles = async () => {
-        try {
-            // Make a request to fetch files
-            const response = await axios.post('https://chin-ec530-project2-2.onrender.com/list_files', { username });
-            setFiles(response.data.filenames);
-            setLoading(false);
-        } catch (error) {
-            console.error('Error fetching files:', error);
-        }
-    };
-
     const chooseFile = (e) => {
         setFile(e.target.files[0]);
     };
