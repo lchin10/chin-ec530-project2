@@ -35,6 +35,7 @@ function LoginPage({ setLoggedIn, setGlobalUsername }) {
             } else {
                 console.log(data.error);
                 setError(data.error); // Set error message
+                setLoading(false);
             }
         } catch (error) {
             if (error.response && error.response.data && error.response.data.error) {
@@ -45,6 +46,7 @@ function LoginPage({ setLoggedIn, setGlobalUsername }) {
                 console.error('An error occurred:', error);
                 setError('An error occurred. Please try again later.');
             }
+            setLoading(false);
         }
     };
 

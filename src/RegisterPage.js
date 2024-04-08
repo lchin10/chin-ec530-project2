@@ -8,6 +8,7 @@ function RegisterPage({ setLoggedIn, setGlobalUsername }) {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -16,6 +17,7 @@ function RegisterPage({ setLoggedIn, setGlobalUsername }) {
   
     const handleRegister = async (e) => {
         e.preventDefault();
+        setLoading(true);
 
         if (password !== confirmPassword) {
             setError('An error occurred: Passwords do not match')
@@ -37,6 +39,7 @@ function RegisterPage({ setLoggedIn, setGlobalUsername }) {
                 } else {
                     console.log(data.error);
                     setError(data.error); // Set error message
+                    setLoading(false);
                 }
             } catch (error) {
                 if (error.response && error.response.data && error.response.data.error) {
@@ -47,12 +50,13 @@ function RegisterPage({ setLoggedIn, setGlobalUsername }) {
                     console.error('An error occurred:', error);
                     setError('An error occurred. Please try again later.');
                 }
+                setLoading(false);
             }
         }
     };
   
     return (
-        <div>
+        <div style={{ cursor: loading ? 'wait' : 'default' }}>
             <h2>Register</h2>
             {error && <p style={{ color: 'red' }}>{error}</p>}
             <form onSubmit={handleRegister}>
@@ -74,7 +78,9 @@ function RegisterPage({ setLoggedIn, setGlobalUsername }) {
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
             />
-            <button type="submit">Register</button>
+            <button type="submit" disabled={loading}>
+                    {loading ? 'Loading...' : 'Register'}
+                </button>
             </form>
         </div>
     );
