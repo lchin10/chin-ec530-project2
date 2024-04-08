@@ -132,6 +132,7 @@ def login():
                 SET Token = ?
                 WHERE Username = ?
             ''', (token, username))
+        conn.commit()
         logger.info("Login complete.")
         profile.disable()
         profile.dump_stats(f'{profile_folder}login.prof')
