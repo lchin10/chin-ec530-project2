@@ -35,8 +35,11 @@ function ChatWindow({ senderUsername }) {
         return () => clearInterval(intervalId);
     }, [senderUsername, recipientUsername]);
 
-    const handleMessageSend = async () => {
+    const handleMessageSend = async (e) => {
+        e.preventDefault(); 
         try {
+            // user cannot send message until the previous one is processed
+            e.target.elements.button.disabled = true;
             await axios.post('https://chin-ec530-project2-2.onrender.com/send_message', {
                 sender_username: senderUsername,
                 recipient_username: recipientUsername,
@@ -44,9 +47,11 @@ function ChatWindow({ senderUsername }) {
             });
             // Fetch messages again after sending a new message
             setNewMessage('');
-            fetchMessages();
+            await fetchMessages();
         } catch (error) {
             console.error('Error sending message:', error);
+        } finally {
+            e.target.elements.button.disabled = false;
         }
     };
 
@@ -63,7 +68,7 @@ function ChatWindow({ senderUsername }) {
             <form onSubmit={handleMessageSend}>
                 <div className="message-input">
                     <input type="text" value={newMessage} onChange={(e) => setNewMessage(e.target.value)} />
-                    <button type="submit">Send</button>
+                    <button type="submit" name="button">Send</button>
                 </div>
             </form>
         </div>
