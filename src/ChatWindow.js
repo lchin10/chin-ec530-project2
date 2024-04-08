@@ -19,6 +19,16 @@ function ChatWindow({ senderUsername }) {
     };
 
     useEffect(() => {
+        const fetchMessages = async () => {
+            try {
+                const response = await axios.get(`https://chin-ec530-project2-2.onrender.com/get_messages?sender_username=${senderUsername}&recipient_username=${recipientUsername}`);
+                setMessages(response.data.messages);
+                console.log(response.data.messages);
+            } catch (error) {
+                console.error('Error fetching messages:', error);
+            }
+        };
+
         fetchMessages();
         // Poll for new messages every 5 seconds
         const intervalId = setInterval(fetchMessages, 5000);
