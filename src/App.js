@@ -65,35 +65,46 @@ function App() {
 
     return (
         <Router>
-            <div>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/chin-ec530-project2/">Home</Link>
-                        </li>
-                        {loggedIn ? (
-                            <>
-                                <li>
-                                    <Link to="/chin-ec530-project2/welcome">Welcome, {username}!</Link>
-                                </li>
-                                <li>
-                                    <button onClick={handleLogout}>Logout</button>
-                                </li>
-                            </>
-                        ) : (
-                            <>
-                                <li>
-                                    <Link to="/chin-ec530-project2/register">Register</Link>
-                                </li>
-                                <li>
-                                    <Link to="/chin-ec530-project2/login">Login</Link>
-                                </li>
-                            </>
-                        )}
-                    </ul>
-                </nav>
+            <div style={{ display: 'flex' }}>
+                <div style={{ flexGrow: 1 }}>
+                    <nav>
+                        <ul>
+                            <li>
+                                <Link to="/chin-ec530-project2/">Home</Link>
+                            </li>
+                            {loggedIn ? (
+                                <>
+                                    <li>
+                                        <Link to="/chin-ec530-project2/welcome">Welcome, {username}!</Link>
+                                    </li>
+                                    <li>
+                                        <button onClick={handleLogout}>Logout</button>
+                                    </li>
+                                </>
+                            ) : (
+                                <>
+                                    <li>
+                                        <Link to="/chin-ec530-project2/register">Register</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/chin-ec530-project2/login">Login</Link>
+                                    </li>
+                                </>
+                            )}
+                        </ul>
+                    </nav>
 
-                <div className="online-users">
+                    <Routes>
+                        <Route path="/chin-ec530-project2/register" element={loggedIn ? <WelcomePage username={username} /> : <RegisterPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} />} />
+                        <Route path="/chin-ec530-project2/login" element={loggedIn ? <WelcomePage username={username} /> : <LoginPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} />} />
+                        <Route path="/chin-ec530-project2/welcome" element={loggedIn ? <WelcomePage username={username} /> : <AppPage />} />
+                        <Route path="/chin-ec530-project2/welcome/:filename" element={<FileDetailsPage username={username} />} />
+                        <Route path="/chin-ec530-project2/chat/:recipientUsername" element={<ChatWindow senderUsername={username} />} />
+                        <Route path="/chin-ec530-project2/" element={<AppPage />} />
+                    </Routes>
+                </div>
+
+                <div className="online-users" style={{ margin: "5%",}} >
                     <h3>Online Users</h3>
                     <ul>
                         {onlineUsers.map((user, index) => (
@@ -103,15 +114,6 @@ function App() {
                         ))}
                     </ul>
                 </div>
-
-                <Routes>
-                    <Route path="/chin-ec530-project2/register" element={loggedIn ? <WelcomePage username={username} /> : <RegisterPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} />} />
-                    <Route path="/chin-ec530-project2/login" element={loggedIn ? <WelcomePage username={username} /> : <LoginPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} />} />
-                    <Route path="/chin-ec530-project2/welcome" element={loggedIn ? <WelcomePage username={username} /> : <AppPage />} />
-                    <Route path="/chin-ec530-project2/welcome/:filename" element={<FileDetailsPage username={username} />} />
-                    <Route path="/chin-ec530-project2/chat/:recipientUsername" element={<ChatWindow senderUsername={username} />} />
-                    <Route path="/chin-ec530-project2/" element={<AppPage />} />
-                </Routes>
             </div>
         </Router>
     );

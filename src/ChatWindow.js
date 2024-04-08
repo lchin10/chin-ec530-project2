@@ -13,6 +13,7 @@ function ChatWindow({ senderUsername }) {
             try {
                 const response = await axios.get(`https://chin-ec530-project2-2.onrender.com/get_messages?sender_username=${senderUsername}&recipient_username=${recipientUsername}`);
                 setMessages(response.data.messages);
+                console.log(response.data.messages);
             } catch (error) {
                 console.error('Error fetching messages:', error);
             }
@@ -25,6 +26,7 @@ function ChatWindow({ senderUsername }) {
         try {
             const response = await axios.get(`https://chin-ec530-project2-2.onrender.com/get_messages?sender_username=${senderUsername}&recipient_username=${recipientUsername}`);
             setMessages(response.data.messages);
+            console.log(response.data.messages);
         } catch (error) {
             console.error('Error fetching messages:', error);
         }
@@ -46,12 +48,12 @@ function ChatWindow({ senderUsername }) {
     };
 
     return (
-        <div className="chat-window">
+        <div className="chat-window" style={{ margin: "3%",}} >
             <h2>Chat with User {recipientUsername}</h2>
             <div className="messages">
                 {messages.map((message, index) => (
                     <div key={index} className="message">
-                        <p>{message.sender_username === senderUsername ? 'You' : `User ${recipientUsername}`}: {message.MessageText}</p>
+                        <p>{message.Timestamp}: <b>{message.SenderUsername === senderUsername ? 'You' : `User ${recipientUsername}`}</b>: {message.MessageText}</p>
                     </div>
                 ))}
             </div>
