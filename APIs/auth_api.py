@@ -278,7 +278,7 @@ def logout():
         cursor.execute('SELECT * FROM Users WHERE Username = ?', (username,))
         user = cursor.fetchone()
         if not user:
-            return jsonify({'error': 'Invalid username'}), 404
+            return jsonify({'messsage': 'Invalid username'}), 404
         
         cursor.execute('UPDATE Users SET Token = ? WHERE Username = ?', ('', username))
         conn.commit()
