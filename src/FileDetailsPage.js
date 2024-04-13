@@ -40,7 +40,6 @@ function FileDetailsPage({ username }) {
             const data = response.data;
             if (data.message){
                 console.log(data.message);
-                // window.location.reload();
             } else {
                 console.log(data.error);
             }
@@ -61,7 +60,7 @@ function FileDetailsPage({ username }) {
         if (taggingChecked) {
             await handleTag();
         }
-        // window.location.reload();
+        window.location.reload();
     };
 
     if (!fileInfo) {
