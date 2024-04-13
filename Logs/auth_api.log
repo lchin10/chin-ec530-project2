@@ -1735,3 +1735,11 @@ INFO:root:List files initiated.
 INFO:werkzeug:127.0.0.1 - - [01/Apr/2024 19:42:58] "[33mPOST /list_files HTTP/1.1[0m" 404 -
 INFO:root:List files initiated.
 INFO:werkzeug:127.0.0.1 - - [01/Apr/2024 19:42:58] "[33mPOST /list_files HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.239.241.168:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352

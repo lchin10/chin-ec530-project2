@@ -25,8 +25,28 @@ function FileDetailsPage({ username }) {
         getFileInfo();
     }, [username, filename]);
 
+    // const getFileInfo = async () => {
+    //     try {
+    //         const response = await axios.post('https://chin-ec530-project2-2.onrender.com/get_file_info', { username, filename });
+    //         setFileInfo(response.data.file_info);
+    //     } catch (error) {
+    //         console.error('Error fetching file info:', error);
+    //     }
+    // };
+
     const handleTranslate = async () => {
-        // Make API call to translate doc to text
+        try {
+            const response = await axios.post('https://chin-ec530-project2-2.onrender.com/doc_to_text', { username, filename });
+            const data = response.data;
+            if (data.message){
+                console.log(data.message);
+                // window.location.reload();
+            } else {
+                console.log(data.error);
+            }
+        } catch (error) {
+            console.error('Error fetching file info:', error);
+        }
     };
 
     const handleTag = async () => {
@@ -41,7 +61,7 @@ function FileDetailsPage({ username }) {
         if (taggingChecked) {
             await handleTag();
         }
-        window.location.reload();
+        // window.location.reload();
     };
 
     if (!fileInfo) {

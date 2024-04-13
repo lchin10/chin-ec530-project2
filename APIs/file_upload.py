@@ -103,31 +103,6 @@ def upload_file(username):
         return jsonify({'error': 'Username already exists'}), 401
     finally:
         conn.close()
-
-# Parse file
-@file_upload_app.route('/parse_file', methods=['POST'])
-def parse_file():
-    # Trace, profiling, logging
-    profile.enable()
-    logging.info('Parse file initiated.')
-    
-    data = request.json
-    username = data.get('username')
-    file_title = data.get('file_title')
-
-    conn = get_db_connection()
-    cursor = conn.cursor()
-
-    try:
-        # File not in db
-        cursor.execute('SELECT U_ID FROM Users WHERE Username = ?', (username,))
-    except sqlite3.IntegrityError:
-        logger.info("Upload could not be completed.")
-        profile.disable()
-        profile.dump_stats(f'{profile_folder}upload.prof')
-        return jsonify({'error': 'Username already exists'}), 401
-    finally:
-        conn.close()
     
 
 # Select file
@@ -212,7 +187,7 @@ def remove_file():
         logger.info("File removal complete.")
         profile.disable()
         profile.dump_stats(f'{profile_folder}remove_file.prof')
-        return jsonify({'message': 'File removed successfully'}), 200        
+        return jsonify({'message': 'File removed successfully'}), 200
     except sqlite3.IntegrityError:
         logger.info("Remove could not be completed.")
         profile.disable()
