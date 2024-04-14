@@ -259,7 +259,7 @@ def get_file_info():
         cursor.execute('SELECT file_ID FROM Files WHERE U_ID = ? AND file_title = ?', (u_id, filename))
         file_record = cursor.fetchone()
         if not file_record:
-            return jsonify({'error': f'File \'{filename}\'not found'}), 404
+            return jsonify({'error': 'File not found'}), 404
         file_id = file_record['file_ID']
 
         # Get file info from FileInfo table

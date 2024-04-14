@@ -38,7 +38,7 @@ def doc_to_text():
     
     data = request.json
     username = data.get('username')
-    file_title = data.get('file_title')
+    file_title = data.get('filename')
 
     conn = get_db_connection()
     cursor = conn.cursor()
@@ -55,7 +55,7 @@ def doc_to_text():
         cursor.execute('SELECT file_ID FROM Files WHERE file_title = ? AND U_ID = ?', (file_title, u_id))
         existing_file = cursor.fetchone()
         if not existing_file:
-            return jsonify({'error': 'File not found'}), 404
+            return jsonify({'error': f'File \'{file_title}\' not found'}), 404
         file_id = existing_file[0]
 
         # Determine file path and type
