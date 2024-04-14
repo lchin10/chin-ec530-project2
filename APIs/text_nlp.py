@@ -11,6 +11,8 @@ import sqlite3
 import cProfile
 import logging
 from pypdf import PdfReader
+import pytesseract
+from PIL import Image
 
 # Logging
 logging.basicConfig(filename='../Logs/text_nlp.log', level=logging.INFO)
@@ -70,12 +72,12 @@ def doc_to_text():
                 text = f.read()
         elif file_type == 'pdf':
             pdf_reader = PdfReader(file_path)
-            page = pdf_reader.pages[0]
-            text = page.extract_text()
-            pass
+            text = ""
+            for page in pdf_reader.pages:
+                text += page.extract_text()
         elif file_type in ['png', 'jpg']:
-            # Implement image to text conversion
-            pass
+            img = Image.open(file_path)
+            text = pytesseract.image_to_string(img)
         else:
             return jsonify({'error': 'Unsupported file type'}), 400
 

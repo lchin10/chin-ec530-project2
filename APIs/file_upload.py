@@ -2,7 +2,7 @@
 file_upload.py: Secure File Uploader API
 
 """
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask import Blueprint, current_app
 import os
 import sqlite3
@@ -232,6 +232,22 @@ def list_files():
         profile.disable()
         profile.dump_stats(f'{profile_folder}list_files.prof')
         return jsonify({'error': 'Internal server error'}), 401
+    finally:
+        conn.close()
+    
+ # Show File
+@file_upload_app.route('/show_file/<username>/<filename>', methods=['GET'])
+def show_file(username,filename):
+    # Trace, profiling, logging
+    profile.enable()
+    logging.info('Get file info initiated.')
+
+    upload_folder = current_app.config['UPLOAD_FOLDER']
+    user_folder = os.path.join(upload_folder, username)
+    logger.info("Showing file complete.")
+    profile.disable()
+    profile.dump_stats(f'{profile_folder}show_file.prof')
+    return send_from_directory(user_folder, filename)
 
 # Get File Info
 @file_upload_app.route('/get_file_info', methods=['POST'])
@@ -276,6 +292,8 @@ def get_file_info():
         profile.disable()
         profile.dump_stats(f'{profile_folder}get_file_info.prof')
         return jsonify({'error': 'Internal server error'}), 500
+    finally:
+        conn.close()
 
 # APP RUN
 if __name__ == '__main__':

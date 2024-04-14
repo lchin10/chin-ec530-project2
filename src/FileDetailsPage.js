@@ -5,8 +5,10 @@ import { useParams } from 'react-router-dom';
 function FileDetailsPage({ username }) {
     const { filename } = useParams();
     const [fileInfo, setFileInfo] = useState(null);
+    const [loading, setLoading] = useState(false);
     const [translationChecked, setTranslationChecked] = useState(false);
     const [taggingChecked, setTaggingChecked] = useState(false);
+    const [fileContent, setFileContent] = useState('');
 
     useEffect(() => {
         document.title = `${filename} - Smart Document Analyzer`;
@@ -25,14 +27,18 @@ function FileDetailsPage({ username }) {
         getFileInfo();
     }, [username, filename]);
 
-    // const getFileInfo = async () => {
-    //     try {
-    //         const response = await axios.post('https://chin-ec530-project2-2.onrender.com/get_file_info', { username, filename });
-    //         setFileInfo(response.data.file_info);
-    //     } catch (error) {
-    //         console.error('Error fetching file info:', error);
-    //     }
-    // };
+    useEffect(() => {
+        const fetchFile = async () => {
+            try {
+                const response = await axios.get(`https://chin-ec530-project2-2.onrender.com/show_file/${username}/${filename}`);
+                setFileContent(response.data);
+            } catch (error) {
+                console.error('Error fetching file:', error);
+            }
+        };
+    
+        fetchFile();
+    }, [username, filename]);
 
     const handleTranslate = async () => {
         try {
@@ -54,6 +60,8 @@ function FileDetailsPage({ username }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true);
+
         if (translationChecked) {
             await handleTranslate();
         }
@@ -61,6 +69,7 @@ function FileDetailsPage({ username }) {
             await handleTag();
         }
         // window.location.reload();
+        setLoading(false);
     };
 
     if (!fileInfo) {
@@ -98,8 +107,13 @@ function FileDetailsPage({ username }) {
                     />
                 </label>
                 <br />
-                <button type="submit">Confirm</button>
+                <button type="submit" disabled={loading}>
+                    {loading ? 'Loading...' : 'Confirm'}
+                </button>
             </form>
+            <div>
+                <pre>{fileContent}</pre>
+            </div>
         </div>
     );
 }

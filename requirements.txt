@@ -5,3 +5,4 @@ pyjwt==2.8.0
 bcrypt==4.1.2
 pytz==2023.3
 pypdf==4.2.0
+pytesseract==0.3.10
