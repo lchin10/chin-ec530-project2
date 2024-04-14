@@ -60,7 +60,7 @@ function FileDetailsPage({ username }) {
         if (taggingChecked) {
             await handleTag();
         }
-        window.location.reload();
+        // window.location.reload();
     };
 
     if (!fileInfo) {

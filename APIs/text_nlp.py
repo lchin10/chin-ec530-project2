@@ -79,6 +79,12 @@ def doc_to_text():
         else:
             return jsonify({'error': 'Unsupported file type'}), 400
 
+        # Check if the entry already exists in FileInfo
+        cursor.execute('SELECT * FROM FileInfo WHERE file_ID = ? AND info_type = ?', (file_id, 'text'))
+        existing_entry = cursor.fetchone()
+        if existing_entry:
+            return jsonify({'error': 'Text already exists for this file'}), 400
+
         # Insert text into database
         cursor.execute('INSERT INTO FileInfo (info_type, info, file_ID) VALUES (?, ?, ?)', ('text', text, file_id))
         conn.commit()
@@ -108,3 +114,7 @@ def doc_to_text():
 
 # # Name recognizer (names, locations, institutions and address)
 # def name_recognizer(file_ID):
+
+# APP RUN
+if __name__ == '__main__':
+    text_nlp_app.run(debug=True)
