@@ -236,18 +236,47 @@ def list_files():
         conn.close()
     
  # Show File
-@file_upload_app.route('/show_file/<username>/<filename>', methods=['GET'])
-def show_file(username,filename):
+@file_upload_app.route('/get_file', methods=['POST'])
+def get_file():
     # Trace, profiling, logging
     profile.enable()
     logging.info('Get file info initiated.')
 
-    upload_folder = current_app.config['UPLOAD_FOLDER']
-    user_folder = os.path.join(upload_folder, username)
-    logger.info("Showing file complete.")
-    profile.disable()
-    profile.dump_stats(f'{profile_folder}show_file.prof')
-    return send_from_directory(user_folder, filename)
+    data = request.json
+    username = data.get('username')
+    filename = data.get('filename')
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    try:
+        # Get UID from username
+        cursor.execute('SELECT U_ID FROM Users WHERE Username = ?', (username,))
+        user = cursor.fetchone()
+        if not user:
+            return jsonify({'error': 'User not found'}), 404
+        u_id = user['U_ID']
+
+        # Check if the file exists in the database
+        cursor.execute('SELECT file_data FROM Files WHERE file_title = ? AND U_ID = ?', (filename,u_id))
+        file_data = cursor.fetchone()
+        if file_data:
+            # If file exists in the database, return the file data
+            return file_data[0]
+
+        # # If file does not exist in the database, retrieve it from the file system
+        # upload_folder = current_app.config['UPLOAD_FOLDER']
+        # user_folder = os.path.join(upload_folder, username)
+        # file_path = os.path.join(user_folder, filename)
+        # with open(file_path, 'rb') as f:
+        #     return f.read()
+    except sqlite3.IntegrityError:
+        logger.info("Could not get text from doc.")
+        profile.disable()
+        profile.dump_stats(f'{profile_folder}doc_to_text.prof')
+        return jsonify({'error': 'Internal server error'}), 401
+    finally:
+        conn.close()
 
 # Get File Info
 @file_upload_app.route('/get_file_info', methods=['POST'])

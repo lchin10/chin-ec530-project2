@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+// import { Document, Page, pdfjs } from 'react-pdf';
 
 function FileDetailsPage({ username }) {
     const { filename } = useParams();
@@ -30,10 +31,11 @@ function FileDetailsPage({ username }) {
     useEffect(() => {
         const fetchFile = async () => {
             try {
-                const response = await axios.get(`https://chin-ec530-project2-2.onrender.com/show_file/${username}/${filename}`);
+                const response = await axios.post('https://chin-ec530-project2-2.onrender.com/get_file', { username, filename });
                 setFileContent(response.data);
             } catch (error) {
                 console.error('Error fetching file:', error);
+            } finally {
             }
         };
     
@@ -111,9 +113,17 @@ function FileDetailsPage({ username }) {
                     {loading ? 'Loading...' : 'Confirm'}
                 </button>
             </form>
-            <div>
-                <pre>{fileContent}</pre>
-            </div>
+            {fileContent && (
+                <div>
+                    {filename.endsWith('.jpg') || filename.endsWith('.png') ? (
+                        <img src={`data:image/jpeg;base64,${fileContent}`} alt="File" />
+                    ) : filename.endsWith('.pdf') ? (
+                        <embed src={URL.createObjectURL(fileContent)} type="application/pdf" width="100%" height="500px"></embed>
+                    ) : (
+                        <pre>{fileContent}</pre>
+                    )}
+                </div>
+            )}
         </div>
     );
 }
