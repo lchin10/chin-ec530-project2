@@ -9,7 +9,7 @@ function FileDetailsPage({ username }) {
     const [loading, setLoading] = useState(false);
     const [translationChecked, setTranslationChecked] = useState(false);
     const [taggingChecked, setTaggingChecked] = useState(false);
-    const [fileContent, setFileContent] = useState('');
+    // const [fileContent, setFileContent] = useState('');
 
     useEffect(() => {
         document.title = `${filename} - Smart Document Analyzer`;
@@ -28,19 +28,19 @@ function FileDetailsPage({ username }) {
         getFileInfo();
     }, [username, filename]);
 
-    useEffect(() => {
-        const fetchFile = async () => {
-            try {
-                const response = await axios.post('https://chin-ec530-project2-2.onrender.com/get_file', { username, filename });
-                setFileContent(response.data);
-            } catch (error) {
-                console.error('Error fetching file:', error);
-            } finally {
-            }
-        };
+    // useEffect(() => {
+    //     const fetchFile = async () => {
+    //         try {
+    //             const response = await axios.post('https://chin-ec530-project2-2.onrender.com/get_file', { username, filename });
+    //             setFileContent(response.data);
+    //         } catch (error) {
+    //             console.error('Error fetching file:', error);
+    //         } finally {
+    //         }
+    //     };
     
-        fetchFile();
-    }, [username, filename]);
+    //     fetchFile();
+    // }, [username, filename]);
 
     const handleTranslate = async () => {
         try {
@@ -70,7 +70,7 @@ function FileDetailsPage({ username }) {
         if (taggingChecked) {
             await handleTag();
         }
-        // window.location.reload();
+        window.location.reload();
         setLoading(false);
     };
 
@@ -113,17 +113,24 @@ function FileDetailsPage({ username }) {
                     {loading ? 'Loading...' : 'Confirm'}
                 </button>
             </form>
-            {fileContent && (
+            {/* {fileContent && (
                 <div>
                     {filename.endsWith('.jpg') || filename.endsWith('.png') ? (
                         <img src={`data:image/jpeg;base64,${fileContent}`} alt="File" />
                     ) : filename.endsWith('.pdf') ? (
-                        <embed src={URL.createObjectURL(fileContent)} type="application/pdf" width="100%" height="500px"></embed>
+                        <iframe
+                            id="pdf-viewer"
+                            title="PDF Viewer"
+                            src={`data:application/pdf;base64,${fileContent}`}
+                            width="100%"
+                            height="500px"
+                            frameborder="0"
+                        ></iframe>
                     ) : (
                         <pre>{fileContent}</pre>
                     )}
                 </div>
-            )}
+            )} */}
         </div>
     );
 }

@@ -13,6 +13,10 @@ import logging
 from pypdf import PdfReader
 import pytesseract
 from PIL import Image
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+from collections import Counter
 
 # Logging
 logging.basicConfig(filename='../Logs/text_nlp.log', level=logging.INFO)
@@ -103,8 +107,70 @@ def doc_to_text():
     finally:
         conn.close()
 
-# # Find topics and keywords (for whole text and seperate paragraphs)
-# def find_topics(file_ID):
+# Find topics and keywords (for whole text and seperate paragraphs)
+@text_nlp_app.route('/tag_keywords_topics', methods=['POST'])
+def tag_keywords_topics():
+    # Trace, profiling, logging
+    profile.enable()
+    logging.info('Tag keywords and topics initiated.')
+    
+    data = request.json
+    username = data.get('username')
+    file_title = data.get('filename')
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    try:
+        # Get UID from username
+        cursor.execute('SELECT U_ID FROM Users WHERE Username = ?', (username,))
+        user = cursor.fetchone()
+        if not user:
+            return jsonify({'error': 'User not found'}), 404
+        u_id = user[0]
+
+        # Check if file exists for user in file database
+        cursor.execute('SELECT file_ID FROM Files WHERE file_title = ? AND U_ID = ?', (file_title, u_id))
+        existing_file = cursor.fetchone()
+        if not existing_file:
+            return jsonify({'error': f'File \'{file_title}\' not found'}), 404
+        file_id = existing_file[0]
+
+        # Check if text has been extracted
+        cursor.execute('SELECT info FROM FileInfo WHERE file_ID = ? AND info_type = ?', (file_id, 'text'))
+        text_info = cursor.fetchone()
+        if not text_info:
+            return jsonify({'error': 'Text information not found for this file'}), 400
+        text = text_info['info']
+
+        # Tokenize the text
+        tokens = word_tokenize(text)
+        # Remove stop words
+        stop_words = set(stopwords.words('english'))
+        filtered_tokens = [word for word in tokens if word.lower() not in stop_words]
+        # Lemmatize tokens
+        lemmatizer = WordNetLemmatizer()
+        lemmatized_tokens = [lemmatizer.lemmatize(token) for token in filtered_tokens]
+        # Get the most common keywords/topics
+        keywords_count = 3
+        keywords = Counter(lemmatized_tokens).most_common(keywords_count)
+
+        # Insert keywords/topics into the database
+        for keyword, count in keywords:
+            cursor.execute('INSERT INTO FileInfo (info_type, info, file_ID) VALUES (?, ?, ?)', ('keyword', keyword, file_id))
+            conn.commit()
+
+        logger.info("Tag keywords and topics complete.")
+        profile.disable()
+        profile.dump_stats(f'{profile_folder}tag_keywords_topics.prof')
+        return jsonify({'message': 'Tag keywords and topics successful'}), 200
+    except sqlite3.IntegrityError:
+        logger.info("Could not tag keywords and topics.")
+        profile.disable()
+        profile.dump_stats(f'{profile_folder}tag_keywords_topics.prof')
+        return jsonify({'error': 'Internal server error'}), 401
+    finally:
+        conn.close()
 
 # def find_keywords(file_ID):
 
