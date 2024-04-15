@@ -1,9 +1,17 @@
+"""
+flask_run.py: Runs Flask Application in full
+
+"""
 from flask import Flask
 from flask_cors import CORS
 from auth_api import auth_api_app
 from file_upload import file_upload_app
 from p2p import p2p_app
 from text_nlp import text_nlp_app
+
+# import nltk
+# nltk.download('stopwords')
+# nltk.download('wordnet')
 
 app = Flask(__name__)
 CORS(app)
