@@ -13,6 +13,10 @@ import logging
 from pypdf import PdfReader
 import pytesseract
 from PIL import Image
+
+import nltk
+nltk.download('stopwords')
+nltk.download('wordnet')
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer

@@ -57,7 +57,17 @@ function FileDetailsPage({ username }) {
     };
 
     const handleTag = async () => {
-        // Make API call to tag doc with keywords/topics
+        try {
+            const response = await axios.post('https://chin-ec530-project2-2.onrender.com/tag_keywords_topics', { username, filename });
+            const data = response.data;
+            if (data.message){
+                console.log(data.message);
+            } else {
+                console.log(data.error);
+            }
+        } catch (error) {
+            console.error('Error fetching file info:', error);
+        }
     };
 
     const handleSubmit = async (e) => {
