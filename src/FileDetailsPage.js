@@ -9,7 +9,6 @@ function FileDetailsPage({ username }) {
     const [loading, setLoading] = useState(false);
     const [translationChecked, setTranslationChecked] = useState(false);
     const [taggingChecked, setTaggingChecked] = useState(false);
-    // const [fileContent, setFileContent] = useState('');
 
     useEffect(() => {
         document.title = `${filename} - Smart Document Analyzer`;
@@ -19,6 +18,7 @@ function FileDetailsPage({ username }) {
         const getFileInfo = async () => {
             try {
                 const response = await axios.post('https://chin-ec530-project2-2.onrender.com/get_file_info', { username, filename });
+                // const response = await axios.post('http://localhost:5000/get_file_info', { username, filename });
                 setFileInfo(response.data.file_info);
             } catch (error) {
                 console.error('Error fetching file info:', error);
@@ -28,23 +28,10 @@ function FileDetailsPage({ username }) {
         getFileInfo();
     }, [username, filename]);
 
-    // useEffect(() => {
-    //     const fetchFile = async () => {
-    //         try {
-    //             const response = await axios.post('https://chin-ec530-project2-2.onrender.com/get_file', { username, filename });
-    //             setFileContent(response.data);
-    //         } catch (error) {
-    //             console.error('Error fetching file:', error);
-    //         } finally {
-    //         }
-    //     };
-    
-    //     fetchFile();
-    // }, [username, filename]);
-
     const handleTranslate = async () => {
         try {
             const response = await axios.post('https://chin-ec530-project2-2.onrender.com/doc_to_text', { username, filename });
+            // const response = await axios.post('http://localhost:5000/doc_to_text', { username, filename });
             const data = response.data;
             if (data.message){
                 console.log(data.message);
@@ -59,6 +46,7 @@ function FileDetailsPage({ username }) {
     const handleTag = async () => {
         try {
             const response = await axios.post('https://chin-ec530-project2-2.onrender.com/tag_keywords_topics', { username, filename });
+            // const response = await axios.post('http://localhost:5000/tag_keywords_topics', { username, filename });
             const data = response.data;
             if (data.message){
                 console.log(data.message);
@@ -91,14 +79,6 @@ function FileDetailsPage({ username }) {
     return (
         <div style={{ margin: "3%", }}>
             <h2><u>{filename}</u></h2>
-            <h1>Current Information:</h1>
-            {Object.keys(fileInfo).length > 0 ? (
-                Object.entries(fileInfo).map(([key, value]) => (
-                    <p key={key}>{key}: {value}</p>
-                ))
-            ) : (
-                <p>No information available for this file.</p>
-            )}
             <h2>What would you like to do with this file?</h2>
             <form onSubmit={handleSubmit}>
                 <label>
@@ -123,24 +103,18 @@ function FileDetailsPage({ username }) {
                     {loading ? 'Loading...' : 'Confirm'}
                 </button>
             </form>
-            {/* {fileContent && (
-                <div>
-                    {filename.endsWith('.jpg') || filename.endsWith('.png') ? (
-                        <img src={`data:image/jpeg;base64,${fileContent}`} alt="File" />
-                    ) : filename.endsWith('.pdf') ? (
-                        <iframe
-                            id="pdf-viewer"
-                            title="PDF Viewer"
-                            src={`data:application/pdf;base64,${fileContent}`}
-                            width="100%"
-                            height="500px"
-                            frameborder="0"
-                        ></iframe>
-                    ) : (
-                        <pre>{fileContent}</pre>
-                    )}
-                </div>
-            )} */}
+            <h1>Current Information:</h1>
+            {Object.keys(fileInfo).length > 0 ? (
+                Object.entries(fileInfo).map(([key, value]) => (
+                    // <p key={key}>{key}: {value}</p>
+                    <details>
+                        <summary className='text-info'> {key} </summary>
+                        {value}
+                    </details>
+                ))
+            ) : (
+                <p>No information available for this file.</p>
+            )}
         </div>
     );
 }

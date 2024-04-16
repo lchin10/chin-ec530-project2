@@ -25,6 +25,7 @@ function RegisterPage({ setLoggedIn, setGlobalUsername }) {
         else {
             try {
                 const response = await axios.post('https://chin-ec530-project2-2.onrender.com/registration', {
+                // const response = await axios.post('http://localhost:5000/registration', {
                     username,
                     password
                 });

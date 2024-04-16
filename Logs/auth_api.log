@@ -1785,3 +1785,921 @@ INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:47:13] "OPTIONS /logout HTTP/1.1" 200 -
+INFO:root:Logout initiated.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:47:13] "[35m[1mPOST /logout HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:48:28] "OPTIONS /registration HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:48:28] "POST /registration HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:48:29] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:48:29] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:48:29] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:48:29] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:48:34] "[35m[1mPOST /upload_file/admin HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:48:35] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:48:35] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:48:35] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:48:35] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:49:00] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:49:01] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:49:03] "OPTIONS /doc_to_text HTTP/1.1" 200 -
+INFO:root:Doc to text initiated.
+INFO:text_nlp:Doc to text complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:49:04] "POST /doc_to_text HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:49:05] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:49:06] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:49:08] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:49:08] "[35m[1mPOST /tag_keywords_topics HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:49:48] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:text_nlp:Tag keywords and topics complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:49:52] "POST /tag_keywords_topics HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:49:57] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:49:57] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:49:57] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:49:57] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:50:03] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:text_nlp:Tag keywords and topics complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:50:04] "POST /tag_keywords_topics HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:50:08] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:50:08] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:50:08] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 20:50:08] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:02:12] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:text_nlp:Tag keywords and topics complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:02:18] "POST /tag_keywords_topics HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:02:21] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:02:21] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:02:21] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:02:22] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:04:17] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:04:17] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:04:17] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:04:17] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:04:25] "[35m[1mPOST /upload_file/admin HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:04:26] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:04:26] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:04:27] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:04:27] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:04:27] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:04:34] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:04:34] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:04:34] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:04:34] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:04:36] "OPTIONS /doc_to_text HTTP/1.1" 200 -
+INFO:root:Doc to text initiated.
+INFO:text_nlp:Doc to text complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:04:57] "POST /doc_to_text HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:05:03] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:text_nlp:Tag keywords and topics complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:05:10] "POST /tag_keywords_topics HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:05:13] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:05:13] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:05:13] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:05:14] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:27:14] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:text_nlp:Tag keywords and topics complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:27:18] "POST /tag_keywords_topics HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:27:22] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:27:22] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:27:23] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:27:23] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:30:35] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:30:35] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:30:40] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:text_nlp:Tag keywords and topics complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:30:42] "POST /tag_keywords_topics HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:30:43] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:30:44] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:30:44] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:30:44] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:33:56] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:33:56] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:39:19] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:39:19] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:39:19] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:39:19] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:39:38] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:39:38] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:39:58] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:39:58] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:39:58] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:39:58] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:40:51] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:40:51] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:41:41] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:41:41] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:42:03] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:42:03] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:42:17] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:42:17] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:42:53] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:42:53] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:42:58] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:42:58] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:42:58] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:42:59] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:43:27] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:43:27] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:43:27] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:43:27] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:43:29] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:43:29] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:43:51] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:43:51] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:47:29] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:47:29] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:48:10] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:48:10] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:48:19] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:48:19] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:48:24] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:48:24] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:48:42] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:48:42] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:48:43] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:48:43] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:49:01] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:49:01] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:49:31] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:49:31] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:49:38] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:49:38] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:49:38] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:49:38] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:50:20] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:50:20] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:50:21] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:50:21] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:51:00] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:51:00] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:51:01] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:51:01] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:54:22] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:54:22] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:54:31] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:text_nlp:Tag keywords and topics complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:54:38] "POST /tag_keywords_topics HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:54:40] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:54:40] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:54:40] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 21:54:40] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:11:38] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:11:38] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:11:38] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:11:38] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:11:41] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:11:41] "[31m[1mPOST /tag_keywords_topics HTTP/1.1[0m" 400 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:11:42] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:11:42] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:12:03] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:12:04] "[31m[1mPOST /tag_keywords_topics HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:12:05] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:12:05] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:12:05] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:12:05] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:12:19] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:12:19] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:12:19] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:12:19] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:12:22] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:12:22] "[31m[1mPOST /tag_keywords_topics HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:13:38] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:13:38] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:13:39] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:13:39] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:13:43] "OPTIONS /remove_file HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:File removal complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:13:43] "POST /remove_file HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:13:45] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:13:45] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:13:45] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:13:45] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:13:55] "[35m[1mPOST /upload_file/admin HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:13:56] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:13:56] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:13:56] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:13:56] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:13:57] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:13:58] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:13:58] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:13:58] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:14:00] "OPTIONS /doc_to_text HTTP/1.1" 200 -
+INFO:root:Doc to text initiated.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:14:23] "[31m[1mPOST /doc_to_text HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\file_upload.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:04] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:04] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:04] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:04] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:05] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:08] "OPTIONS /remove_file HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:File removal complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:08] "POST /remove_file HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:09] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:09] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:09] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:10] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:16] "OPTIONS /remove_file HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:File removal complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:16] "POST /remove_file HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:17] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:17] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:17] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:17] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:25] "[35m[1mPOST /upload_file/admin HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:26] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:26] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:26] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:26] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:27] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:28] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:28] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:28] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:29] "OPTIONS /doc_to_text HTTP/1.1" 200 -
+INFO:root:Doc to text initiated.
+INFO:text_nlp:Doc to text complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:42] "POST /doc_to_text HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:46] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:46] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:46] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:46] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:16:54] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:17:03] "[35m[1mPOST /tag_keywords_topics HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:23:44] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:23:44] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:23:45] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:23:45] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:23:46] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:text_nlp:Tag keywords and topics complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:24:02] "POST /tag_keywords_topics HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:24:06] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:24:06] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:24:06] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:24:06] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:26:57] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:26:59] "[31m[1mPOST /tag_keywords_topics HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:02] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:02] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:03] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:03] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:05] "OPTIONS /remove_file HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:File removal complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:05] "POST /remove_file HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:06] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:07] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:16] "[35m[1mPOST /upload_file/admin HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:17] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:17] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:17] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:18] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:18] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:19] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:19] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:19] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:21] "OPTIONS /doc_to_text HTTP/1.1" 200 -
+INFO:root:Doc to text initiated.
+INFO:text_nlp:Doc to text complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:45] "POST /doc_to_text HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:48] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:49] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:50] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:50] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:27:51] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:28:08] "[35m[1mPOST /tag_keywords_topics HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:28:09] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:28:09] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:28:09] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2024 22:28:09] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 02:02:07] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 02:02:24] "[35m[1mPOST /tag_keywords_topics HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 02:02:26] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 02:02:26] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 02:02:27] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 02:02:27] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:23:21] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:23:23] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:23:23] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:23:36] "[35m[1mPOST /tag_keywords_topics HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:23:37] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:23:37] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:root:Get file info initiated.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:23:38] "POST /get_file_info HTTP/1.1" 200 -
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:23:38] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:31:05] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:31:17] "[35m[1mPOST /tag_keywords_topics HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:31:55] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:31:55] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:31:55] "POST /get_file_info HTTP/1.1" 200 -
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:31:55] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:32:25] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:text_nlp:Tag keywords and topics complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:32:41] "POST /tag_keywords_topics HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:32:44] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:32:44] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:32:44] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:32:44] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:35:51] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:35:51] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:35:51] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:35:51] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:35:54] "OPTIONS /remove_file HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:File removal complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:35:54] "POST /remove_file HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:35:55] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:35:55] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:36:01] "[35m[1mPOST /upload_file/admin HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:36:02] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:36:02] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:36:02] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:36:03] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:36:03] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:36:04] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:36:04] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:36:04] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:36:09] "OPTIONS /doc_to_text HTTP/1.1" 200 -
+INFO:root:Doc to text initiated.
+INFO:text_nlp:Doc to text complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:36:21] "POST /doc_to_text HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:36:21] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:text_nlp:Tag keywords and topics complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:36:30] "POST /tag_keywords_topics HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:36:59] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:36:59] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:36:59] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:36:59] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:50:43] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:50:43] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:50:43] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:50:43] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:50:47] "OPTIONS /remove_file HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:File removal complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:50:47] "POST /remove_file HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:50:49] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:50:49] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:50:49] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:50:49] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:50:57] "[35m[1mPOST /upload_file/admin HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:50:58] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:50:58] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:50:58] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:50:59] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:51:00] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:51:00] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:51:00] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:51:00] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:51:03] "OPTIONS /doc_to_text HTTP/1.1" 200 -
+INFO:root:Doc to text initiated.
+INFO:text_nlp:Doc to text complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:51:14] "POST /doc_to_text HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:51:14] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:text_nlp:Tag keywords and topics complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:51:24] "POST /tag_keywords_topics HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:51:27] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:51:27] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:51:28] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 11:51:28] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:11] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:11] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:11] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:12] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:15] "OPTIONS /remove_file HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:File removal complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:15] "POST /remove_file HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:17] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:17] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:17] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:17] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:27] "[35m[1mPOST /upload_file/admin HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:28] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:28] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:28] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:29] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:30] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:30] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:30] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:30] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:33] "OPTIONS /doc_to_text HTTP/1.1" 200 -
+INFO:root:Doc to text initiated.
+INFO:text_nlp:Doc to text complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:41] "POST /doc_to_text HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:41] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+INFO:sentence_transformers.SentenceTransformer:Use pytorch device_name: cpu
+INFO:text_nlp:Tag keywords and topics complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:19:58] "POST /tag_keywords_topics HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:20:03] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:20:03] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:20:03] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:20:03] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:26:09] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:26:09] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:26:09] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:26:09] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:26:19] "[35m[1mPOST /upload_file/admin HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:26:20] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:26:26] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:26:26] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:26:27] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:26:27] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:26:27] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:26:27] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:26:33] "OPTIONS /doc_to_text HTTP/1.1" 200 -
+INFO:root:Doc to text initiated.
+INFO:text_nlp:Doc to text complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:26:33] "POST /doc_to_text HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:26:33] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+INFO:sentence_transformers.SentenceTransformer:Use pytorch device_name: cpu
+INFO:text_nlp:Tag keywords and topics complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:26:37] "POST /tag_keywords_topics HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:26:41] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:26:41] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:26:41] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2024 15:26:41] "POST /get_file_info HTTP/1.1" 200 -

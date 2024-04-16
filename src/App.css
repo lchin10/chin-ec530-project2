@@ -45,3 +45,13 @@
 .online-users ul li:hover {
     color: blue;
 }
+
+.text-info {
+    cursor: pointer;
+    border: 1px solid transparent; /* Initially transparent border */
+    transition: border-color 0.3s ease;
+}
+
+.text-info:hover {
+    border-color: black;
+}

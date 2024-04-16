@@ -176,6 +176,9 @@ def remove_file():
         if os.path.exists(file_path):
             os.remove(file_path)
 
+        # Remove all entries related to the file from the FileInfo table
+        cursor.execute('DELETE FROM FileInfo WHERE file_ID = ?', (existing_file['file_ID'],))
+
         # Remove file from database
         cursor.execute('DELETE FROM Files WHERE file_title = ? AND U_ID = ?', (file_title, u_id))
 

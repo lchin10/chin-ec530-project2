@@ -13,14 +13,8 @@ import logging
 from pypdf import PdfReader
 import pytesseract
 from PIL import Image
-
-import nltk
-nltk.download('stopwords')
-nltk.download('wordnet')
-from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer
-from collections import Counter
+import json
+from keybert import KeyBERT
 
 # Logging
 logging.basicConfig(filename='../Logs/text_nlp.log', level=logging.INFO)
@@ -31,8 +25,6 @@ profile_folder = '../Profiling/'
 profile = cProfile.Profile()
 
 text_nlp_app = Blueprint('text_nlp_app', __name__)
-
-file_types = {'txt', 'pdf', 'png', 'jpg'}
 
 def get_db_connection():
     conn = sqlite3.connect('../Database/database.db')
@@ -147,22 +139,21 @@ def tag_keywords_topics():
             return jsonify({'error': 'Text information not found for this file'}), 400
         text = text_info['info']
 
-        # Tokenize the text
-        tokens = word_tokenize(text)
-        # Remove stop words
-        stop_words = set(stopwords.words('english'))
-        filtered_tokens = [word for word in tokens if word.lower() not in stop_words]
-        # Lemmatize tokens
-        lemmatizer = WordNetLemmatizer()
-        lemmatized_tokens = [lemmatizer.lemmatize(token) for token in filtered_tokens]
-        # Get the most common keywords/topics
-        keywords_count = 3
-        keywords = Counter(lemmatized_tokens).most_common(keywords_count)
+        # Check if the entry already exists in FileInfo
+        cursor.execute('SELECT * FROM FileInfo WHERE file_ID = ? AND info_type = ?', (file_id, 'keyword'))
+        existing_entry = cursor.fetchone()
+        if existing_entry:
+            return jsonify({'error': 'Keywords already exist for this file'}), 400
+        
+        kw_model = KeyBERT()
+        keywords = kw_model.extract_keywords(text, keyphrase_ngram_range=(1, 1), stop_words=None)
 
-        # Insert keywords/topics into the database
-        for keyword, count in keywords:
-            cursor.execute('INSERT INTO FileInfo (info_type, info, file_ID) VALUES (?, ?, ?)', ('keyword', keyword, file_id))
-            conn.commit()
+        # Serialize keywords into a JSON-like string
+        keywords_json = json.dumps(keywords)
+
+        # Insert keywords/topics into the database as a single JSON-like string
+        cursor.execute('INSERT INTO FileInfo (info_type, info, file_ID) VALUES (?, ?, ?)', ('keyword', keywords_json, file_id))
+        conn.commit()
 
         logger.info("Tag keywords and topics complete.")
         profile.disable()
@@ -175,8 +166,6 @@ def tag_keywords_topics():
         return jsonify({'error': 'Internal server error'}), 401
     finally:
         conn.close()
-
-# def find_keywords(file_ID):
 
 # # Negative/positive parser (for sentences and paragraphs)
 # def sentiment_parser(file_ID):

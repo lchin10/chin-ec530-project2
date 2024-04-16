@@ -18,6 +18,7 @@ function App() {
     const handleLogout = async () => {
         try {
             const response = await axios.post('https://chin-ec530-project2-2.onrender.com/logout', {
+            // const response = await axios.post('http://localhost:5000/logout', {
                 username
             });
 
