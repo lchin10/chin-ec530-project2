@@ -12,7 +12,7 @@
 /build
 
 # database
-database.db
+/Database/database.db
 
 # misc
 .DS_Store
