@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-function RegisterPage({ setLoggedIn, setGlobalUsername }) {
+function RegisterPage({ setLoggedIn, setGlobalUsername, currUrl }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -24,8 +24,7 @@ function RegisterPage({ setLoggedIn, setGlobalUsername }) {
         }
         else {
             try {
-                const response = await axios.post('https://chin-ec530-project2-2.onrender.com/registration', {
-                // const response = await axios.post('http://localhost:5000/registration', {
+                const response = await axios.post(currUrl + '/registration', {
                     username,
                     password
                 });

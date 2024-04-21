@@ -3,14 +3,14 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
-function ChatWindow({ senderUsername }) {
+function ChatWindow({ senderUsername, currUrl }) {
     const { recipientUsername } = useParams();
     const [messages, setMessages] = useState([]);
     const [newMessage, setNewMessage] = useState('');
 
     const fetchMessages = async () => {
         try {
-            const response = await axios.get(`https://chin-ec530-project2-2.onrender.com/get_messages?sender_username=${senderUsername}&recipient_username=${recipientUsername}`);
+            const response = await axios.get(currUrl + `/get_messages?sender_username=${senderUsername}&recipient_username=${recipientUsername}`);
             setMessages(response.data.messages);
             console.log(response.data.messages);
         } catch (error) {
@@ -21,7 +21,7 @@ function ChatWindow({ senderUsername }) {
     useEffect(() => {
         const fetchMessages = async () => {
             try {
-                const response = await axios.get(`https://chin-ec530-project2-2.onrender.com/get_messages?sender_username=${senderUsername}&recipient_username=${recipientUsername}`);
+                const response = await axios.get(currUrl + `/get_messages?sender_username=${senderUsername}&recipient_username=${recipientUsername}`);
                 setMessages(response.data.messages);
                 console.log(response.data.messages);
             } catch (error) {
@@ -40,7 +40,7 @@ function ChatWindow({ senderUsername }) {
         try {
             // user cannot send message until the previous one is processed
             e.target.elements.button.disabled = true;
-            await axios.post('https://chin-ec530-project2-2.onrender.com/send_message', {
+            await axios.post(currUrl + '/send_message', {
                 sender_username: senderUsername,
                 recipient_username: recipientUsername,
                 message_text: newMessage

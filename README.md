@@ -6,6 +6,16 @@
 
 This application provides a secure platform for users to upload various types of documents, and get various forms of information about the text.
 
+### 4/20/2024 Update:
+
+- Added queue to backend for file analysis functions
+
+### 4/16/2024 Update:
+
+- Added functionality to get some file info:
+    - Translation of doc to text (for PDF, using pypdf; for image, using pytesseract)
+    - Tagging of doc with keywords/topics (using keybert)
+
 ### 4/7/2024 Update:
 
 - Added P2P Functionality:

@@ -3,12 +3,13 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 // import { Document, Page, pdfjs } from 'react-pdf';
 
-function FileDetailsPage({ username }) {
+function FileDetailsPage({ username, currUrl }) {
     const { filename } = useParams();
     const [fileInfo, setFileInfo] = useState(null);
     const [loading, setLoading] = useState(false);
     const [translationChecked, setTranslationChecked] = useState(false);
     const [taggingChecked, setTaggingChecked] = useState(false);
+    const [processing, setProcessing] = useState(false);
 
     useEffect(() => {
         document.title = `${filename} - Smart Document Analyzer`;
@@ -17,8 +18,7 @@ function FileDetailsPage({ username }) {
     useEffect(() => {
         const getFileInfo = async () => {
             try {
-                const response = await axios.post('https://chin-ec530-project2-2.onrender.com/get_file_info', { username, filename });
-                // const response = await axios.post('http://localhost:5000/get_file_info', { username, filename });
+                const response = await axios.post(currUrl + '/get_file_info', { username, filename });
                 setFileInfo(response.data.file_info);
             } catch (error) {
                 console.error('Error fetching file info:', error);
@@ -26,12 +26,11 @@ function FileDetailsPage({ username }) {
         };
     
         getFileInfo();
-    }, [username, filename]);
+    }, [username, filename, currUrl]);
 
     const handleTranslate = async () => {
         try {
-            const response = await axios.post('https://chin-ec530-project2-2.onrender.com/doc_to_text', { username, filename });
-            // const response = await axios.post('http://localhost:5000/doc_to_text', { username, filename });
+            const response = await axios.post(currUrl + '/doc_to_text', { username, filename });
             const data = response.data;
             if (data.message){
                 console.log(data.message);
@@ -45,8 +44,7 @@ function FileDetailsPage({ username }) {
 
     const handleTag = async () => {
         try {
-            const response = await axios.post('https://chin-ec530-project2-2.onrender.com/tag_keywords_topics', { username, filename });
-            // const response = await axios.post('http://localhost:5000/tag_keywords_topics', { username, filename });
+            const response = await axios.post(currUrl + '/tag_keywords_topics', { username, filename });
             const data = response.data;
             if (data.message){
                 console.log(data.message);
@@ -61,6 +59,7 @@ function FileDetailsPage({ username }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
+        setProcessing(true); 
 
         if (translationChecked) {
             await handleTranslate();
@@ -103,6 +102,7 @@ function FileDetailsPage({ username }) {
                     {loading ? 'Loading...' : 'Confirm'}
                 </button>
             </form>
+            <p>{processing ? 'Parsing file. Information will be shown on this page when it is finished.' : ''}</p>
             <h1>Current Information:</h1>
             {Object.keys(fileInfo).length > 0 ? (
                 Object.entries(fileInfo).map(([key, value]) => (

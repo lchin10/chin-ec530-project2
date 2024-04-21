@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-function LoginPage({ setLoggedIn, setGlobalUsername }) {
+function LoginPage({ setLoggedIn, setGlobalUsername, currUrl }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
@@ -19,8 +19,7 @@ function LoginPage({ setLoggedIn, setGlobalUsername }) {
         setLoading(true);
 
         try {
-            const response = await axios.post('https://chin-ec530-project2-2.onrender.com/login', {
-            // const response = await axios.post('http://localhost:5000/login', {
+            const response = await axios.post(currUrl + '/login', {
                 username,
                 password
             });

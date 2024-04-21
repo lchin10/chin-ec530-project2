@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-function WelcomePage({ username }) {
+function WelcomePage({ username, currUrl }) {
     const [files, setFiles] = useState([]);
     const [loading, setLoading] = useState(true);
     const [file, setFile] = useState(null);
@@ -18,8 +18,7 @@ function WelcomePage({ username }) {
         const fetchFiles = async () => {
             try {
                 // Make a request to fetch files
-                const response = await axios.post('https://chin-ec530-project2-2.onrender.com/list_files', { username });
-                // const response = await axios.post('http://localhost:5000/list_files', { username });
+                const response = await axios.post(currUrl + '/list_files', { username });
                 setFiles(response.data.filenames);
                 setLoading(false);
             } catch (error) {
@@ -46,8 +45,7 @@ function WelcomePage({ username }) {
 
         try {
             // Make a request to upload the file
-            await axios.post(`https://chin-ec530-project2-2.onrender.com/upload_file/${username}`, formData, {
-            // await axios.post(`http://localhost:5000/upload_file/${username}`, formData, {
+            await axios.post(currUrl + `/upload_file/${username}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
@@ -71,8 +69,7 @@ function WelcomePage({ username }) {
     const confirmRemoveFile = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('https://chin-ec530-project2-2.onrender.com/remove_file', { username, file_title: selectedFile });
-            // await axios.post('http://localhost:5000/remove_file', { username, file_title: selectedFile });
+            await axios.post(currUrl + '/remove_file', { username, file_title: selectedFile });
             window.location.reload();
         } catch (error) {
             console.error('Error removing file:', error);

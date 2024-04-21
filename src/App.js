@@ -15,10 +15,12 @@ function App() {
     const [username, setGlobalUsername] = useState(localStorage.getItem('username') || '');
     const [onlineUsers, setOnlineUsers] = useState([]);
 
+    const baseUrl = ['https://chin-ec530-project2-2.onrender.com', 'http://localhost:5000'];
+    const currUrl = baseUrl[0];
+
     const handleLogout = async () => {
         try {
-            const response = await axios.post('https://chin-ec530-project2-2.onrender.com/logout', {
-            // const response = await axios.post('http://localhost:5000/logout', {
+            const response = await axios.post(currUrl + '/logout', {
                 username
             });
 
@@ -48,7 +50,7 @@ function App() {
     useEffect(() => {
         const fetchOnlineUsers = async () => {
             try {
-                const response = await axios.post('https://chin-ec530-project2-2.onrender.com/list_online_users');
+                const response = await axios.post(currUrl + '/list_online_users');
                 setOnlineUsers(response.data.online_users);
             } catch (error) {
                 console.error('Error fetching online users:', error);
@@ -58,7 +60,7 @@ function App() {
         fetchOnlineUsers();
         const intervalId = setInterval(fetchOnlineUsers, 5000); // Fetch every 5 seconds
         return () => clearInterval(intervalId);
-    }, []);
+    }, [currUrl]);
 
     const handleChatOpen = (recipientUsername) => {
         window.location.href = `/chin-ec530-project2/chat/${recipientUsername}`;
@@ -96,11 +98,11 @@ function App() {
                     </nav>
 
                     <Routes>
-                        <Route path="/chin-ec530-project2/register" element={loggedIn ? <WelcomePage username={username} /> : <RegisterPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} />} />
-                        <Route path="/chin-ec530-project2/login" element={loggedIn ? <WelcomePage username={username} /> : <LoginPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} />} />
-                        <Route path="/chin-ec530-project2/welcome" element={loggedIn ? <WelcomePage username={username} /> : <AppPage />} />
-                        <Route path="/chin-ec530-project2/welcome/:filename" element={<FileDetailsPage username={username} />} />
-                        <Route path="/chin-ec530-project2/chat/:recipientUsername" element={loggedIn ? <ChatWindow senderUsername={username} /> : <LoginPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} />} />
+                        <Route path="/chin-ec530-project2/register" element={loggedIn ? <WelcomePage username={username} currUrl={currUrl} /> : <RegisterPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} currUrl={currUrl} />} />
+                        <Route path="/chin-ec530-project2/login" element={loggedIn ? <WelcomePage username={username} currUrl={currUrl} /> : <LoginPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} currUrl={currUrl} />} />
+                        <Route path="/chin-ec530-project2/welcome" element={loggedIn ? <WelcomePage username={username} currUrl={currUrl} /> : <AppPage />} />
+                        <Route path="/chin-ec530-project2/welcome/:filename" element={<FileDetailsPage username={username} currUrl={currUrl} />} />
+                        <Route path="/chin-ec530-project2/chat/:recipientUsername" element={loggedIn ? <ChatWindow senderUsername={username} currUrl={currUrl} /> : <LoginPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} currUrl={currUrl} />} />
                         <Route path="/chin-ec530-project2/" element={<AppPage />} />
                     </Routes>
                 </div>
