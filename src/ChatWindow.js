@@ -33,7 +33,7 @@ function ChatWindow({ senderUsername, currUrl }) {
         // Poll for new messages every 5 seconds
         const intervalId = setInterval(fetchMessages, 5000);
         return () => clearInterval(intervalId);
-    }, [senderUsername, recipientUsername]);
+    }, [senderUsername, recipientUsername, currUrl]);
 
     const handleMessageSend = async (e) => {
         e.preventDefault(); 

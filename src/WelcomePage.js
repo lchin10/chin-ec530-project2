@@ -28,7 +28,7 @@ function WelcomePage({ username, currUrl }) {
     
         fetchFiles(); // Call fetchFiles directly inside the effect
     
-    }, [username]);
+    }, [username, currUrl]);
 
     const chooseFile = (e) => {
         setFile(e.target.files[0]);
