@@ -194,7 +194,7 @@ def test_main():
     if register_message != 'success':
         print(f'Could not register. Deleting \'{username}\' and reregistering:')
         assert delete(data) == 'success'
-    assert register(data) == 'success'
+        assert register(data) == 'success'
 
     # Upload Files
     filename = 'test_pdf_file.pdf'
