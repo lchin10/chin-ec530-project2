@@ -8,7 +8,7 @@ This application provides a secure platform for users to upload various types of
 
 ### 4/29/2024 Update:
 
-- Updated unit testing script to work
+- Updated unit testing script to work (test_script.py)
 
 ### 4/16/2024 Update:
 
