@@ -7706,3 +7706,286 @@ INFO:werkzeug:127.0.0.1 - - [20/Apr/2024 20:20:03] "[35m[1mPOST /list_online_u
 INFO:root:Listing online users initiated.
 INFO:p2p:Listing online users complete.
 INFO:werkzeug:127.0.0.1 - - [20/Apr/2024 20:21:03] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2024 11:54:19] "POST /registration HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2024 11:55:46] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2024 11:58:18] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2024 11:58:21] "POST /login HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2024 11:59:10] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2024 11:59:13] "POST /login HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2024 12:01:03] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2024 12:01:06] "POST /login HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2024 12:05:27] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2024 12:05:29] "POST /login HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:24:41] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:24:44] "POST /login HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:26:31] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:26:33] "POST /login HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:26:48] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:26:51] "POST /login HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:26:54] "[35m[1mPOST /upload_file/lukas HTTP/1.1[0m" 201 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:26:56] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Doc to text initiated.
+INFO:text_nlp:Doc to text complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:26:58] "POST /doc_to_text HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+INFO:sentence_transformers.SentenceTransformer:Use pytorch device_name: cpu
+INFO:text_nlp:Tag keywords and topics complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:27:03] "POST /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:27:05] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Logout initiated.
+INFO:auth_api:Logout complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:27:07] "POST /logout HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:27:10] "POST /login HTTP/1.1" 200 -
+INFO:root:Delete user initiated.
+INFO:auth_api:Delete complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:27:12] "POST /delete_user HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:28:00] "POST /registration HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:28:02] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:28:17] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:28:19] "POST /login HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:28:22] "[35m[1mPOST /upload_file/lukas HTTP/1.1[0m" 201 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:28:24] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Doc to text initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:28:26] "[31m[1mPOST /doc_to_text HTTP/1.1[0m" 400 -
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:30:20] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Delete user initiated.
+INFO:auth_api:Delete complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:30:22] "POST /delete_user HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:30:24] "POST /registration HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:30:26] "[35m[1mPOST /upload_file/lukas HTTP/1.1[0m" 201 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:30:28] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Doc to text initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:30:30] "[31m[1mPOST /doc_to_text HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:36:44] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Delete user initiated.
+INFO:auth_api:Delete complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:36:46] "POST /delete_user HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:36:49] "POST /registration HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:36:51] "[35m[1mPOST /upload_file/lukas HTTP/1.1[0m" 201 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:36:53] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Doc to text initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:36:55] "[31m[1mPOST /doc_to_text HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:37:13] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Delete user initiated.
+INFO:auth_api:Delete complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:37:16] "POST /delete_user HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:37:18] "POST /registration HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:37:20] "[35m[1mPOST /upload_file/lukas HTTP/1.1[0m" 201 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:37:22] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Doc to text initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:37:24] "[31m[1mPOST /doc_to_text HTTP/1.1[0m" 400 -
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:39:39] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Delete user initiated.
+INFO:auth_api:Delete complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:39:41] "POST /delete_user HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:39:43] "POST /registration HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:39:45] "[35m[1mPOST /upload_file/lukas HTTP/1.1[0m" 201 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:39:47] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Doc to text initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:39:50] "[31m[1mPOST /doc_to_text HTTP/1.1[0m" 400 -
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:41:31] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Delete user initiated.
+INFO:auth_api:Delete complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:41:33] "POST /delete_user HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:42:33] "POST /registration HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:42:53] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Delete user initiated.
+INFO:auth_api:Delete complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:42:55] "POST /delete_user HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:42:58] "POST /registration HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:43:00] "[35m[1mPOST /upload_file/lukas HTTP/1.1[0m" 201 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:43:02] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Doc to text initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:43:04] "[31m[1mPOST /doc_to_text HTTP/1.1[0m" 400 -
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:43:09] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Delete user initiated.
+INFO:auth_api:Delete complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:43:12] "POST /delete_user HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:43:14] "POST /registration HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:43:16] "[35m[1mPOST /upload_file/lukas HTTP/1.1[0m" 201 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:43:18] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Doc to text initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:43:20] "[31m[1mPOST /doc_to_text HTTP/1.1[0m" 400 -
+INFO:root:Delete user initiated.
+INFO:auth_api:Delete complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:44:00] "POST /delete_user HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:45:34] "POST /registration HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:45:37] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:46:11] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Delete user initiated.
+INFO:auth_api:Delete complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:46:14] "POST /delete_user HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:46:16] "POST /registration HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:46:18] "[35m[1mPOST /upload_file/lukas HTTP/1.1[0m" 201 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:46:20] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Doc to text initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:46:22] "[31m[1mPOST /doc_to_text HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\auth_api.py', reloading
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Registration initiated.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:47:11] "[31m[1mPOST /registration HTTP/1.1[0m" 401 -
+INFO:root:Delete user initiated.
+INFO:auth_api:Delete complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:47:13] "POST /delete_user HTTP/1.1" 200 -
+INFO:root:Registration initiated.
+INFO:auth_api:Registration complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:47:15] "POST /registration HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:47:17] "[35m[1mPOST /upload_file/lukas HTTP/1.1[0m" 201 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:47:20] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Doc to text initiated.
+INFO:text_nlp:Doc to text complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:47:22] "POST /doc_to_text HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+INFO:sentence_transformers.SentenceTransformer:Use pytorch device_name: cpu
+INFO:text_nlp:Tag keywords and topics complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:47:27] "POST /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:47:29] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Logout initiated.
+INFO:auth_api:Logout complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:47:31] "POST /logout HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:47:33] "POST /login HTTP/1.1" 200 -
+INFO:root:Delete user initiated.
+INFO:auth_api:Delete complete.
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:47:35] "POST /delete_user HTTP/1.1" 200 -

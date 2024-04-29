@@ -15,8 +15,6 @@ import pytesseract
 from PIL import Image
 import json
 from keybert import KeyBERT
-import threading
-import time
 
 # Logging
 logging.basicConfig(filename='../Logs/text_nlp.log', level=logging.INFO)
@@ -33,23 +31,16 @@ def get_db_connection():
     conn.row_factory = sqlite3.Row
     return conn
 
-# Queue
-queue = []
-
-#### Translate doc to text ####
+# Translate doc to text
 @text_nlp_app.route('/doc_to_text', methods=['POST'])
-def doc_to_text_queue():
-    data = request.json
-    username = data.get('username')
-    file_title = data.get('filename')
-
-    queue.append((doc_to_text, (username, file_title)))
-    return jsonify({'message': 'Task added to queue'}), 200
-
-def doc_to_text(username, file_title):
+def doc_to_text():
     # Trace, profiling, logging
     profile.enable()
     logging.info('Doc to text initiated.')
+    
+    data = request.json
+    username = data.get('username')
+    file_title = data.get('filename')
 
     conn = get_db_connection()
     cursor = conn.cursor()
@@ -112,22 +103,16 @@ def doc_to_text(username, file_title):
     finally:
         conn.close()
 
-########
-
-#### Find topics and keywords (for whole text and seperate paragraphs) ####
+# Find topics and keywords (for whole text and seperate paragraphs)
 @text_nlp_app.route('/tag_keywords_topics', methods=['POST'])
-def tag_keywords_topics_queue():
-    data = request.json
-    username = data.get('username')
-    file_title = data.get('filename')
-
-    queue.append((tag_keywords_topics, (username, file_title)))
-    return jsonify({'message': 'Task added to queue'}), 200
-
-def tag_keywords_topics(username, file_title):
+def tag_keywords_topics():
     # Trace, profiling, logging
     profile.enable()
     logging.info('Tag keywords and topics initiated.')
+    
+    data = request.json
+    username = data.get('username')
+    file_title = data.get('filename')
 
     conn = get_db_connection()
     cursor = conn.cursor()
@@ -181,8 +166,6 @@ def tag_keywords_topics(username, file_title):
         return jsonify({'error': 'Internal server error'}), 401
     finally:
         conn.close()
-
-########
 
 # # Negative/positive parser (for sentences and paragraphs)
 # def sentiment_parser(file_ID):

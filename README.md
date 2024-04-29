@@ -6,10 +6,6 @@
 
 This application provides a secure platform for users to upload various types of documents, and get various forms of information about the text.
 
-### 4/20/2024 Update:
-
-- Added queue to backend for file analysis functions
-
 ### 4/16/2024 Update:
 
 - Added functionality to get some file info:
@@ -30,6 +26,8 @@ This application provides a secure platform for users to upload various types of
     - uploading files, listing upser files, removing files
 - Web app is set up on github pages (https://lchin10.github.io/chin-ec530-project2/)
 - Database is set up with Render (https://chin-ec530-project2-2.onrender.com/ to call APIs in app)
+    - Called flask application using gunicorn
+    - Uses 4 workers as form of queue system
 
 ### 3/23/2024 Update:
 
@@ -41,6 +39,7 @@ This application provides a secure platform for users to upload various types of
 - Created database (database.db) using sqlite3
     - Created a script to reset and clear the existing database
 - Created a client-side script to test API functionality
+- Added unit testing of backend using python (test.py)
 
 ## How it works (previous application in terminal, not in use anymore):
 

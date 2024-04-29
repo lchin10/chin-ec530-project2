@@ -166,6 +166,18 @@ def delete_user():
 
     if hashed_password and bcrypt.checkpw(password.encode('utf-8'), hashed_password[0]):
         try:
+            # Delete file info from FileInfo db
+            cursor.execute('''
+                    DELETE FROM FileInfo
+                    WHERE file_ID IN (
+                        SELECT file_ID FROM Files
+                        WHERE U_ID = (
+                            SELECT U_ID FROM Users
+                            WHERE Username = ?
+                        )
+                    )
+                ''', (username,))
+            
             # Delete files from Files db
             cursor.execute('''
                 DELETE FROM Files
