@@ -6,6 +6,10 @@
 
 This application provides a secure platform for users to upload various types of documents, and get various forms of information about the text.
 
+### 4/29/2024 Update:
+
+- Updated unit testing script to work
+
 ### 4/16/2024 Update:
 
 - Added functionality to get some file info:
