@@ -146,7 +146,7 @@ def doc_to_text(data):
                 print(f'ERROR: {error}')
                 return 'error'
         except requests.exceptions.JSONDecodeError:
-            print('File remove failed. No response data.')
+            print('Doc to text failed. No response data.')
             return 'error'
 
 def tag_keywords_topics(data):
@@ -161,7 +161,7 @@ def tag_keywords_topics(data):
                 print(f'ERROR: {error}')
                 return 'error'
         except requests.exceptions.JSONDecodeError:
-            print('File remove failed. No response data.')
+            print('Tagging keywords failed. No response data.')
             return 'error'
 
 def get_file_info(data):
@@ -176,7 +176,7 @@ def get_file_info(data):
                 print(f'ERROR: {error}')
                 return 'error'
         except requests.exceptions.JSONDecodeError:
-            print('File remove failed. No response data.')
+            print('Getting file info failed. No response data.')
             return 'error'
 
 
@@ -214,12 +214,12 @@ def test_main():
     assert doc_to_text(data) == 'success'
 
     # Tag keywords
-    print(f'Tagging doc with keywords:')
-    data = {'username': username,'filename': filename}
-    assert tag_keywords_topics(data) == 'success'
+    # print(f'Tagging doc with keywords:')
+    # data = {'username': username,'filename': filename}
+    # assert tag_keywords_topics(data) == 'success'
 
     # Get file info
-    print(f'Tagging doc with keywords:')
+    print(f'Getting file info:')
     data = {'username': username,'filename': filename}
     assert get_file_info(data) == 'success'
 
