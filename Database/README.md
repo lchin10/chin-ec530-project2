@@ -1,3 +1,23 @@
-## Database:
+## Database
 
-![alt text](../Images/database_table.png)
+- **Users**
+    - `U_ID [INTEGER PRIMARY KEY]`
+    - `Username [TEXT]`
+    - `Hashed_password [TEXT]`
+    - `NOFiles [INTEGER]`
+    - `Token [TEXT]`
+- **Files**
+    - `file_ID [INTEGER PRIMARY KEY]`
+    - `file_title [TEXT]`
+    - `file_data [BLOB]`
+    - `U_ID [INTEGER FOREIGN KEY]`
+- **FileInfo**
+    - `file_ID [INTEGER FOREIGN KEY]`
+    - `info_type [TEXT]`
+    - `info [TEXT]`
+- **P2P**
+    - `MessageID [INTEGER PRIMARY KEY]`
+    - `SenderID [INTEGER]`
+    - `RecipientID [INTEGER]`
+    - `MessageText [TEXT]`
+    - `Timestamp [DATETIME]`

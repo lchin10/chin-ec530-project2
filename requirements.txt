@@ -27,3 +27,4 @@ kombu==5.3.7
 prompt-toolkit==3.0.43
 vine==5.1.0
 wcwidth==0.2.13
+pypdf==4.2.0

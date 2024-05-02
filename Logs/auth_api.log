@@ -7989,3 +7989,1042 @@ INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:47:33] "POST /login HTTP/1.1" 200 -
 INFO:root:Delete user initiated.
 INFO:auth_api:Delete complete.
 INFO:werkzeug:127.0.0.1 - - [29/Apr/2024 11:47:35] "POST /delete_user HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Listing online users initiated.
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:11:25] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:11:25] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:11:27] "OPTIONS /login HTTP/1.1" 200 -
+INFO:root:Login initiated.
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:11:27] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:auth_api:Login complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:11:27] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:11:27] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:11:27] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:11:27] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:11:28] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:11:32] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:11:37] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:11:42] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:11:44] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:11:45] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:11:45] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:11:45] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:11:47] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:11:52] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:11:53] "OPTIONS /get_metadata HTTP/1.1" 200 -
+INFO:root:Grabbing metadata initiated.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:11:54] "[35m[1mPOST /get_metadata HTTP/1.1[0m" 500 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:11:57] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:12:03] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:12:07] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:12:13] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:12:17] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:12:23] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:12:27] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:12:33] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:12:37] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:05] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:05] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:05] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:05] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:05] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:05] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:root:Get file info initiated.
+INFO:p2p:Listing online users complete.
+INFO:root:Get file info initiated.
+INFO:root:List files initiated.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:05] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:file_upload:Get file info complete.
+INFO:file_upload:List files complete.
+INFO:file_upload:Get file info complete.
+INFO:root:List files initiated.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:05] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:05] "POST /get_file_info HTTP/1.1" 200 -
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:05] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:05] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:07] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Get file info initiated.
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:08] "POST /get_file_info HTTP/1.1" 200 -
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:08] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:09] "OPTIONS /get_metadata HTTP/1.1" 200 -
+INFO:root:Grabbing metadata initiated.
+INFO:text_nlp:Grabbing metadata complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:10] "POST /get_metadata HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:12] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:15] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:15] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:15] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:15] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:15] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:15] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:20] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:24] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:30] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:34] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:40] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:44] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:50] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:13:54] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:14:00] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:14:04] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:14:10] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:14:14] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:14:20] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:14:24] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:14:30] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:14:34] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:14:40] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:14:44] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:14:50] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:14:54] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:15:00] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:15:04] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:15:10] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:15:14] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:15:20] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:15:24] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:15:30] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:15:34] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:15:40] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:15:44] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:15:50] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:root:Listing online users initiated.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:06] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:06] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:10] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:15] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:19] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:19] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:19] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:19] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:20] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:23] "OPTIONS /remove_file HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:File removal complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:23] "POST /remove_file HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:24] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:root:List files initiated.
+INFO:p2p:Listing online users complete.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:24] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:24] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:24] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:29] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:33] "[35m[1mPOST /upload_file/admin HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:33] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:34] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:p2p:Listing online users complete.
+INFO:root:List files initiated.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:34] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:34] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:34] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:34] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:35] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:35] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:35] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:35] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:37] "OPTIONS /get_metadata HTTP/1.1" 200 -
+INFO:root:Grabbing metadata initiated.
+INFO:text_nlp:Grabbing metadata complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:38] "POST /get_metadata HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:38] "OPTIONS /doc_to_text HTTP/1.1" 200 -
+INFO:root:Doc to text initiated.
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:39] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:text_nlp:Doc to text complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:40] "POST /doc_to_text HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:40] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+INFO:sentence_transformers.SentenceTransformer:Use pytorch device_name: cpu
+INFO:text_nlp:Tag keywords and topics complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:43] "POST /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:44] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:45] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:46] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:root:Listing online users initiated.
+INFO:root:Get file info initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:46] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:46] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:46] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:46] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:51] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:16:56] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:17:00] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:17:06] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:17:10] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:17:16] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:17:20] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:17:26] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:17:30] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:17:36] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:17:40] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:17:46] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:17:50] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:17:56] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:18:00] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:18:06] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:18:10] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:18:16] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:18:20] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:18:26] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:18:30] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:18:36] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:18:40] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:18:46] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:18:50] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:18:58] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:19:46] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:19:46] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:19:46] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:19:46] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:List files initiated.
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:19:46] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:19:46] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:19:51] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:19:55] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:19:56] "OPTIONS /remove_file HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:File removal complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:19:57] "POST /remove_file HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:19:57] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:19:58] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:root:List files initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:19:58] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:19:58] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:19:58] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:19:58] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:03] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:07] "[35m[1mPOST /upload_file/admin HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:07] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:07] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:07] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:07] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:08] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:08] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:09] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:09] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:09] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:09] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:12] "OPTIONS /get_metadata HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:12] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Grabbing metadata initiated.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:12] "[35m[1mPOST /get_metadata HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:12] "OPTIONS /doc_to_text HTTP/1.1" 200 -
+INFO:root:Doc to text initiated.
+INFO:text_nlp:Doc to text complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:14] "POST /doc_to_text HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:14] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+INFO:sentence_transformers.SentenceTransformer:Use pytorch device_name: cpu
+INFO:text_nlp:Tag keywords and topics complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:17] "POST /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:18] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:22] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:28] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:32] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:38] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:43] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:47] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:20:53] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:09] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:09] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:09] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:09] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:09] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:09] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:09] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:09] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:List files initiated.
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:09] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:09] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:11] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:11] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:12] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:12] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:13] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:13] "OPTIONS /get_metadata HTTP/1.1" 200 -
+INFO:root:Grabbing metadata initiated.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:14] "[35m[1mPOST /get_metadata HTTP/1.1[0m" 500 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:18] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:24] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:29] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:33] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:39] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:43] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:49] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:53] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:22:59] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:23:04] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:23:08] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:23:14] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:23:18] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:23:24] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:04] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:04] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:09] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:13] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:13] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:13] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:14] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:14] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:15] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:15] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:15] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:15] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:17] "OPTIONS /get_metadata HTTP/1.1" 200 -
+INFO:root:Grabbing metadata initiated.
+INFO:text_nlp:Grabbing metadata complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:17] "POST /get_metadata HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:18] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:21] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:21] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:21] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:21] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:21] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:21] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:26] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:30] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:36] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:40] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:46] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:50] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:26:56] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:27:00] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:27:06] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:27:10] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:27:16] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:27:20] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:27:26] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:27:30] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:27:36] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:27:40] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:27:46] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:27:54] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:27:56] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:28:00] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:28:06] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:28:10] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:28:16] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:28:20] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:28:26] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:28:30] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:28:36] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:28:40] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:28:50] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:28:50] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:05] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:05] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:11] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:15] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:16] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:p2p:Listing online users complete.
+INFO:root:Listing online users initiated.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:16] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:List files initiated.
+INFO:p2p:Listing online users complete.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:16] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:16] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:16] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:17] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:17] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:17] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:17] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:20] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:22] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:22] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:22] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:22] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:25] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:26] "OPTIONS /remove_file HTTP/1.1" 200 -
+INFO:root:Upload file initiated.
+INFO:file_upload:File removal complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:26] "POST /remove_file HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:26] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:root:List files initiated.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:27] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:file_upload:List files complete.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:27] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:27] "POST /list_files HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:32] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Upload file initiated.
+INFO:file_upload:Upload complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:34] "[35m[1mPOST /upload_file/admin HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:35] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:35] "OPTIONS /list_files HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:35] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:35] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:35] "POST /list_files HTTP/1.1" 200 -
+INFO:root:List files initiated.
+INFO:file_upload:List files complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:35] "POST /list_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:36] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:36] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:36] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:36] "POST /get_file_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:39] "OPTIONS /get_metadata HTTP/1.1" 200 -
+INFO:root:Grabbing metadata initiated.
+INFO:text_nlp:Grabbing metadata complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:39] "POST /get_metadata HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:39] "OPTIONS /doc_to_text HTTP/1.1" 200 -
+INFO:root:Doc to text initiated.
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:40] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:text_nlp:Doc to text complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:41] "POST /doc_to_text HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:41] "OPTIONS /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Tag keywords and topics initiated.
+INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+INFO:sentence_transformers.SentenceTransformer:Use pytorch device_name: cpu
+INFO:text_nlp:Tag keywords and topics complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:44] "POST /tag_keywords_topics HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:45] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:46] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:46] "OPTIONS /get_file_info HTTP/1.1" 200 -
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:46] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:46] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:46] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Get file info initiated.
+INFO:file_upload:Get file info complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:46] "POST /get_file_info HTTP/1.1" 200 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:51] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:29:55] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:30:01] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:30:05] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:30:11] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:30:15] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:30:21] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:30:25] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:30:31] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\lukas\\spring_2024\\EC530\\chin-ec530-project2\\APIs\\text_nlp.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-958-352
+INFO:root:Listing online users initiated.
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:30:40] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:30:40] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:30:46] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:30:50] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:30:56] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:31:00] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:31:06] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:31:10] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:31:16] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:31:20] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:31:26] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:31:30] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:31:36] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:31:40] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:31:46] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:31:50] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:31:56] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:32:00] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:32:06] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:32:10] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:32:16] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:32:20] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:32:26] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:32:30] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:32:36] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:32:40] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:32:46] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:32:50] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:32:56] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:33:00] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:33:06] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -
+INFO:root:Listing online users initiated.
+INFO:p2p:Listing online users complete.
+INFO:werkzeug:127.0.0.1 - - [02/May/2024 11:33:10] "[35m[1mPOST /list_online_users HTTP/1.1[0m" 201 -

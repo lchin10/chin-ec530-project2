@@ -7,6 +7,7 @@ Use Text NLP Analysis API Calls. One possibility is SpaCy.
 from flask import Flask, request, jsonify
 from flask import Blueprint, current_app
 import os
+import datetime
 import sqlite3
 import cProfile
 import logging
@@ -15,6 +16,7 @@ import pytesseract
 from PIL import Image
 import json
 from keybert import KeyBERT
+from pypdf import PdfReader
 
 # Logging
 logging.basicConfig(filename='../Logs/text_nlp.log', level=logging.INFO)
@@ -30,6 +32,89 @@ def get_db_connection():
     conn = sqlite3.connect('../Database/database.db')
     conn.row_factory = sqlite3.Row
     return conn
+
+# Get doc metadata (filename, type, size, width, height, time created, time modified)
+@text_nlp_app.route('/get_metadata', methods=['POST'])
+def get_metadata():
+    # Trace, profiling, logging
+    profile.enable()
+    logging.info('Grabbing metadata initiated.')
+    
+    data = request.json
+    username = data.get('username')
+    file_title = data.get('filename')
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    try:
+        # Get UID from username
+        cursor.execute('SELECT U_ID FROM Users WHERE Username = ?', (username,))
+        user = cursor.fetchone()
+        if not user:
+            return jsonify({'error': 'User not found'}), 404
+        u_id = user[0]
+
+        # Check if file exists for user in file database
+        cursor.execute('SELECT file_ID FROM Files WHERE file_title = ? AND U_ID = ?', (file_title, u_id))
+        existing_file = cursor.fetchone()
+        if not existing_file:
+            return jsonify({'error': f'File \'{file_title}\' not found'}), 404
+        file_id = existing_file[0]
+
+        # Determine file path and type
+        upload_folder = current_app.config['UPLOAD_FOLDER']
+        user_folder = os.path.join(upload_folder, username)
+        file_path = os.path.join(user_folder, file_title)
+        file_type = file_title.split('.')[-1]
+
+        # Get metadata
+        file_size = os.path.getsize(file_path)
+        file_stat = os.stat(file_path)
+        file_creation_time = datetime.datetime.fromtimestamp(file_stat.st_ctime)
+        file_modification_time = datetime.datetime.fromtimestamp(file_stat.st_mtime)
+        width, height = None, None
+        if file_type.lower() in ['jpg', 'jpeg', 'png', 'gif', 'bmp']:
+            with Image.open(file_path) as img:
+                width, height = img.size
+        elif file_type.lower() == 'pdf':
+            with open(file_path, 'rb') as pdf_file:
+                reader = PdfReader(pdf_file)
+                first_page = reader.pages[0] # First page
+                width = first_page.mediabox.width/72.0
+                height = first_page.mediabox.height/72.0
+        metadata = {
+            'filename': file_title,
+            'type': file_type,
+            'size (bytes)': file_size,
+            'width (inches)': width,
+            'height (inches)': height,
+            'creation_time': file_creation_time.isoformat(),
+            'modification_time': file_modification_time.isoformat()
+        }
+        metadata_json = json.dumps(metadata)
+
+        # Check if the entry already exists in FileInfo
+        cursor.execute('SELECT * FROM FileInfo WHERE file_ID = ? AND info_type = ?', (file_id, 'metadata'))
+        existing_entry = cursor.fetchone()
+        if existing_entry:
+            return jsonify({'error': 'Metadata already exists for this file'}), 400
+        
+        # Insert metadata into database
+        cursor.execute('INSERT INTO FileInfo (info_type, info, file_ID) VALUES (?, ?, ?)', ('metadata', metadata_json, file_id))
+        conn.commit()
+
+        logger.info("Grabbing metadata complete.")
+        profile.disable()
+        profile.dump_stats(f'{profile_folder}get_metadata.prof')
+        return jsonify({'message': 'Grabbing metadata successful'}), 200
+    except sqlite3.IntegrityError:
+        logger.info("Could not get metadata.")
+        profile.disable()
+        profile.dump_stats(f'{profile_folder}get_metadata.prof')
+        return jsonify({'error': 'Internal server error'}), 401
+    finally:
+        conn.close()
 
 # Translate doc to text
 @text_nlp_app.route('/doc_to_text', methods=['POST'])

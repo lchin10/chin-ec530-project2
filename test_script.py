@@ -134,6 +134,21 @@ def remove_file(data):
             return 'error'
         
 # TEXT FUNCTIONS
+def get_metadata(data):
+        response = requests.post(f'{currUrl}/get_metadata', json=data)
+        try:
+            message = response.json().get('message')
+            if message:
+                print(message)
+                return 'success'
+            else:
+                error = response.json().get('error')
+                print(f'ERROR: {error}')
+                return 'error'
+        except requests.exceptions.JSONDecodeError:
+            print('Doc to text failed. No response data.')
+            return 'error'
+        
 def doc_to_text(data):
         response = requests.post(f'{currUrl}/doc_to_text', json=data)
         try:
@@ -207,6 +222,11 @@ def test_main():
     print(f'Listing files for \'{username}\':')
     data = {'username': username}
     assert list_files(data) == 'success'
+
+    # Doc to text
+    print(f'Grabbing metadata:')
+    data = {'username': username,'filename': filename}
+    assert get_metadata(data) == 'success'
 
     # Doc to text
     print(f'Converting doc to text:')
