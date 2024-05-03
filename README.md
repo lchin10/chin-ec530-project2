@@ -146,29 +146,34 @@ Runs one python script (*flask_run.py*) to run the Flask Application through Ren
 
 ## Access to Full Functionality
 
-My Flask application is currently running a free instance of Render, which has 512 MB and 0.1 CPU. Therefore, some features are not accessible through the web application deployed online through Github Pages. To have access to this functionality, you can go through the following steps:
+The Flask application for backend functionality is currently running on a free instance of Render, which has 512 MB and 0.1 CPU. Therefore, some features are not accessible through the web application deployed online through Github Pages. To have access to this functionality, you can go through the following steps:
 
 1. Clone this repository to your computer/device.
 
-        git clone https://github.com/jakubzolkos/document-analyzer
+        git clone https://github.com/lchin10/chin-ec530-project2.git
 
 2. Download the required libraries/dependencies.
 
         pip install -r requirements.txt
         python -m spacy download en_core_web_sm
 
-3. **Important**: Navigate to '/src/App.js' and change line 19 to the following:
+3. ****Important***: Navigate to '/src/App.js' and change line 19 to the following:
 
         const currUrl = baseUrl[1];
 
     This allows the web application to call API functionality from localhost rather than Render.
 
-4. Run the Flask Application.
+4. ****Optional***: If you want to start with a clean database, you can reinitiate the database.
+
+        cd Database
+        python database_init.py        
+
+5. Run the Flask Application.
 
         cd APIs
         python flask_run.py
 
-5. Open a new terminal, then run the web application.
+6. Open a new terminal, then run the web application.
 
         npm start
 
@@ -176,7 +181,9 @@ My Flask application is currently running a free instance of Render, which has 5
 
 ### 5/3/2024:
 
-- Added functionality for getting metadata and getting entities of documents
+- Added file functionality (text_nlp.py) for:
+  - Getting metadata (using PdfReader)
+  - Getting entities of documents (using SpaCy Model 'en_core_web_sm')
 
 ### 4/29/2024:
 
