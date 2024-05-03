@@ -2,7 +2,7 @@ import pytest
 import requests
 import os
 
-baseUrl = ['https://chin-ec530-project2-2.onrender.com', 'http://localhost:5000']
+baseUrl = ['https://chin-smart-document-analyzer.onrender.com', 'http://localhost:5000']
 currUrl = baseUrl[0]
 
 

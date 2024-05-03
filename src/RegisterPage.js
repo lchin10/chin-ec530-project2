@@ -35,7 +35,7 @@ function RegisterPage({ setLoggedIn, setGlobalUsername, currUrl }) {
                     setLoggedIn(true);
                     setGlobalUsername(username);
                     // Redirect the user to the welcome page
-                    navigate('/chin-ec530-project2/welcome');
+                    navigate('/smart-document-analyzer/welcome');
                 } else {
                     console.log(data.error);
                     setError(data.error); // Set error message

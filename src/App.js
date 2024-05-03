@@ -15,7 +15,7 @@ function App() {
     const [username, setGlobalUsername] = useState(localStorage.getItem('username') || '');
     const [onlineUsers, setOnlineUsers] = useState([]);
 
-    const baseUrl = ['https://chin-ec530-project2-2.onrender.com', 'http://localhost:5000'];
+    const baseUrl = ['https://chin-smart-document-analyzer.onrender.com', 'http://localhost:5000'];
     const currUrl = baseUrl[0];
 
     const handleLogout = async () => {
@@ -32,7 +32,7 @@ function App() {
                 // Remove logged-in state and username from localStorage
                 localStorage.removeItem('loggedIn');
                 localStorage.removeItem('username');
-                window.location.href = '/chin-ec530-project2/';
+                window.location.href = '/smart-document-analyzer/';
             } else if (data.error) {
                 console.log(data.error);
             }
@@ -63,7 +63,7 @@ function App() {
     }, [currUrl]);
 
     const handleChatOpen = (recipientUsername) => {
-        window.location.href = `/chin-ec530-project2/chat/${recipientUsername}`;
+        window.location.href = `/smart-document-analyzer/chat/${recipientUsername}`;
     };
 
     return (
@@ -73,12 +73,12 @@ function App() {
                     <nav>
                         <ul>
                             <li>
-                                <Link to="/chin-ec530-project2/">Home</Link>
+                                <Link to="/smart-document-analyzer/">Home</Link>
                             </li>
                             {loggedIn ? (
                                 <>
                                     <li>
-                                        <Link to="/chin-ec530-project2/welcome">Welcome, {username}!</Link>
+                                        <Link to="/smart-document-analyzer/welcome">Welcome, {username}!</Link>
                                     </li>
                                     <li>
                                         <button onClick={handleLogout}>Logout</button>
@@ -87,10 +87,10 @@ function App() {
                             ) : (
                                 <>
                                     <li>
-                                        <Link to="/chin-ec530-project2/register">Register</Link>
+                                        <Link to="/smart-document-analyzer/register">Register</Link>
                                     </li>
                                     <li>
-                                        <Link to="/chin-ec530-project2/login">Login</Link>
+                                        <Link to="/smart-document-analyzer/login">Login</Link>
                                     </li>
                                 </>
                             )}
@@ -98,12 +98,12 @@ function App() {
                     </nav>
 
                     <Routes>
-                        <Route path="/chin-ec530-project2/register" element={loggedIn ? <WelcomePage username={username} currUrl={currUrl} /> : <RegisterPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} currUrl={currUrl} />} />
-                        <Route path="/chin-ec530-project2/login" element={loggedIn ? <WelcomePage username={username} currUrl={currUrl} /> : <LoginPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} currUrl={currUrl} />} />
-                        <Route path="/chin-ec530-project2/welcome" element={loggedIn ? <WelcomePage username={username} currUrl={currUrl} /> : <AppPage />} />
-                        <Route path="/chin-ec530-project2/welcome/:filename" element={<FileDetailsPage username={username} currUrl={currUrl} />} />
-                        <Route path="/chin-ec530-project2/chat/:recipientUsername" element={loggedIn ? <ChatWindow senderUsername={username} currUrl={currUrl} /> : <LoginPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} currUrl={currUrl} />} />
-                        <Route path="/chin-ec530-project2/" element={<AppPage />} />
+                        <Route path="/smart-document-analyzer/register" element={loggedIn ? <WelcomePage username={username} currUrl={currUrl} /> : <RegisterPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} currUrl={currUrl} />} />
+                        <Route path="/smart-document-analyzer/login" element={loggedIn ? <WelcomePage username={username} currUrl={currUrl} /> : <LoginPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} currUrl={currUrl} />} />
+                        <Route path="/smart-document-analyzer/welcome" element={loggedIn ? <WelcomePage username={username} currUrl={currUrl} /> : <AppPage />} />
+                        <Route path="/smart-document-analyzer/welcome/:filename" element={<FileDetailsPage username={username} currUrl={currUrl} />} />
+                        <Route path="/smart-document-analyzer/chat/:recipientUsername" element={loggedIn ? <ChatWindow senderUsername={username} currUrl={currUrl} /> : <LoginPage setLoggedIn={setLoggedIn} setGlobalUsername={setGlobalUsername} currUrl={currUrl} />} />
+                        <Route path="/smart-document-analyzer/" element={<AppPage />} />
                     </Routes>
                 </div>
 

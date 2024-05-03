@@ -91,7 +91,7 @@ function WelcomePage({ username, currUrl }) {
                         {files && files.length > 0 ? (
                             files.map((file, index) => (
                                 <li key={index}>
-                                    <Link to={`/chin-ec530-project2/welcome/${file}`}>{file}</Link>
+                                    <Link to={`/smart-document-analyzer/welcome/${file}`}>{file}</Link>
                                 </li>
                             ))
                         ) : (

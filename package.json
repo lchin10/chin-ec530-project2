@@ -1,6 +1,6 @@
 {
-  "homepage": "https://lchin10.github.io/chin-ec530-project2",
-  "name": "web-app",
+  "homepage": "https://lchin10.github.io/smart-document-analyzer",
+  "name": "smart-document-analyzer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

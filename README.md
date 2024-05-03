@@ -6,7 +6,7 @@
 
 - [Overview](#overview)
 - [Functionality](#functionality)
-- [APIs](#api)
+- [APIs](#api-modules)
 - [Database](#database)
 - [Full Functionality](#access-to-full-functionality)
 - [Updates](#updates)
@@ -16,7 +16,7 @@
 
 This application provides a secure platform for users to upload various types of documents, and get various forms of information about the text. This includes changing your document to text.
 
-Click [this link](https://lchin10.github.io/chin-ec530-project2/) to visit the web application.
+Click [this link](https://lchin10.github.io/smart-document-analyzer/) to visit the web application.
 
 ## Functionality
 
@@ -36,10 +36,6 @@ Click [this link](https://lchin10.github.io/chin-ec530-project2/) to visit the w
   - I should find definition of keywords using open services (e.g., OpenAI)
   - I should be able to get summaries of each document
   - I want to discover content from the WEB to enhance story
-
-## API
-
-Runs one python script (*flask_run.py*) to run the Flask Application through Render
 
 ## API Modules
 
@@ -150,7 +146,7 @@ The Flask application for backend functionality is currently running on a free i
 
 1. Clone this repository to your computer/device.
 
-        git clone https://github.com/lchin10/chin-ec530-project2.git
+        git clone https://github.com/lchin10/smart-document-analyzer.git
 
 2. Download the required libraries/dependencies.
 
@@ -207,8 +203,8 @@ The Flask application for backend functionality is currently running on a free i
 - Successfully called to web app APIs:
     - registration, login
     - uploading files, listing upser files, removing files
-- Web app is set up on github pages (https://lchin10.github.io/chin-ec530-project2/)
-- Database is set up with Render (https://chin-ec530-project2-2.onrender.com/ to call APIs in app)
+- Web app is set up on github pages (https://lchin10.github.io/smart-document-analyzer/)
+- Database is set up with Render (https://chin-smart-document-analyzer.com/ to call APIs in app)
     - Called flask application using gunicorn
     - Uses 4 workers as form of queue system
 
