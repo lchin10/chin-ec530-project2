@@ -15,7 +15,7 @@
 
 This application provides a secure platform for users to upload various types of documents, and get various forms of information about the text. This includes changing your document to text.
 
-Click [this link](#https://lchin10.github.io/chin-ec530-project2/) to visit the web application.
+Click [this link](https://lchin10.github.io/chin-ec530-project2/) to visit the web application.
 
 ## Functionality
 
