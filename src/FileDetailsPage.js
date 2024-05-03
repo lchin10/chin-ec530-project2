@@ -10,6 +10,7 @@ function FileDetailsPage({ username, currUrl }) {
     const [metadataChecked, setMetadataChecked] = useState(false);
     const [translationChecked, setTranslationChecked] = useState(false);
     const [taggingChecked, setTaggingChecked] = useState(false);
+    const [entitiesChecked, setEntitiesChecked] = useState(false);
     const [processing, setProcessing] = useState(false);
 
     useEffect(() => {
@@ -71,6 +72,21 @@ function FileDetailsPage({ username, currUrl }) {
         }
     };
 
+    const handleEntities = async () => {
+        try {
+            const response = await axios.post(currUrl + '/get_entities', { username, filename });
+            const data = response.data;
+            if (data.message){
+                console.log(data.message);
+            } else {
+                console.log(data.error);
+            }
+        } catch (error) {
+            console.error('Error fetching file info:', error);
+        }
+    };
+
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -84,6 +100,9 @@ function FileDetailsPage({ username, currUrl }) {
         }
         if (taggingChecked) {
             await handleTag();
+        }
+        if (entitiesChecked) {
+            await handleEntities();
         }
         // window.location.reload();
         setLoading(false);
@@ -122,6 +141,15 @@ function FileDetailsPage({ username, currUrl }) {
                         type="checkbox"
                         checked={taggingChecked}
                         onChange={() => setTaggingChecked(!taggingChecked)}
+                    />
+                </label>
+                <br />
+                <label>
+                    Get entities (names, locations, institutions and address):
+                    <input
+                        type="checkbox"
+                        checked={entitiesChecked}
+                        onChange={() => setEntitiesChecked(!entitiesChecked)}
                     />
                 </label>
                 <br />

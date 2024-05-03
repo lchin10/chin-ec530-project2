@@ -179,6 +179,21 @@ def tag_keywords_topics(data):
             print('Tagging keywords failed. No response data.')
             return 'error'
 
+def get_entities(data):
+        response = requests.post(f'{currUrl}/get_entities', json=data)
+        try:
+            message = response.json().get('message')
+            if message:
+                print(message)
+                return 'success'
+            else:
+                error = response.json().get('error')
+                print(f'ERROR: {error}')
+                return 'error'
+        except requests.exceptions.JSONDecodeError:
+            print('Getting file info failed. No response data.')
+            return 'error'
+
 def get_file_info(data):
         response = requests.post(f'{currUrl}/get_file_info', json=data)
         try:
@@ -237,6 +252,11 @@ def test_main():
     # print(f'Tagging doc with keywords:')
     # data = {'username': username,'filename': filename}
     # assert tag_keywords_topics(data) == 'success'
+
+    # Get entities (names, locations, institutions and address)
+    print(f'Getting entities (names, locations, institutions and address):')
+    data = {'username': username,'filename': filename}
+    assert get_entities(data) == 'success'
 
     # Get file info
     print(f'Getting file info:')

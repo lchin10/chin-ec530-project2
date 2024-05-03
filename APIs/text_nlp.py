@@ -17,6 +17,8 @@ from PIL import Image
 import json
 from keybert import KeyBERT
 from pypdf import PdfReader
+import spacy
+import re
 
 # Logging
 logging.basicConfig(filename='../Logs/text_nlp.log', level=logging.INFO)
@@ -27,6 +29,14 @@ profile_folder = '../Profiling/'
 profile = cProfile.Profile()
 
 text_nlp_app = Blueprint('text_nlp_app', __name__)
+
+# Load SpaCy Model
+nlp = spacy.load("en_core_web_sm")
+
+address_pattern = r'\b\d{1,5}\s+\w+\s+(?:Street|St|Avenue|Ave|Road|Rd|Boulevard|Blvd|Lane|Ln|Drive|Dr|Court|Ct|'
+address_pattern += r'Place|Pl|Square|Sq|Trail|Trl|Parkway|Pkwy|Commons|Loop|Way|Highway|Hwy|Terrace|Ter|'
+address_pattern += r'Expressway|Expy|Freeway|Fwy|Alley|Path)\b(?:\s+\w+){0,2},?\s+\w+\s+\d{5}(?:-\d{4})?\b'
+
 
 def get_db_connection():
     conn = sqlite3.connect('../Database/database.db')
@@ -258,8 +268,87 @@ def tag_keywords_topics():
 # # Text summarization
 # def summarization(file_ID):
 
-# # Name recognizer (names, locations, institutions and address)
-# def name_recognizer(file_ID):
+# # Get entities (names, locations, institutions and address)
+@text_nlp_app.route('/get_entities', methods=['POST'])
+def get_entities():
+    # Trace, profiling, logging
+    profile.enable()
+    logging.info('Extracting entities initiated.')
+    
+    data = request.json
+    username = data.get('username')
+    file_title = data.get('filename')
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    try:
+        # Get UID from username
+        cursor.execute('SELECT U_ID FROM Users WHERE Username = ?', (username,))
+        user = cursor.fetchone()
+        if not user:
+            return jsonify({'error': 'User not found'}), 404
+        u_id = user[0]
+
+        # Check if file exists for user in file database
+        cursor.execute('SELECT file_ID FROM Files WHERE file_title = ? AND U_ID = ?', (file_title, u_id))
+        existing_file = cursor.fetchone()
+        if not existing_file:
+            return jsonify({'error': f'File \'{file_title}\' not found'}), 404
+        file_id = existing_file[0]
+
+        # Check if text has been extracted
+        cursor.execute('SELECT info FROM FileInfo WHERE file_ID = ? AND info_type = ?', (file_id, 'text'))
+        text_info = cursor.fetchone()
+        if not text_info:
+            return jsonify({'error': 'Text information not found for this file'}), 400
+        text = text_info['info']
+
+        # Check if the entry already exists in FileInfo
+        cursor.execute('SELECT * FROM FileInfo WHERE file_ID = ? AND info_type = ?', (file_id, 'entities'))
+        existing_entry = cursor.fetchone()
+        if existing_entry:
+            return jsonify({'error': 'Entities already extracted for this file'}), 400
+
+        # Initialize entities dictionary
+        entities = {
+            'names': [],
+            'locations': [],
+            'institutions': [],
+            'addresses': []
+        }
+
+        # Perform named entity recognition (NER) on the text
+        doc = nlp(text)
+        for entity in doc.ents:
+            if entity.label_ == 'PERSON':
+                entities['names'].append(entity.text)
+            elif entity.label_ == 'GPE':
+                entities['locations'].append(entity.text)
+            elif entity.label_ == 'ORG':
+                entities['institutions'].append(entity.text)
+                
+        # addresses
+        addresses = re.findall(address_pattern, text)
+        entities['addresses'] = addresses
+        
+        entities_json = json.dumps(entities)
+
+        # Insert entities into the database
+        cursor.execute('INSERT INTO FileInfo (info_type, info, file_ID) VALUES (?, ?, ?)', ('entities', entities_json, file_id))
+        conn.commit()
+
+        logger.info("Getting entities complete.")
+        profile.disable()
+        profile.dump_stats(f'{profile_folder}get_entities.prof')
+        return jsonify({'message': 'Getting entities successful'}), 200
+    except sqlite3.IntegrityError:
+        logger.info("Could not tag keywords and topics.")
+        profile.disable()
+        profile.dump_stats(f'{profile_folder}tag_keywords_topics.prof')
+        return jsonify({'error': 'Internal server error'}), 401
+    finally:
+        conn.close()
 
 # APP RUN
 if __name__ == '__main__':
