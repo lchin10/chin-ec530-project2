@@ -238,7 +238,7 @@ def test_main():
     data = {'username': username}
     assert list_files(data) == 'success'
 
-    # Doc to text
+    # Grab metadata
     print(f'Grabbing metadata:')
     data = {'username': username,'filename': filename}
     assert get_metadata(data) == 'success'
@@ -253,10 +253,10 @@ def test_main():
     # data = {'username': username,'filename': filename}
     # assert tag_keywords_topics(data) == 'success'
 
-    # Get entities (names, locations, institutions and address)
-    print(f'Getting entities (names, locations, institutions and address):')
-    data = {'username': username,'filename': filename}
-    assert get_entities(data) == 'success'
+    # # Get entities (names, locations, institutions and address)
+    # print(f'Getting entities (names, locations, institutions and address):')
+    # data = {'username': username,'filename': filename}
+    # assert get_entities(data) == 'success'
 
     # Get file info
     print(f'Getting file info:')

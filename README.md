@@ -8,6 +8,7 @@
 - [Functionality](#functionality)
 - [APIs](#api)
 - [Database](#database)
+- [Full Functionality](#access-to-full-functionality)
 - [Updates](#updates)
 - [Resources](#resources)
 
@@ -22,8 +23,10 @@ Click [this link](https://lchin10.github.io/chin-ec530-project2/) to visit the w
   - `Login` to a secure service to upload content
   - `Upload` documents
   - Can upload PDFs or images
+  - Gets `metadata` of documents, including filename, type, size, width, height, time created, and time modified
   - Translate `documents to text`
-  - Tag all documents with `keywords` and topics
+  - Tag all documents with `keywords` and topics    ***not accesible through online web app*
+  - Get `entities` of all names, locations, institutions and address in documents    ***not accesible through online web app*
 
 *Not Implemented:*
   - I want the service to tag all my documents and paragraphs within every document with the keywords and know the topics each document cover
@@ -33,8 +36,6 @@ Click [this link](https://lchin10.github.io/chin-ec530-project2/) to visit the w
   - I should find definition of keywords using open services (e.g., OpenAI)
   - I should be able to get summaries of each document
   - I want to discover content from the WEB to enhance story
-  - I want to know all names, locations, institutions and address in my documents.
-  - I want to upload different types of files (CSV, DOC, etc.)
 
 ## API
 
@@ -100,6 +101,10 @@ Runs one python script (*flask_run.py*) to run the Flask Application through Ren
     - URL: `/tag_keywords_topics`
     - Methods: `POST`
     - Data Params: `{username, file_title}`
+- **Get Entities**
+    - URL: `/get_entities`
+    - Methods: `POST`
+    - Data Params: `{username, file_title}`
 
 ### Peer-To-Peer (p2p.py):
 - **List Online Users**
@@ -139,7 +144,39 @@ Runs one python script (*flask_run.py*) to run the Flask Application through Ren
     - `MessageText [TEXT]`
     - `Timestamp [DATETIME]`
 
+## Access to Full Functionality
+
+My Flask application is currently running a free instance of Render, which has 512 MB and 0.1 CPU. Therefore, some features are not accessible through the web application deployed online through Github Pages. To have access to this functionality, you can go through the following steps:
+
+1. Clone this repository to your computer/device.
+
+        git clone https://github.com/jakubzolkos/document-analyzer
+
+2. Download the required libraries/dependencies.
+
+        pip install -r requirements.txt
+        python -m spacy download en_core_web_sm
+
+3. **Important**: Navigate to '/src/App.js' and change line 19 to the following:
+
+        const currUrl = baseUrl[1];
+
+    This allows the web application to call API functionality from localhost rather than Render.
+
+4. Run the Flask Application.
+
+        cd APIs
+        python flask_run.py
+
+5. Open a new terminal, then run the web application.
+
+        npm start
+
 ## Updates
+
+### 5/3/2024:
+
+- Added functionality for getting metadata and getting entities of documents
 
 ### 4/29/2024:
 
@@ -181,3 +218,8 @@ Runs one python script (*flask_run.py*) to run the Flask Application through Ren
 - Added unit testing of backend using python (test.py)
 
 ## Resources
+
+- [ReactJS Web Application](https://react.dev/)
+- [Render Application Deployment](render.com)
+- [SpaCy Language Model](https://spacy.io/usage/models)
+- [KeyBERT](https://github.com/MaartenGr/KeyBERT)
