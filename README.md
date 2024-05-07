@@ -18,6 +18,8 @@ This application provides a secure platform for users to upload various types of
 
 Click [this link](https://lchin10.github.io/smart-document-analyzer/) to visit the web application.
 
+
+
 ## Functionality
 
   - `Login` to a secure service to upload content

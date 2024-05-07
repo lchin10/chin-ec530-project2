@@ -16,7 +16,7 @@ function App() {
     const [onlineUsers, setOnlineUsers] = useState([]);
 
     const baseUrl = ['https://chin-smart-document-analyzer.onrender.com', 'http://localhost:5000'];
-    const currUrl = baseUrl[0];
+    const currUrl = baseUrl[1];
 
     const handleLogout = async () => {
         try {
