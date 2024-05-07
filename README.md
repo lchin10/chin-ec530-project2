@@ -6,9 +6,9 @@
 
 - [Overview](#overview)
 - [Functionality](#functionality)
+- [Full Functionality](#access-to-full-functionality)
 - [APIs](#api-modules)
 - [Database](#database)
-- [Full Functionality](#access-to-full-functionality)
 - [Updates](#updates)
 - [Resources](#resources)
 
@@ -18,11 +18,12 @@ This application provides a secure platform for users to upload various types of
 
 Click [this link](https://lchin10.github.io/smart-document-analyzer/) to visit the web application.
 
-
+https://github.com/lchin10/smart-document-analyzer/assets/46639864/c21f2d5e-4ad4-443a-a141-6f37efec45a7
 
 ## Functionality
 
   - `Login` to a secure service to upload content
+  - `Chat` with other online users
   - `Upload` documents
   - Can upload PDFs or images
   - Gets `metadata` of documents, including filename, type, size, width, height, time created, and time modified
@@ -31,6 +32,9 @@ Click [this link](https://lchin10.github.io/smart-document-analyzer/) to visit t
   - Get `entities` of all names, locations, institutions and address in documents    ***not accesible through online web app*
 
 *Not Implemented:*
+
+
+
   - I want the service to tag all my documents and paragraphs within every document with the keywords and know the topics each document cover
   - I should be able to access different paragraphs of different documents based on keywords
   - I should be able to to find all positive, neutral and negative paragraphs and sentences
@@ -38,6 +42,39 @@ Click [this link](https://lchin10.github.io/smart-document-analyzer/) to visit t
   - I should find definition of keywords using open services (e.g., OpenAI)
   - I should be able to get summaries of each document
   - I want to discover content from the WEB to enhance story
+
+## Access to Full Functionality
+
+The Flask application for backend functionality is currently running on a free instance of Render, which has 512 MB and 0.1 CPU. Therefore, some features are not accessible through the web application deployed online through Github Pages. To have access to this functionality, you can go through the following steps:
+
+1. Clone this repository to your computer/device.
+
+        git clone https://github.com/lchin10/smart-document-analyzer.git
+
+2. Download the required libraries/dependencies.
+
+        pip install -r requirements.txt
+        python -m spacy download en_core_web_sm
+
+3. ****Important***: Navigate to '/src/App.js' and change line 19 to the following:
+
+        const currUrl = baseUrl[1];
+
+    This allows the web application to call API functionality from localhost rather than Render.
+
+4. ****Optional***: If you want to start with a clean database, you can reinitiate the database.
+
+        cd Database
+        python database_init.py        
+
+5. Run the Flask Application.
+
+        cd APIs
+        python flask_run.py
+
+6. Open a new terminal, then run the web application.
+
+        npm start
 
 ## API Modules
 
@@ -142,39 +179,6 @@ Click [this link](https://lchin10.github.io/smart-document-analyzer/) to visit t
     - `MessageText [TEXT]`
     - `Timestamp [DATETIME]`
 
-## Access to Full Functionality
-
-The Flask application for backend functionality is currently running on a free instance of Render, which has 512 MB and 0.1 CPU. Therefore, some features are not accessible through the web application deployed online through Github Pages. To have access to this functionality, you can go through the following steps:
-
-1. Clone this repository to your computer/device.
-
-        git clone https://github.com/lchin10/smart-document-analyzer.git
-
-2. Download the required libraries/dependencies.
-
-        pip install -r requirements.txt
-        python -m spacy download en_core_web_sm
-
-3. ****Important***: Navigate to '/src/App.js' and change line 19 to the following:
-
-        const currUrl = baseUrl[1];
-
-    This allows the web application to call API functionality from localhost rather than Render.
-
-4. ****Optional***: If you want to start with a clean database, you can reinitiate the database.
-
-        cd Database
-        python database_init.py        
-
-5. Run the Flask Application.
-
-        cd APIs
-        python flask_run.py
-
-6. Open a new terminal, then run the web application.
-
-        npm start
-
 ## Updates
 
 ### 5/3/2024:
@@ -221,6 +225,7 @@ The Flask application for backend functionality is currently running on a free i
     - Created a script to reset and clear the existing database
 - Created a client-side script to test API functionality
 - Added unit testing of backend using python (test.py)
+- Dockered my project (docker-compose.yml)
 
 ## Resources
 
